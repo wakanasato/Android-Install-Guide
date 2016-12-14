@@ -32,17 +32,29 @@ ArcGIS Runtime SDK for Android がサポートする最新の動作環境につ�
 
 1.Android Studio を起動し [Start a new Android Studio project] をクリックします。すでに Android Studio のプロジェクトが開いている場合は Android Studio のメニューから [File] → [New Project] をクリックします。
 
+![](img_android/1.StartupAndroid.png)
+
 2.[Application name] にアプリケーションの名称を入力します。ここでは「HelloVersion100」としています。
 [Company Domain] にドメインを、[Project Location] に作成するディレクトリを入力して [Next] をクリックします。
 ここではドメインを「tutorials.esri.com」としています。
 
+![](img_android/2.makeProject.png)
+
 3.[Phone and Tablet] のみにチェックを入れ [Minimum SDK] のドロップダウン リストから 「API 16: Android 4.1」を選択して [Next] をクリックします。
+
+![](img_android/3.choseAndroidVersion.png)
 
 4.Activity を選択します。ここでは「Empty Activity」を選択して [Next] をクリックします。
 
+![](img_android/4.choseActivity.png)
+
 5.[Finish] をクリックします。
 
+![](img_android/5.makeActivity.png)
+
 6.以上で新しいプロジェクトが作成されます。
+
+![](img_android/6.finish_startProject.png)
 
 ### ArcGIS Runtime SDK の設定
 
