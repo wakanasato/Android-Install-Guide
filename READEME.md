@@ -69,10 +69,16 @@ Project ツールウィンドウ で「Android」を選択して「Manifests」�
 <uses-feature android:glEsVersion="0x00020000" android:required="true" />
 ```
 
+![](img_android/2_1.addPermission.png)
+
+
 2.Project ツールウィンドウ で「Project」を選択して build.gradle をダブルクリックして開きます。
 ArcGIS の Maven リポジトリの URL を追加します。
 
 ```
+
+![](img_android/2_2.addMaven.png)
+
 allprojects {
     repositories {
         jcenter()
@@ -93,8 +99,11 @@ dependencies {
 }
 ```
 
+![](img_android/2_3.addRuntimeVersion.png)
+
 4.ツールバーの [Sync Project with Gradle Files] または build.gradle を変更した後に表示されるメッセージの右にある [Sync Now] をクリックします。
 
+![](img_android/2_4.sync project.png)
 
 これで準備が整いました。
 
@@ -103,6 +112,8 @@ dependencies {
 ArcGIS の機能を実装する準備ができたので、アプリケーションに ArcGIS Online のベースマップを表示するための実装を加えます。
 
 1.Project ツールウィンドウで [app] → [res] → [layout] と展開し activity_main.xml をダブルクリックして開きます。
+
+![](img_android/3_1.openLayoutXml.png)
 
 2.左下の [Text] タブをクリックして XML 形式で開きます。TextView 部分を全て削除して以下の MapView エレメントを追加します。
 
@@ -113,6 +124,8 @@ ArcGIS の機能を実装する準備ができたので、アプリケーショ�
     android:layout_height="fill_parent" >
 </com.esri.arcgisruntime.mapping.view.MapView>
 ```
+
+![](img_android/3_2.addMapviewElement.png)
 
 3.Project ツールウィンドウで [app] → [res] → [java] と展開し MainActivity クラスを ダブルクリックして開き、地図表示のためのコードを設定します。
 
@@ -154,7 +167,11 @@ protected void onResume(){
 
 * MainActivity は以下のようになります。
 
+![](img_android/3_3.finishMapViewElement.png)
+
 4.ツールバーの [Make Project] または [Build] メニューから [Make Project] をクリックします。
+
+![](img_android/3_4.makeProject.png)
 
 ### モバイル マッピング アプリケーションの実行
 
@@ -162,8 +179,15 @@ protected void onResume(){
 
 1.ツールバーの [Run ‘app’] をクリックします。
 
+![](img_android/4_1.runAppBottun.png)
+
 2.接続しているデバイスを選択し [OK] をクリックします。
+
+![](img_android/4_2.choseDevice.png)
 
 3.アプリケーションが起動しロサンゼルス付近の地図が表示されます。
 スワイプやピンチイン/ピンチアウトで地図を移動したり拡大/縮小したりすることができます。
+
+![](img_android/4_3.displayMap.png)
+
 
