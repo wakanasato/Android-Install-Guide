@@ -16,15 +16,20 @@
 
 * JDK(Java Development Kit) ※
 * Android Studio
-* Android 4.0.1 以降
+* Android 4.1.x (Jelly Bean) 以降
 
-※ JDK 5 または JDK 7 が必要です。Android 5.0 以上をターゲットとする場合は JDK 7 が必要です。
+※ JDK 6 または JDK 7 が必要です。Android 5.0 以上をターゲットとする場合は JDK 7 が必要です。
 
 ArcGIS Runtime SDK for Android がサポートする最新の動作環境につきましては[動作環境](http://www.esrij.com/products/arcgis-runtime-sdk-for-android/environments/)をご参照ください。
 
 ## モバイル マッピング アプリケーションの開発
 
-ここでは、ArcGIS Runtime SDK for Android を使ってモバイル マッピング アプリケーションを作成するための基本的な手順を説明します。
+ここでは、次の構成で ArcGIS Runtime SDK for Android を使ってモバイル マッピング アプリケーションを作成するための基本的な手順を説明します。
+
+* [プロジェクトの作成](#プロジェクトの作成)
+* [ArcGIS Runtime SDK の設定](#ArcGIS-tRuntime-tSDK-tの設定)
+* [地図表示の実装](#地図表示の実装)
+* [モバイル マッピング アプリケーションの実行](#モバイルマッピングアプリケーションの実行)
 
 ### プロジェクトの作成
 
@@ -76,9 +81,6 @@ Project ツールウィンドウ で「Android」を選択して「Manifests」�
 ArcGIS の Maven リポジトリの URL を追加します。
 
 ```
-
-![](img_android/2_2.addMaven.png)
-
 allprojects {
     repositories {
         jcenter()
@@ -89,6 +91,8 @@ allprojects {
     }
 }
 ```
+![](img_android/2_2.addMaven.png)
+
 
 3.Project ツールウィンドウ で「Android」を選択して [Gradle Scripts] の下にある build.gradle (Module: app) をダブルクリックして開きます。dependencies セクション内に「compile 'com.esri.arcgisruntime:arcgis-android:100.0.0'」を追加します。
 
