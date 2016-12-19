@@ -39,7 +39,7 @@ ArcGIS Runtime SDK for Android がサポートする最新の動作環境につ�
 
 ![](img_android/1_1.StartupAndroid.png)
 
-2.[Application name] にアプリケーションの名称を入力します。ここでは「HelloVersion100」としています。
+2.[Application name] にアプリケーションの名称を入力します。ここでは「HelloMap」としています。
 [Company Domain] にドメインを、[Project Location] に作成するディレクトリを入力して [Next] をクリックします。
 ここではドメインを「tutorials.esri.com」としています。
 
