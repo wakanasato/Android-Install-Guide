@@ -60,7 +60,7 @@ ArcGIS Runtime SDK for Android がサポートする最新の動作環境につ�
 
 ![](img_android/1_6.finish_startProject.png)
 
-### ArcGISRuntimeSDKの設定
+### ArcGIS Runtime SDKの設定
 
 次に ArcGIS Runtime SDK for Android の API を使えるようにするための設定を行います。
 
