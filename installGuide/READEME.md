@@ -1,11 +1,10 @@
 # インストールガイド（Android）
 
-　このインストール ガイドでは、初めて ArcGIS Runtime SDK for Android を使用してモバイル マッピング アプリケーションを構築する開発者の方に最も基本的な開発手順を紹介します。
-　このインストール ガイドをお読み頂くことで、ArcGIS Runtime SDK for Android を使用したモバイル マッピング アプリケーション開発の基礎を理解することができます。
+　このインストール ガイドでは、初めて ArcGIS Runtime SDK for Android を使用してモバイル マッピング アプリケーションを構築する開発者の方に最も基本的な開発手順を紹介します。このインストール ガイドをお読み頂くことで、ArcGIS Runtime SDK for Android を使用したモバイル マッピング アプリケーション開発の基礎を理解することができます。
 
 ## ArcGIS Runtime SDK for Android とは
 
-　ArcGIS Runtime SDK for Android を使うと ArcGIS の機能を Android のネイティブ アプリとして実装することができます。
+　ArcGIS Runtime SDK for Android を使うと ArcGIS の機能を Android のネイティブ アプリケーションとして実装することができます。
 この SDK には API やリファレンス、サンプルコードなどが含まれています。
 詳細は [ArcGIS Runtime SDK for Android](http://www.esrij.com/products/arcgis-runtime-sdk-for-android/) をご参照ください。
 
@@ -27,9 +26,9 @@ ArcGIS Runtime SDK for Android がサポートする最新の動作環境につ�
 ここでは、次の構成で ArcGIS Runtime SDK for Android を使ってモバイル マッピング アプリケーションを作成するための基本的な手順を説明します。
 
 * [プロジェクトの作成](#プロジェクトの作成)
-* [ArcGIS Runtime SDKの設定](#ArcGISRuntimeSDKの設定)
+* [ArcGIS Runtime SDKの設定](#ArcGIS-Runtime-SDK-の設定)
 * [地図表示の実装](#地図表示の実装)
-* [モバイル マッピング アプリケーションの実行](#モバイルマッピングアプリケーションの実行)
+* [モバイル マッピング アプリケーションの実行](#モバイル-マッピング-アプリケーションの実行)
 
 ### プロジェクトの作成
 
@@ -147,7 +146,7 @@ private MapView mMapView;
 ```
 * onCreate() メソッド内の setContentView() を呼び出している後に以下のコードを追加します。
 このコードは、レイアウトに定義している MapView の参照を取得し、ベースマップのタイプや初期表示の範囲、縮尺レベルを設定した地図を MapView に設定します。
-ここではベースマップに設定し、初期表示範囲は永田町付近を表示するようにしています。
+ここではベースマップに地形図を設定し、初期表示範囲は永田町付近を表示するようにしています。
 
 ```
 mMapView = (MapView) findViewById(R.id.mapView);
@@ -177,7 +176,7 @@ protected void onResume(){
 
 ![](img_android/3_4.makeProject.png)
 
-### モバイルマッピングアプリケーションの実行
+### モバイル マッピング アプリケーションの実行
 
 ベースマップを表示するアプリケーションが作成できたので Android 端末にインストールして実行します。
 
@@ -189,7 +188,7 @@ protected void onResume(){
 
 ![](img_android/4_2.choseDevice.png)
 
-3.アプリケーションが起動しロサンゼルス付近の地図が表示されます。
+3.アプリケーションが起動し永田町付近の地図が表示されます。
 スワイプやピンチイン/ピンチアウトで地図を移動したり拡大/縮小したりすることができます。
 
 ![](img_android/4_3.displayMap.png)
