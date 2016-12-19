@@ -27,9 +27,9 @@ ArcGIS Runtime SDK for Android がサポートする最新の動作環境につ�
 ここでは、次の構成で ArcGIS Runtime SDK for Android を使ってモバイル マッピング アプリケーションを作成するための基本的な手順を説明します。
 
 * [プロジェクトの作成](#プロジェクトの作成)
-* [ArcGIS Runtime SDK の設定](# ArcGIS Runtime SDK の設定)
+* [ArcGIS Runtime SDK の設定](#ArcGISRuntimeSDKの設定)
 * [地図表示の実装](#地図表示の実装)
-* [モバイル マッピング アプリケーションの実行](#モバイル-tマッピング-tアプリケーションの実行)
+* [モバイル マッピング アプリケーションの実行](#モバイルマッピングアプリケーションの実行)
 
 ### プロジェクトの作成
 
@@ -61,7 +61,7 @@ ArcGIS Runtime SDK for Android がサポートする最新の動作環境につ�
 
 ![](img_android/1_6.finish_startProject.png)
 
-### ArcGIS Runtime SDK の設定
+### ArcGISRuntimeSDKの設定
 
 次に ArcGIS Runtime SDK for Android の API を使えるようにするための設定を行います。
 
@@ -177,7 +177,7 @@ protected void onResume(){
 
 ![](img_android/3_4.makeProject.png)
 
-### モバイル マッピング アプリケーションの実行
+### モバイルマッピングアプリケーションの実行
 
 ベースマップを表示するアプリケーションが作成できたので Android 端末にインストールして実行します。
 
