@@ -37,7 +37,7 @@ ArcGIS Runtime SDK for Android がサポートする最新の動作環境につ�
 
 1.Android Studio を起動し [Start a new Android Studio project] をクリックします。すでに Android Studio のプロジェクトが開いている場合は Android Studio のメニューから [File] → [New Project] をクリックします。
 
-![](img_android/1_1.StartupAndroid.jpg)
+![](img_android/1_1.StartupAndroid.png)
 
 2.[Application name] にアプリケーションの名称を入力します。ここでは「HelloVersion100」としています。
 [Company Domain] にドメインを、[Project Location] に作成するディレクトリを入力して [Next] をクリックします。
