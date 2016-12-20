@@ -50,15 +50,15 @@ ArcGIS Runtime SDK for Android がサポートする最新の動作環境につ�
 
 4.Activity を選択します。ここでは「Empty Activity」を選択して [Next] をクリックします。
 
-![](img_android/1_4.choseActivity.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/1_4.choseActivity.png" >
 
 5.[Finish] をクリックします。
 
-![](img_android/1_5.makeActivity.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/1_5.makeActivity.png" >
 
 6.以上で新しいプロジェクトが作成されます。
 
-![](img_android/1_6.finish_startProject.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/1_6.finish_startProject.png" >
 
 ### ArcGIS Runtime SDKの設定
 
@@ -73,8 +73,7 @@ Project ツールウィンドウ で「Android」を選択して「Manifests」�
 <uses-feature android:glEsVersion="0x00020000" android:required="true" />
 ```
 
-![](img_android/2_1.addPermission.png)
-
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/2_1.addPermission.png" >
 
 2.Project ツールウィンドウ で「Project」を選択して build.gradle をダブルクリックして開きます。
 ArcGIS の Maven リポジトリの URL を追加します。
@@ -90,7 +89,8 @@ allprojects {
     }
 }
 ```
-![](img_android/2_2.addMaven.png)
+
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/2_2.addMaven.png" >
 
 
 3.Project ツールウィンドウ で「Android」を選択して [Gradle Scripts] の下にある build.gradle (Module: app) をダブルクリックして開きます。dependencies セクション内に「compile 'com.esri.arcgisruntime:arcgis-android:100.0.0'」を追加します。
@@ -102,11 +102,11 @@ dependencies {
 }
 ```
 
-![](img_android/2_3.addRuntimeVersion.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/2_3.addRuntimeVersion.png" >
 
 4.ツールバーの [Sync Project with Gradle Files] または build.gradle を変更した後に表示されるメッセージの右にある [Sync Now] をクリックします。
 
-![](img_android/2_4.sync project.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/2_4.sync project.png" >
 
 これで準備が整いました。
 
@@ -116,7 +116,7 @@ ArcGIS の機能を実装する準備ができたので、アプリケーショ�
 
 1.Project ツールウィンドウで [app] → [res] → [layout] と展開し activity_main.xml をダブルクリックして開きます。
 
-![](img_android/3_1.openLayoutXml.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/3_1.openLayoutXml.png" >
 
 2.左下の [Text] タブをクリックして XML 形式で開きます。TextView 部分を全て削除して以下の MapView エレメントを追加します。
 
@@ -128,7 +128,7 @@ ArcGIS の機能を実装する準備ができたので、アプリケーショ�
 </com.esri.arcgisruntime.mapping.view.MapView>
 ```
 
-![](img_android/3_2.addMapviewElement.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/3_2.addMapviewElement.png" >
 
 3.Project ツールウィンドウで [app] → [res] → [java] と展開し MainActivity クラスを ダブルクリックして開き、地図表示のためのコードを設定します。
 
@@ -170,11 +170,11 @@ protected void onResume(){
 
 * MainActivity は以下のようになります。
 
-![](img_android/3_3.finishMapViewElement.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/3_3.finishMapViewElement.png" >
 
 4.ツールバーの [Make Project] または [Build] メニューから [Make Project] をクリックします。
 
-![](img_android/3_4.makeProject.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/3_4.makeProject.png" >
 
 ### モバイル マッピング アプリケーションの実行
 
@@ -182,15 +182,15 @@ protected void onResume(){
 
 1.ツールバーの [Run ‘app’] をクリックします。
 
-![](img_android/4_1.runAppBottun.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/4_1.runAppBottun.png" >
 
 2.接続しているデバイスを選択し [OK] をクリックします。
 
-![](img_android/4_2.choseDevice.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/4_2.choseDevice.png" >
 
 3.アプリケーションが起動し永田町付近の地図が表示されます。
 スワイプやピンチイン/ピンチアウトで地図を移動したり拡大/縮小したりすることができます。
 
-![](img_android/4_3.displayMap.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/4_3.displayMap.png" >
 
 
