@@ -42,11 +42,11 @@ ArcGIS Runtime SDK for Android がサポートする最新の動作環境につ�
 [Company Domain] にドメインを、[Project Location] に作成するディレクトリを入力して [Next] をクリックします。
 ここではドメインを「tutorials.esri.com」としています。
 
-![](img_android/1_2.makeProject.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/1_2.makeProject.png" >
 
 3.[Phone and Tablet] のみにチェックを入れ [Minimum SDK] のドロップダウン リストから 「API 16: Android 4.1」を選択して [Next] をクリックします。
 
-![](img_android/1_3.choseAndroidVersion.png)
+<img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/1_3.choseAndroidVersion.png" >
 
 4.Activity を選択します。ここでは「Empty Activity」を選択して [Next] をクリックします。
 
