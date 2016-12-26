@@ -63,7 +63,7 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
 
  1. 次に、アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してアプリケーションにコピーしたライセンスキーを設定します。
 
-   ```Android java
+```
  // ライセンスキーを設定して認証
  ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud#########,day-month-year,####################");
 ```
