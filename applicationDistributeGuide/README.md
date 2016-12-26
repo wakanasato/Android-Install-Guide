@@ -1,6 +1,6 @@
-# アプリケーションの配布方法（iOS）
+# アプリケーションの配布方法（Android）
 
-ArcGIS Runtime SDK for iOS を使用して開発したアプリケーションを配布する場合に必要なライセンス認証の手順を説明します。
+ArcGIS Runtime SDK for Android を使用して開発したアプリケーションを配布する場合に必要なライセンス認証の手順を説明します。
 
 ## ライセンス認証のステップ
 
@@ -62,16 +62,9 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライセンス レベ
 
  1. 次に、アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してアプリケーションにコピーしたライセンスキーを設定します。
 
-   ```javascript
-do {
+   ```Android java
  // ライセンスキーを設定して認証
- let result = try AGSArcGISRuntimeEnvironment.setLicenseKey("runtimelite,1000,rud#########,none,####################")
- print("License Result: \(result.licenseStatus)")
-}
-catch let error as NSError {
- // 認証に失敗した場合はエラーを出力
- print("Error: \(error)")
-}
+ ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud#########,day-month-year,####################");
 ```
 
 
@@ -81,7 +74,7 @@ catch let error as NSError {
 
  アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してライセンスを取得します。
 
- ```javascript
+ ```Android java
   // ArcGIS Online / Portal for ArcGIS へロクインし認証情報を取得       
   let theURL = URL(string: "https://www.arcgis.com")
   let portal = AGSPortal(url: theURL!, loginRequired: true)
