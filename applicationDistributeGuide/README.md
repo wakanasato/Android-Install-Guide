@@ -1,81 +1,82 @@
-# �A�v���P�[�V�����̔z�z���@�iAndroid�j
+# アプリケーションの配布方法（Android）
 
-ArcGIS Runtime SDK for Android ���g�p���ĊJ�������A�v���P�[�V������z�z����ꍇ�ɕK�v�ȃ��C�Z���X�F�؂̎菇��������܂��B
+ArcGIS Runtime SDK for Android を使用して開発したアプリケーションを配布する場合に必要なライセンス認証の手順を説明します。
 
-## ���C�Z���X�F�؂̃X�e�b�v
+## ライセンス認証のステップ
 
-�J�������A�v���P�[�V�����̃��C�Z���X�F�؂̃X�e�b�v�͈ȉ��̒ʂ�ł��B
+開発したアプリケーションのライセンス認証のステップは以下の通りです。
 
-1. __[�g�p���郉�C�Z���X�̑I��](#�g�p���郉�C�Z���X�̑I��)__
-1. __[���C�Z���X�̔F��](#���C�Z���X�̔F��)__
-  * __[Lite ���C�Z���X�̔F��](#lite-���C�Z���X�̔F��)__
-  * __[Basic ���C�Z���X�̔F��](#basic-���C�Z���X�̔F��)__
-  * __[Standard �܂��� Advanced ���C�Z���X�̔F��](#standard-�܂���-advanced-���C�Z���X�̔F��)__
-1. __[�A�v���P�[�V�����ւ̋A���̒ǉ�](#�A�v���P�[�V�����ւ̋A���̒ǉ�)__
+1. __[使用するライセンスの選択](#使用するライセンスの選択)__
+1. __[ライセンスの認証](#ライセンスの認証)__
+  * __[Lite ライセンスの認証](#lite-ライセンスの認証)__
+  * __[Basic ライセンスの認証](#basic-ライセンスの認証)__
+  * __[Standard または Advanced ライセンスの認証](#standard-または-advanced-ライセンスの認証)__
+1. __[アプリケーションへの帰属の追加](#アプリケーションへの帰属の追加)__
 
 
-## �g�p���郉�C�Z���X�̑I��
+## 使用するライセンスの選択
 
-ArcGIS Runtime SDK �ɂ� Lite�ABasic�AStandard�AAdvanced �� 4 �̃��C�Z���X ���x��������܂��B�J�������A�v���P�[�V�������g�p����@�\�ɉ����āA�K�؂ȃ��C�Z���X ���x����I�����Ă��������B
+ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライセンス レベルがあります。開発したアプリケーションが使用する機能に応じて、適切なライセンス レベルを選択してください。
 
-�e���C�Z���X�ŗ��p�\�ȋ@�\�̊T�v�͈ȉ��̕\�����Q�Ƃ��������B
+各ライセンスで利用可能な機能の概要は以下の表をご参照ください。
 
-| ���C�Z���X | ���p�ł���@�\ |
+| ライセンス | 利用できる機能 |
 |:-----|:-----|
-| Lite | �E�n�}�\��<br>�E�t�B�[�`���̕\��/����<br>�E���[�g����<br>�E�Z������ |
-| Basic | �ELite ���C�Z���X�ŗ��p�ł��邷�ׂĂ̋@�\<br>�E�t�B�[�`���ҏW<br>�EArcGIS Online �̉�̓T�[�r�X�̎g�p<br>�EArcGIS Online/Portal for ArcGIS �̃R���e���c�̕ҏW |
-| Standard | �EBasic ���C�Z���X�ŗ��p�ł��邷�ׂĂ̋@�\<br>�E�摜�t�@�C����V�F�[�v�t�@�C���Ȃǂ̒��ڎQ��<br>�E���[�J�� �T�[�o�[�̕W���I�ȋ@�\�iWPF API �̂�)|
-| Advanced | �EStandard ���C�Z���X�ŗ��p�ł��邷�ׂĂ̋@�\<br>�E���[�J�� �T�[�o�[�̍��x�ȋ@�\�iWPF API �̂�) |
+| Lite | ・地図表示<br>・フィーチャの表示/検索<br>・ルート検索<br>・住所検索 |
+| Basic | ・Lite ライセンスで利用できるすべての機能<br>・フィーチャ編集<br>・ArcGIS Online の解析サービスの使用<br>・ArcGIS Online/Portal for ArcGIS のコンテンツの編集 |
+| Standard | ・Basic ライセンスで利用できるすべての機能<br>・画像ファイルやシェープファイルなどの直接参照<br>・ローカル サーバーの標準的な機能（WPF API のみ)|
+| Advanced | ・Standard ライセンスで利用できるすべての機能<br>・ローカル サーバーの高度な機能（WPF API のみ) |
 
 
-���C�Z���X�̏ڍׂ�[ESRI�W���p�����i�y�[�W](http://www.esrij.com/products/arcgis-runtime-sdk-for-ios/details/license/)�����Q�Ƃ��������B
+ライセンスの詳細は[ESRIジャパン製品ページ](http://www.esrij.com/products/arcgis-runtime-sdk-for-ios/details/license/)をご参照ください。
 
-## ���C�Z���X�̔F��
+## ライセンスの認証
 
-�e���C�Z���X ���x���ŔF�ؕ��@���قȂ�܂��B�g�p���郉�C�Z���X ���x���̃g�s�b�N�����Q�Ƃ��������B
-
-
-## Lite ���C�Z���X�̔F��
-�A�v���P�[�V������ Lite ���x���ŔF�؂���ɂ́A�ȉ��� 2 �̕��@������܂��B
-
-1. __���C�Z���X�L�[���g�p�����F��__
-
- * ArcGIS Runtime Lite �̃��C�Z���X�L�[���擾����K�v������܂��B
-
-1. __ArcGIS Online / Portal for ArcGIS �ւ̃��O�C���ɂ��F��__
-
- *  �A�v���P�[�V�������g�p���郆�[�U�[���Ƃ� ArcGIS Online �g�D�����v����/ Portal for ArcGIS �̎w�胆�[�U�[ �A�J�E���g���K�v�ł�
- *  �A�v���P�[�V���������Ȃ��Ƃ� 30 ���� 1 ��� ArcGIS Online �g�D�����v����/ Portal for ArcGIS �փ��O�C������K�v������܂�
+各ライセンス レベルで認証方法が異なります。使用するライセンス レベルのトピックをご参照ください。
 
 
-* __���C�Z���X�L�[���g�p�����F��__
+## Lite ライセンスの認証
+アプリケーションを Lite レベルで認証するには、以下の 2 つの方法があります。
 
-  ArcGIS Runtime Lite �̃��C�Z���X�L�[�� ArcGIS for Developers �̃T�C�g����擾���A�擾�������C�Z���X�L�[�𗘗p���āA�A�v���P�[�V������ Lite ���C�Z���X�ŔF�؂��邱�Ƃ��ł��܂��B
+1. __ライセンスキーを使用した認証__
 
-  �ŏ��Ɉȉ��̎菇�� Lite ���x���̃��C�Z���X�L�[���擾���܂��B
+ * ArcGIS Runtime Lite のライセンスキーを取得する必要があります。
 
- 1. [ArcGIS for Developers: Licensing Your ArcGIS Runtime App](https://developers.arcgis.com/arcgis-runtime/licensing/) �y�[�W�ɃA�N�Z�X���܂��i�T�C���C�������߂�ꂽ�ꍇ�́AArcGIS for Developers �A�J�E���g�ŃT�C���C�����܂��B�A�J�E���g�̍쐬���@��[�J���҃A�J�E���g�̍쐬](http://esrijapan.github.io/arcgis-dev-resources/get-dev-account/)�����Q�Ƃ��������B�j
- 1. [Show my ArcGIS Runtime Lite license key] ���N���b�N���܂�
+1. __ArcGIS Online / Portal for ArcGIS へのログインによる認証__
+
+ *  アプリケーションを使用するユーザーごとに ArcGIS Online 組織向けプラン/ Portal for ArcGIS の指定ユーザー アカウントが必要です
+ *  アプリケーションが少なくとも 30 日に 1 回は ArcGIS Online 組織向けプラン/ Portal for ArcGIS へログインする必要があります
+
+
+* __ライセンスキーを使用した認証__
+
+  ArcGIS Runtime Lite のライセンスキーを ArcGIS for Developers のサイトから取得し、取得したライセンスキーを利用して、アプリケーションを Lite ライセンスで認証することができます。
+
+  最初に以下の手順で Lite レベルのライセンスキーを取得します。
+
+ 1. [ArcGIS for Developers: Licensing Your ArcGIS Runtime App](https://developers.arcgis.com/arcgis-runtime/licensing/) ページにアクセスします（サインインを求められた場合は、ArcGIS for Developers アカウントでサインインします。アカウントの作成方法は[開発者アカウントの作成](http://esrijapan.github.io/arcgis-dev-resources/get-dev-account/)をご参照ください。）
+ 1. [Show my ArcGIS Runtime Lite license key] をクリックします
+ 
  <img src="https://s3-ap-northeast-1.amazonaws.com/test-ozawa/github-image/show_lite_license.png" width="400px">
 
- 1. �\�����ꂽ���C�Z���X�L�[���R�s�[���܂�
+ 1. 表示されたライセンスキーをコピーします
 
- 1. ���ɁA�A�v���P�[�V�����̃R�[�h�ɂ����� ArcGIS Runtime SDK �̋@�\���Ăяo�����O�ɁA�ȉ��̃R�[�h���g�p���ăA�v���P�[�V�����ɃR�s�[�������C�Z���X�L�[��ݒ肵�܂��B
+ 1. 次に、アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してアプリケーションにコピーしたライセンスキーを設定します。
 
    ```Android java
- // ���C�Z���X�L�[��ݒ肵�ĔF��
+ // ライセンスキーを設定して認証
  ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud#########,day-month-year,####################");
 ```
 
 
-* __ArcGIS Online / Portal for ArcGIS �ւ̃��O�C���ɂ��F��__
+* __ArcGIS Online / Portal for ArcGIS へのログインによる認証__
 
- �A�v���P�[�V�����̎��s���ɁA�A�v���P�[�V�����𗘗p���郆�[�U�[���ۗL���� [ArcGIS Online �g�D�����v����](http://www.esrij.com/products/arcgis-online/plan/organization/) �������� [Portal for ArcGIS](http://www.esrij.com/products/arcgis-for-server/details/portal-for-arcgis/) �̎w�胆�[�U�[ �A�J�E���g���g�p���� ArcGIS Online / Portal for ArcGIS �Ƀ��O�C�����邱�ƂŁALite ���C�Z���X���擾���邱�Ƃ��ł��܂��B
+ アプリケーションの実行時に、アプリケーションを利用するユーザーが保有する [ArcGIS Online 組織向けプラン](http://www.esrij.com/products/arcgis-online/plan/organization/) もしくは [Portal for ArcGIS](http://www.esrij.com/products/arcgis-for-server/details/portal-for-arcgis/) の指定ユーザー アカウントを使用して ArcGIS Online / Portal for ArcGIS にログインすることで、Lite ライセンスを取得することができます。
 
- �A�v���P�[�V�����̃R�[�h�ɂ����� ArcGIS Runtime SDK �̋@�\���Ăяo�����O�ɁA�ȉ��̃R�[�h���g�p���ă��C�Z���X���擾���܂��B
+ アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してライセンスを取得します。
 
  ```Android java
-  // ArcGIS Online / Portal for ArcGIS �փ��N�C�����F�؏����擾       
+  // ArcGIS Online / Portal for ArcGIS へロクインし認証情報を取得       
   let theURL = URL(string: "https://www.arcgis.com")
   let portal = AGSPortal(url: theURL!, loginRequired: true)
 
@@ -84,42 +85,42 @@ ArcGIS Runtime SDK �ɂ� Lite�ABasic�AStandard�AAdvanced �� 4 �̃��C�Z���X ���x
     print(error)
    }
    else {
-    // ArcGIS Online / Portal for ArcGIS ���烉�C�Z���X���擾            
+    // ArcGIS Online / Portal for ArcGIS からライセンスを取得            
     let licenseInfo = portal.portalInfo?.licenseInfo
     do {
-     // ArcGIS Runtime �Ƀ��C�Z���X��ݒ�
+     // ArcGIS Runtime にライセンスを設定
      let result = try AGSArcGISRuntimeEnvironment.setLicenseInfo(licenseInfo!)
     }
     catch let error as NSError {
      print("Error: \(error.localizedDescription)")
     }
-   �p
-  �p
+   ｝
+  ｝
  ```
 
- __�A�v���P�[�V������ ArcGIS Online / Portal for ArcGIS �ɏ�Ƀ��O�C���ł��Ȃ��ꍇ__
+ __アプリケーションが ArcGIS Online / Portal for ArcGIS に常にログインできない場合__
 
- �z�z����A�v���P�[�V�������l�b�g���[�N�ɐڑ��ł��Ȃ����Ŏ��s����Ȃǂ̗��R�ɂ��A�N�����ɖ��� ArcGIS Online / Portal for ArcGIS �Ƀ��O�C�����邱�Ƃ��ł��Ȃ��ꍇ�́A�擾�������C�Z���X�����ő� 30 ���܂Ń��[�J���ɕۑ����Ă������Ƃ��ł��܂��B
+ 配布するアプリケーションがネットワークに接続できない環境で実行するなどの理由により、起動時に毎回 ArcGIS Online / Portal for ArcGIS にログインすることができない場合は、取得したライセンス情報を最大 30 日までローカルに保存しておくことができます。
 
- ���̕��@���g�p����ꍇ�A���Ȃ��Ƃ� 30 ���� 1 ��̓A�v���P�[�V�������� ArcGIS Online / Portal for ArcGIS �Ƀ��O�C�����A���[�J���̃��C�Z���X�����X�V����K�v������܂��B�Ō�Ƀ��O�C�����Ă��� 30 ���ȏ�o�߂����ꍇ�́A���C�Z���X�������ƂȂ� Basic ���C�Z���X��K�v�Ƃ���@�\���g�p�ł��Ȃ��Ȃ�܂��B
+ この方法を使用する場合、少なくとも 30 日に 1 回はアプリケーションから ArcGIS Online / Portal for ArcGIS にログインし、ローカルのライセンス情報を更新する必要があります。最後にログインしてから 30 日以上経過した場合は、ライセンスが無効となり Basic ライセンスを必要とする機能が使用できなくなります。
 
- �ȉ��̃R�[�h���g�p���Ď擾�������C�Z���X����z��ŏo�͂��邱�Ƃ��ł��܂��B�o�͂������C�Z���X���͔C�ӂ̕��@�Ń��[�J���ɕۑ����Ă��������B
+ 以下のコードを使用して取得したライセンス情報を配列で出力することができます。出力したライセンス情報は任意の方法でローカルに保存してください。
 
  ```javascript
   do {
-   // ���C�Z���X����z��ŏo��
+   // ライセンス情報を配列で出力
    let licenseDictionary = try licenseInfo?.toJSON() as! NSDictionary?
   } catch {
-   print("���C�Z���X��񂪖����ł�")
+   print("ライセンス情報が無効です")
   }
 
-  �E�E�E�E�E�E
+  ・・・・・・
 
-  // �z�񂩂烉�C�Z���X�����쐬
+  // 配列からライセンス情報を作成
   let licenseInfo = try! AGSLicenseInfo.fromJSON(licenseDictionary!) as? AGSLicenseInfo
 
   do {
-   // ���C�Z���X�L�[��ݒ肵�ĔF��
+   // ライセンスキーを設定して認証
    let result = try AGSArcGISRuntimeEnvironment.setLicenseInfo(licenseInfo!)
   } catch let error as NSError {
    print("Error: \(error.localizedDescription)")
@@ -127,48 +128,48 @@ ArcGIS Runtime SDK �ɂ� Lite�ABasic�AStandard�AAdvanced �� 4 �̃��C�Z���X ���x
  ```
 
 
-## Basic ���C�Z���X�̔F��
+## Basic ライセンスの認証
 
-�A�v���P�[�V������ Basic ���x���ŔF�؂���ɂ́A�ȉ��� 2 �̕��@������܂��B
-
-
-1. __���C�Z���X�L�[���g�p�����F��__
- * ArcGIS Runtime Basic �̔z�z�p�b�N���w������K�v������܂�
-
-1. __ArcGIS Online / Portal for ArcGIS �ւ̃��O�C���ɂ��F��__
- *  �A�v���P�[�V�������g�p���郆�[�U�[���Ƃ� ArcGIS Online �g�D�����v����/ Portal for ArcGIS �̎w�胆�[�U�[ �A�J�E���g���K�v�ł�
- *  �A�v���P�[�V���������Ȃ��Ƃ� 30 ���� 1 ��� ArcGIS Online �g�D�����v����/ Portal for ArcGIS �փ��O�C������K�v������܂�
+アプリケーションを Basic レベルで認証するには、以下の 2 つの方法があります。
 
 
-* __���C�Z���X�L�[���g�p�����F��__
+1. __ライセンスキーを使用した認証__
+ * ArcGIS Runtime Basic の配布パックを購入する必要があります
 
-  ArcGIS Runtime Basic �̔z�z�p�b�N���w�����A�擾�������C�Z���X�L�[�𗘗p���āA�A�v���P�[�V������ Basic ���C�Z���X�ŔF�؂��邱�Ƃ��ł��܂��B
+1. __ArcGIS Online / Portal for ArcGIS へのログインによる認証__
+ *  アプリケーションを使用するユーザーごとに ArcGIS Online 組織向けプラン/ Portal for ArcGIS の指定ユーザー アカウントが必要です
+ *  アプリケーションが少なくとも 30 日に 1 回は ArcGIS Online 組織向けプラン/ Portal for ArcGIS へログインする必要があります
 
-  ArcGIS Runtime Basic �̔z�z�p�b�N�̍w���ɂ��Ă� [ESRI�W���p��](https://esrij.smartseminar.jp/public/application/add/356)�ɂ��⍇�����������BArcGIS Runtime �̔z�z�p�b�N�����w���������ꍇ�AESRI�W���p����胉�C�Z���X�L�[�����[���ɂĂ����肵�܂��B
 
-  �z�z�p�b�N�̃��C�Z���X�L�[���g�p���ăA�v���P�[�V������ Basic ���x���ŔF�؂���ɂ͈ȉ��̃R�[�h���g�p���܂��B
+* __ライセンスキーを使用した認証__
+
+  ArcGIS Runtime Basic の配布パックを購入し、取得したライセンスキーを利用して、アプリケーションを Basic ライセンスで認証することができます。
+
+  ArcGIS Runtime Basic の配布パックの購入については [ESRIジャパン](https://esrij.smartseminar.jp/public/application/add/356)にお問合せください。ArcGIS Runtime の配布パックをご購入頂いた場合、ESRIジャパンよりライセンスキーをメールにてお送りします。
+
+  配布パックのライセンスキーを使用してアプリケーションを Basic レベルで認証するには以下のコードを使用します。
 
   ```javascript
-  // ���C�Z���X�L�[��ݒ肵�ĔF��
+  // ライセンスキーを設定して認証
   do {
    let result = try AGSArcGISRuntimeEnvironment.setLicenseKey("runtimelite,1000,rud#########,day-month-year,####################")
    print("License Result: \(result.licenseStatus)")
   }
   catch let error as NSError {
-   // �F�؂Ɏ��s�����ꍇ�̓G���[���o��
+   // 認証に失敗した場合はエラーを出力
    print("Error: \(error)")
   }
   ```
 
 
-* __ArcGIS Online / Portal for ArcGIS �ւ̃��O�C���ɂ��F��__
+* __ArcGIS Online / Portal for ArcGIS へのログインによる認証__
 
- �A�v���P�[�V�����̎��s���ɁA�A�v���P�[�V�����𗘗p���郆�[�U�[���ۗL���� [ArcGIS Online �g�D�����v����](http://www.esrij.com/products/arcgis-online/plan/organization/) �������� [Portal for ArcGIS](http://www.esrij.com/products/arcgis-for-server/details/portal-for-arcgis/) �̎w�胆�[�U�[ �A�J�E���g���g�p���� ArcGIS Online / Portal for ArcGIS �Ƀ��O�C�����邱�ƂŁABasic ���C�Z���X���擾���邱�Ƃ��ł��܂��B
+ アプリケーションの実行時に、アプリケーションを利用するユーザーが保有する [ArcGIS Online 組織向けプラン](http://www.esrij.com/products/arcgis-online/plan/organization/) もしくは [Portal for ArcGIS](http://www.esrij.com/products/arcgis-for-server/details/portal-for-arcgis/) の指定ユーザー アカウントを使用して ArcGIS Online / Portal for ArcGIS にログインすることで、Basic ライセンスを取得することができます。
 
- �A�v���P�[�V�����̃R�[�h�ɂ����� ArcGIS Runtime SDK �̋@�\���Ăяo�����O�ɁA�ȉ��̃R�[�h���g�p���ă��C�Z���X���擾���܂��B
+ アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してライセンスを取得します。
 
  ```javascript
-  // ArcGIS Online / Portal for ArcGIS �փ��N�C�����F�؏����擾       
+  // ArcGIS Online / Portal for ArcGIS へロクインし認証情報を取得       
   let theURL = URL(string: "https://www.arcgis.com")
   let portal = AGSPortal(url: theURL!, loginRequired: true)
 
@@ -177,97 +178,97 @@ ArcGIS Runtime SDK �ɂ� Lite�ABasic�AStandard�AAdvanced �� 4 �̃��C�Z���X ���x
     print(error)
    }
    else {
-    // ArcGIS Online / Portal for ArcGIS ���烉�C�Z���X���擾            
+    // ArcGIS Online / Portal for ArcGIS からライセンスを取得            
     let licenseInfo = portal.portalInfo?.licenseInfo
     do {
-     // ArcGIS Runtime �Ƀ��C�Z���X��ݒ�
+     // ArcGIS Runtime にライセンスを設定
      let result = try AGSArcGISRuntimeEnvironment.setLicenseInfo(licenseInfo!)
     }
     catch let error as NSError {
      print("Error: \(error.localizedDescription)")
     }
-   �p
-  �p
+   ｝
+  ｝
  ```
 
- __�A�v���P�[�V������ ArcGIS Online / Portal for ArcGIS �ɏ�Ƀ��O�C���ł��Ȃ��ꍇ__
+ __アプリケーションが ArcGIS Online / Portal for ArcGIS に常にログインできない場合__
 
- �z�z����A�v���P�[�V�������l�b�g���[�N�ɐڑ��ł��Ȃ����Ŏ��s����Ȃǂ̗��R�ɂ��A�N�����ɖ��� ArcGIS Online / Portal for ArcGIS �Ƀ��O�C�����邱�Ƃ��ł��Ȃ��ꍇ�́A�擾�������C�Z���X�����ő� 30 ���܂Ń��[�J���ɕۑ����Ă������Ƃ��ł��܂��B
+ 配布するアプリケーションがネットワークに接続できない環境で実行するなどの理由により、起動時に毎回 ArcGIS Online / Portal for ArcGIS にログインすることができない場合は、取得したライセンス情報を最大 30 日までローカルに保存しておくことができます。
 
- ���̕��@���g�p����ꍇ�A���Ȃ��Ƃ� 30 ���� 1 ��̓A�v���P�[�V�������� ArcGIS Online / Portal for ArcGIS �Ƀ��O�C�����A���[�J���̃��C�Z���X�����X�V����K�v������܂��B�Ō�Ƀ��O�C�����Ă��� 30 ���ȏ�o�߂����ꍇ�́A���C�Z���X�������ƂȂ� Basic ���C�Z���X��K�v�Ƃ���@�\���g�p�ł��Ȃ��Ȃ�܂��B
+ この方法を使用する場合、少なくとも 30 日に 1 回はアプリケーションから ArcGIS Online / Portal for ArcGIS にログインし、ローカルのライセンス情報を更新する必要があります。最後にログインしてから 30 日以上経過した場合は、ライセンスが無効となり Basic ライセンスを必要とする機能が使用できなくなります。
 
- �o�͂������C�Z���X���͔C�ӂ̕��@�Ń��[�J���ɕۑ����Ă��������B�ȉ��̃R�[�h�ł́A���C�Z���X����z��ŏo�͂��AAGSKeychainItem �N���X���g�p���� Keychain �ɕۑ����Ă��܂��iiOS �V�~�����[�^�Ŏ��s����ꍇ�́AXcode �� Capabilities �ݒ��ʂ� [Keychain Sharing] �� ON �ɂ��Ă��������j�B
+ 出力したライセンス情報は任意の方法でローカルに保存してください。以下のコードでは、ライセンス情報を配列で出力し、AGSKeychainItem クラスを使用して Keychain に保存しています（iOS シミュレータで実行する場合は、Xcode の Capabilities 設定画面で [Keychain Sharing] を ON にしてください）。
 
   ```javascript
   var licenseDictionary: NSDictionary?
   do {
-   // ���C�Z���X����z��ŏo��
+   // ライセンス情報を配列で出力
    let licenseDictionary = try licenseInfo?.toJSON() as! NSDictionary?
   } catch {
-   print("���C�Z���X��񂪖����ł�")
+   print("ライセンス情報が無効です")
   }
-  // �o�͂����z��� Keychain �ɕۑ�
-  self.keychainItem = AGSKeychainItem(identifier: "<��ӂȒl>", accessGroup: nil, acrossDevices: false)
+  // 出力した配列を Keychain に保存
+  self.keychainItem = AGSKeychainItem(identifier: "<一意な値>", accessGroup: nil, acrossDevices: false)
   self.keychainItem.writeObject(toKeychain: licenseDictionary!, completion: { (writeError) in
    if let error = writeError {
-    print("Keychain �ւ̏������݂̃G���[ \(error)")
+    print("Keychain への書き込みのエラー \(error)")
    }
   })
 
-  �E�E�E�E�E�E
+  ・・・・・・
 
-  // Keychain ���烉�C�Z���X�����擾
-  self.keychainItem = AGSKeychainItem(identifier: "<��ӂȒl>", accessGroup: nil, acrossDevices: false)                
+  // Keychain からライセンス情報を取得
+  self.keychainItem = AGSKeychainItem(identifier: "<一意な値>", accessGroup: nil, acrossDevices: false)                
   let licenseDictionary = self.keychainItem.readObjectFromKeychain() as? NSDictionary
   let licenseInfo = try! AGSLicenseInfo.fromJSON(licenseDictionary!) as? AGSLicenseInfo
   do {
-   // ���C�Z���X�L�[��ݒ肵�ĔF��
+   // ライセンスキーを設定して認証
    let result = try AGSArcGISRuntimeEnvironment.setLicenseInfo(licenseInfo!)
   } catch let error as NSError {
    print("Error: \(error.localizedDescription)")
   }
  ```
 
-## Standard �܂��� Advanced ���C�Z���X�̔F��
+## Standard または Advanced ライセンスの認証
 
-�A�v���P�[�V������ Standard �܂��� Advanced ���x���ŔF�؂���ɂ́AArcGIS Runtime Standard �܂��� Advanced �z�z�p�b�N���w������K�v������܂��B
+アプリケーションを Standard または Advanced レベルで認証するには、ArcGIS Runtime Standard または Advanced 配布パックを購入する必要があります。
 
-ArcGIS Runtime Standard �܂��� Advanced �̔z�z�p�b�N���w�����A�擾�������C�Z���X�L�[�𗘗p���āA�A�v���P�[�V������  Standard �܂��� Advanced ���C�Z���X�ŔF�؂��邱�Ƃ��ł��܂��B
+ArcGIS Runtime Standard または Advanced の配布パックを購入し、取得したライセンスキーを利用して、アプリケーションを  Standard または Advanced ライセンスで認証することができます。
 
-ArcGIS Runtime Standard �܂��� Advanced �z�z�p�b�N�̍w���ɂ��Ă� [ESRI�W���p��](https://esrij.smartseminar.jp/public/application/add/356)�ɂ��⍇�����������BArcGIS Runtime �̔z�z�p�b�N�����w���������ꍇ�AESRI�W���p����胉�C�Z���X�L�[�����[���ɂĂ����肵�܂��B
+ArcGIS Runtime Standard または Advanced 配布パックの購入については [ESRIジャパン](https://esrij.smartseminar.jp/public/application/add/356)にお問合せください。ArcGIS Runtime の配布パックをご購入頂いた場合、ESRIジャパンよりライセンスキーをメールにてお送りします。
 
-�z�z�p�b�N�̃��C�Z���X�L�[���g�p���ăA�v���P�[�V������ Standard �܂��� Advanced ���x���ŔF�؂���ɂ͈ȉ��̃R�[�h���g�p���܂��B
+配布パックのライセンスキーを使用してアプリケーションを Standard または Advanced レベルで認証するには以下のコードを使用します。
 
 ```javascript
-// ���C�Z���X�L�[��ݒ肵�ĔF��
+// ライセンスキーを設定して認証
 do {
  let result = try AGSArcGISRuntimeEnvironment.setLicenseKey("runtimelite,1000,rud#########,day-month-year,####################")
  print("License Result: \(result.licenseStatus)")
 }
 catch let error as NSError {
- // �F�؂Ɏ��s�����ꍇ�̓G���[���o��
+ // 認証に失敗した場合はエラーを出力
  print("Error: \(error)")
 }
 ```
 
 
-## �A�v���P�[�V�����ւ̋A���̒ǉ�
+## アプリケーションへの帰属の追加
 
-* __�n�}�f�[�^�ւ̃N���W�b�g__
+* __地図データへのクレジット__
 
- �A�v���P�[�V�������Ŏg�p����Ă��� ArcGIS Online �ɂ���Ē񋟂���Ă���n�}�T�[�r�X�̃N���W�b�g��񂪃A�v���P�[�V�������Ŗ��L����Ă���K�v������܂��B�L�ڂ���K�v������e�L�X�g�͒n�}�T�[�r�X�� REST �T�[�r�X�G���h�|�C���g�ɂ����� "Copyright Text" �Z�N�V�����ɋL�ڂ���Ă��܂��B
+ アプリケーション内で使用されている ArcGIS Online によって提供されている地図サービスのクレジット情報がアプリケーション内で明記されている必要があります。記載する必要があるテキストは地図サービスの REST サービスエンドポイントにおいて "Copyright Text" セクションに記載されています。
 
- �Ⴆ�� World_Imagery �T�[�r�X �𗘗p����ꍇ�ɋL�ڂ���e�L�X�g�͈ȉ��̒ʂ�ł��B
+ 例えば World_Imagery サービス を利用する場合に記載するテキストは以下の通りです。
 
  *Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community*
 
- �� ��L�e�L�X�g�� [World_Imagery �T�[�r�X�� REST �G���h�|�C���g](https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer)�� "Copyright Text" �Z�N�V�����ɋL�ڂ���Ă��܂��B
+ ※ 上記テキストは [World_Imagery サービスの REST エンドポイント](https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer)の "Copyright Text" セクションに記載されています。
 
 
- * __Esri �A���̕\��__
+ * __Esri 帰属の表示__
 
-  �J�������A�v���P�[�V�����̃}�b�v��� Esri �ւ̋A����\������K�v������܂��BArcGIS Runtime SDK ���g�p���ĊJ�������A�v���P�[�V�����ł́A�}�b�v��ʂɃf�t�H���g�� "Powered by Esri" �̋A�����\������Ă��܂��B���̋A�������̗v�f�Əd�Ȃ�Ȃ��悤�ɒ��ӂ��Ă��������B
+  開発したアプリケーションのマップ上に Esri への帰属を表示する必要があります。ArcGIS Runtime SDK を使用して開発したアプリケーションでは、マップ画面にデフォルトで "Powered by Esri" の帰属が表示されています。この帰属が他の要素と重ならないように注意してください。
 
 
-[:back: ���C���y�[�W�֖߂�](https://github.com/EsriJapan/arcgis-dev-resources/blob/gh-pages/README.md)
+[:back: メインページへ戻る](https://github.com/EsriJapan/arcgis-dev-resources/blob/gh-pages/README.md)
 
