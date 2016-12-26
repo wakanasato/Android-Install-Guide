@@ -63,10 +63,10 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
 
  1. 次に、アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してアプリケーションにコピーしたライセンスキーを設定します。
 
-```
+　```
  // ライセンスキーを設定して認証
  ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud#########,day-month-year,####################");
-```
+　```
 
 
 * __ArcGIS Online / Portal for ArcGIS へのログインによる認証__
@@ -75,56 +75,52 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
 
  アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してライセンスを取得します。
 
- ```Android java
-  // ArcGIS Online / Portal for ArcGIS へロクインし認証情報を取得       
-  let theURL = URL(string: "https://www.arcgis.com")
-  let portal = AGSPortal(url: theURL!, loginRequired: true)
+ ```
+  // namedユーザー情報で ArcGIS Online または ArcGISポータルに接続します。   
+  UserCredential credential = new UserCredential("user", "password");
+  
+  //ArcGIS Online またはご自分の portal の URL を設定します。
+  Portal portal = new Portal("https://your-org.arcgis.com/");
+  portal.setCredential(credential);
 
-  portal.load { (error) in
-   if let error = error {
-    print(error)
-   }
-   else {
-    // ArcGIS Online / Portal for ArcGIS からライセンスを取得            
-    let licenseInfo = portal.portalInfo?.licenseInfo
-    do {
-     // ArcGIS Runtime にライセンスを設定
-     let result = try AGSArcGISRuntimeEnvironment.setLicenseInfo(licenseInfo!)
+  // ポータルの情報を同期してロードします。
+  portal.loadAsync();
+  portal.addDoneLoadingListener(new Runnable() {
+
+    @Override
+    public void run() {
+      // ポータルからライセンス情報を取得します。
+      LicenseInfo licenseInfo = null;
+      try {
+        licenseInfo = portal.getPortalInfo().getLicenseInfo();
+      } catch (Exception e) {
+        // エラーステータスが返ってきた場合のコードをここに作成します。
+      }
+      // 文字列のライセンス情報を取得します。
+      // ※ローカルにライセンス情報を保存する場合はここで保存処理を行うコードを追加します。
+      String licenseJson = licenseInfo.toJson();
+
+      // 取得したライセンスを設定します。
+      ArcGISRuntimeEnvironment.setLicense(licenseInfo);
+
     }
-    catch let error as NSError {
-     print("Error: \(error.localizedDescription)")
-    }
-   ｝
-  ｝
  ```
 
  __アプリケーションが ArcGIS Online / Portal for ArcGIS に常にログインできない場合__
 
  配布するアプリケーションがネットワークに接続できない環境で実行するなどの理由により、起動時に毎回 ArcGIS Online / Portal for ArcGIS にログインすることができない場合は、取得したライセンス情報を最大 30 日までローカルに保存しておくことができます。
 
- この方法を使用する場合、少なくとも 30 日に 1 回はアプリケーションから ArcGIS Online / Portal for ArcGIS にログインし、ローカルのライセンス情報を更新する必要があります。最後にログインしてから 30 日以上経過した場合は、ライセンスが無効となり Basic ライセンスを必要とする機能が使用できなくなります。
+ この方法を使用する場合、少なくとも 30 日に 1 回はアプリケーションから ArcGIS Online / Portal for ArcGIS にログインし、ローカルのライセンス情報を更新する必要があります。最後にログインしてから 30 日以上経過した場合は、ライセンスが無効となり Lite ライセンスを必要とする機能が使用できなくなります。
 
  以下のコードを使用して取得したライセンス情報を配列で出力することができます。出力したライセンス情報は任意の方法でローカルに保存してください。
+ 以下のコードのように、を使用して取得したライセンス情報を配列で出力することができます。出力したライセンス情報は任意の方法でローカルに保存してください。
 
- ```javascript
-  do {
-   // ライセンス情報を配列で出力
-   let licenseDictionary = try licenseInfo?.toJSON() as! NSDictionary?
-  } catch {
-   print("ライセンス情報が無効です")
-  }
+ ```
+  // オンラインで作成し、文字列で保存したライセンス情報を取得します。
+  LicenseInfo licenseInfo = new LicenseInfo(licenseJSONstring);
 
-  ・・・・・・
-
-  // 配列からライセンス情報を作成
-  let licenseInfo = try! AGSLicenseInfo.fromJSON(licenseDictionary!) as? AGSLicenseInfo
-
-  do {
-   // ライセンスキーを設定して認証
-   let result = try AGSArcGISRuntimeEnvironment.setLicenseInfo(licenseInfo!)
-  } catch let error as NSError {
-   print("Error: \(error.localizedDescription)")
-  }
+  // 作成したライセンス情報を設定します。
+  ArcGISRuntimeEnvironment.setLicense(licenseInfo);
  ```
 
 
