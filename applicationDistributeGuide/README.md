@@ -15,7 +15,7 @@ ArcGIS Runtime SDK for Android を使用して開発したアプリケーショ�
 
 ## 使用するライセンスの選択
 
-ArcGIS Runtime SDK には Lite、Basic の 2 つのライセンス レベルがあります。開発したアプリケーションが使用する機能に応じて、適切なライセンス レベルを選択してください。
+ArcGIS Runtime SDK for Android には Lite、Basic の 2 つのライセンス レベルがあります。開発したアプリケーションが使用する機能に応じて、適切なライセンス レベルを選択してください。
 
 各ライセンスで利用可能な機能の概要は以下の表をご参照ください。
 
@@ -24,7 +24,7 @@ ArcGIS Runtime SDK には Lite、Basic の 2 つのライセンス レベルが�
 | Lite | ・地図表示<br>・フィーチャの表示/検索<br>・ルート検索<br>・住所検索 |
 | Basic | ・Lite ライセンスで利用できるすべての機能<br>・フィーチャ編集<br>・ArcGIS Online の解析サービスの使用<br>・ArcGIS Online/Portal for ArcGIS のコンテンツの編集 |
 
-ライセンスの詳細は[ESRIジャパン製品ページ](http://www.esrij.com/products/arcgis-runtime-sdk-for-ios/details/license/)をご参照ください。
+ライセンスの詳細は[ESRIジャパン製品ページ](http://www.esrij.com/products/arcgis-runtime-sdk-for-android/details/license/)をご参照ください。
 
 ## ライセンスの認証
 
