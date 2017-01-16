@@ -15,7 +15,7 @@ ArcGIS Runtime SDK for Android を使用して開発したアプリケーショ�
 
 ## 使用するライセンスの選択
 
-ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライセンス レベルがあります。開発したアプリケーションが使用する機能に応じて、適切なライセンス レベルを選択してください。
+ArcGIS Runtime SDK には Lite、Basic の 2 つのライセンス レベルがあります。開発したアプリケーションが使用する機能に応じて、適切なライセンス レベルを選択してください。
 
 各ライセンスで利用可能な機能の概要は以下の表をご参照ください。
 
