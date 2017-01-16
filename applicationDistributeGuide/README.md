@@ -24,9 +24,6 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
 |:-----|:-----|
 | Lite | ・地図表示<br>・フィーチャの表示/検索<br>・ルート検索<br>・住所検索 |
 | Basic | ・Lite ライセンスで利用できるすべての機能<br>・フィーチャ編集<br>・ArcGIS Online の解析サービスの使用<br>・ArcGIS Online/Portal for ArcGIS のコンテンツの編集 |
-| Standard | ・Basic ライセンスで利用できるすべての機能<br>・画像ファイルやシェープファイルなどの直接参照<br>・ローカル サーバーの標準的な機能（WPF API のみ)|
-| Advanced | ・Standard ライセンスで利用できるすべての機能<br>・ローカル サーバーの高度な機能（WPF API のみ) |
-
 
 ライセンスの詳細は[ESRIジャパン製品ページ](http://www.esrij.com/products/arcgis-runtime-sdk-for-ios/details/license/)をご参照ください。
 
@@ -97,7 +94,6 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
         // エラーステータスが返ってきた場合のコードをここに作成します。
       }
       // 文字列のライセンス情報を取得します。
-      // ※ローカルにライセンス情報を保存する場合はここで保存処理を行うコードを追加します。
       String licenseJson = licenseInfo.toJson();
 
       // 取得したライセンスを設定します。
@@ -145,18 +141,14 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
 
   配布パックのライセンスキーを使用してアプリケーションを Basic レベルで認証するには以下のコードを使用します。
 
-  ```javascript
+  ```
   // ライセンスキーを設定して認証
-  do {
-   let result = try AGSArcGISRuntimeEnvironment.setLicenseKey("runtimelite,1000,rud#########,day-month-year,####################")
-   print("License Result: \(result.licenseStatus)")
-  }
-  catch let error as NSError {
-   // 認証に失敗した場合はエラーを出力
-   print("Error: \(error)")
+  LicenseResult licenseResult = ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud#########,day-month-year,####################");
+  if(licenseResult.equals(LicenseStatus.INVALID)){
+      // ログインに失敗したときの処理を記述する
+      return;
   }
   ```
-
 
 * __ArcGIS Online / Portal for ArcGIS へのログインによる認証__
 
