@@ -10,7 +10,6 @@ ArcGIS Runtime SDK for Android を使用して開発したアプリケーショ�
 1. __[ライセンスの認証](#ライセンスの認証)__
   * __[Lite ライセンスの認証](#lite-ライセンスの認証)__
   * __[Basic ライセンスの認証](#basic-ライセンスの認証)__
-  * __[Standard または Advanced ライセンスの認証](#standard-または-advanced-ライセンスの認証)__
 1. __[アプリケーションへの帰属の追加](#アプリケーションへの帰属の追加)__
 
 
@@ -156,7 +155,7 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
 
  アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してライセンスを取得します。
 
- ```javascript
+ ```java
   // ArcGIS Online / Portal for ArcGIS へロクインし認証情報を取得       
   let theURL = URL(string: "https://www.arcgis.com")
   let portal = AGSPortal(url: theURL!, loginRequired: true)
@@ -216,29 +215,6 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
    print("Error: \(error.localizedDescription)")
   }
  ```
-
-## Standard または Advanced ライセンスの認証
-
-アプリケーションを Standard または Advanced レベルで認証するには、ArcGIS Runtime Standard または Advanced 配布パックを購入する必要があります。
-
-ArcGIS Runtime Standard または Advanced の配布パックを購入し、取得したライセンスキーを利用して、アプリケーションを  Standard または Advanced ライセンスで認証することができます。
-
-ArcGIS Runtime Standard または Advanced 配布パックの購入については [ESRIジャパン](https://esrij.smartseminar.jp/public/application/add/356)にお問合せください。ArcGIS Runtime の配布パックをご購入頂いた場合、ESRIジャパンよりライセンスキーをメールにてお送りします。
-
-配布パックのライセンスキーを使用してアプリケーションを Standard または Advanced レベルで認証するには以下のコードを使用します。
-
-```javascript
-// ライセンスキーを設定して認証
-do {
- let result = try AGSArcGISRuntimeEnvironment.setLicenseKey("runtimelite,1000,rud#########,day-month-year,####################")
- print("License Result: \(result.licenseStatus)")
-}
-catch let error as NSError {
- // 認証に失敗した場合はエラーを出力
- print("Error: \(error)")
-}
-```
-
 
 ## アプリケーションへの帰属の追加
 
