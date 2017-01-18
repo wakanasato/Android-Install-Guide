@@ -42,16 +42,14 @@ Android Studio のビルド ツールは Gradle を使用し、mavenリポジト
 ArcGIS Runtime SDK for Android がサポートする最新の動作環境は、[ESRIジャパン 製品ページ（動作環境）](https://www.esrij.com/products/arcgis-runtime-sdk-for-Android/environments/)をご参照ください。
 
 
-## マップとシーン
-
+## マップとシーン☆
 100.x では、`AGSMap` オブジェクト（2D表示用）と `AGSScene` オブジェクト（3D表示用）<sup>※1</sup> を API のコアとして、ArcGIS プラットフォームの Web GIS 機能を迅速に利用できるようになりました。
 
 `AGSMap` オブジェクトと `AGSScene` オブジェクトは 、それらを表示する View と分離されています。`AGSMap` オブジェクトと `AGSScene` オブジェクトには 、操作レイヤー、ベースマップ、ブックマーク等の ArcGIS 固有のデータを設定でき、アプリケーションで利用することができます。
 
 <sup>※1</sup> バージョン100.0 では、3D 関連の機能はベータ機能として提供されています
 
-## ビュー
-
+## ビュー☆
 `AGSMapView`（2D表示用）と `AGSSceneView`（3D表示用）は、UI コンポーネントです。`AGSMapView` クラスの `map` プロパティに、`AGSMap` オブジェクトを、`AGSMapSceneView` クラスの `scene` プロパティには `AGSScene` オブジェクトを設定します。
 
 100.x では、以下のようにマップを表示します。
@@ -62,8 +60,7 @@ let map = AGSMap(basemap:AGSBasemap.imagery())
 self.mapView.map = map
 ```
 
-## レイヤー クラス名の変更
-
+## レイヤー クラス名の変更☆
 各レイヤーのクラス名が以下のように変更されています。
 
 |レイヤー|10.2.x のクラス名|100.x のクラス名|
@@ -79,32 +76,35 @@ self.mapView.map = map
 * Bing Maps レイヤー（`BingMapsLayer`）
 * Web タイル レイヤー（`AGSWebTiledLayer`）
 
-100.x でサポートされているレイヤーの種類については、[ArcGIS Runtime SDK for Android: レイヤー（英語）](https://developers.arcgis.com/Android/latest/swift/guide/layers.htm)をご参照ください。
+100.x でサポートされているレイヤーの種類については、[ArcGIS Runtime SDK for Android: レイヤー（英語）](https://developers.arcgis.com/android/latest/guide/layers.htm)をご参照ください。
 
 作成した各レイヤーは、以下の方法でマップに追加します。
-```javascript
+```java
 // 操作レイヤーとしてマップに追加する
-self.map.operationalLayers.addObject(arcgis_map_image_layer)
+ArcGISMap mArcGISMap = new ArcGISMap();
+mArcGISMap.getOperationalLayers().add(arcgis_map_image_layer)
+//self.map.operationalLayers.addObject(arcgis_map_image_layer)
 
 // ベースマップとしてマップに追加する
-self.map.basemap = AGSBasemap(baseLayer: arcgis_tiled_layer)
+Basemap mBasemap = new Basemap();
+mBasemap.getBaseLayers().add(arcgis_tiled_layer);
+//self.map.basemap = AGSBasemap(baseLayer: arcgis_tiled_layer)
 ```
 
 
 ## フィーチャ レイヤーの表示
-
 フィーチャ サービスや端末のローカルに格納されたジオデータベースのデータをマップに表示するにはフィーチャ レイヤーを使用します。
-フィーチャ レイヤーを表示するには、はじめにフィーチャ テーブルを作成します（フィーチャ サービスのデータをフィーチャ レイヤーで表示する場合は `AGSArcGISFeatureTable` オブジェクト、ジオデータベースのデータを表示する場合は `AGSGeodatabaseFeatureTable` オブジェクトを使用します）。次に作成したフィーチャ テーブルを引数として `AGSFeatureLayer` オブジェクトを作成し、`AGSMap` オブジェクトの `OperationalLayers` に追加します。
+フィーチャ レイヤーを表示するには、はじめにフィーチャ テーブルを作成します（フィーチャ サービスのデータをフィーチャ レイヤーで表示する場合は `ArcGISFeatureTable` オブジェクト、ジオデータベースのデータを表示する場合は `GeodatabaseFeatureTable` オブジェクトを使用します）。次に作成したフィーチャ テーブルを引数として `FeatureLayer` オブジェクトを作成し、`ArcGISMap` オブジェクトの `OperationalLayers` に追加します。
 
-次のコードは、フィーチャ サービスのデータを `AGSFeatureLayer` としてマップに追加する方法を示しています。
+次のコードは、フィーチャ サービスのデータを `FeatureLayer` としてマップに追加する方法を示しています。
 
 ```java
 // フィーチャ サービスの URL からフィーチャ テーブルを作成
-let featureTable = AGSServiceFeatureTable(url: URL(string: "https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/all_Japan_shikuchoson/FeatureServer/0")!)
+ServiceFeatureTable serviceFeatureTable = new ServiceFeatureTable("https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/all_Japan_shikuchoson/FeatureServer/0");
 // フィーチャ テーブルからフィーチャ レイヤーを作成
-let featureLayer = AGSFeatureLayer(featureTable: featureTable)
+FeatureLayer featureLayer = new FeatureLayer(serviceFeatureTable);
 // フィーチャ レイヤーをマップの操作レイヤーに追加
-self.map.operationalLayers.add(featureLayer)
+mArcGISMap.getOperationalLayers().add(featureLayer);
 ```
 
 ## フィーチャの操作
@@ -218,57 +218,33 @@ mapView.getGraphicsOverlays().add(graphicsOverlay);
 
 ## ジオメトリとジオメトリ ビルダー
 
-`AGSGeometry` オブジェクトのコンストラクタを使用すると、既知の座標を使用してジオメトリを作成できますが、作成後にそのジオメトリを変更することはできません。
+`Geometry` オブジェクトのコンストラクタを使用すると、既知の座標を使用してジオメトリを作成できますが、作成後にそのジオメトリを変更することはできません。
 
-ジオメトリ ビルダー（`AGSGeometryBuilder`）を使用すると、ゼロから新しいジオメトリを作成したり、既存のジオメトリを基に、ジオメトリを変更することができます。詳細は、[ArcGIS Runtime SDK for Android: ジオメトリの編集（英語）](https://developers.arcgis.com/Android/latest/swift/guide/edit-geometries.htm)をご参照ください 。
-
-## スケッチ エディター
-スケッチ エディター（`AGSSketchEditor`）を使用すると、ユーザーがマップ上で対話的にジオメトリをスケッチすることができます。
-
-次のコードは、`AGSSketchEditor` の使用方法の例を示しています。
-
-```javascript
-// マップ ビューにスケッチ エディターを設定
-self.sketchEditor = AGSSketchEditor()
-self.mapView.sketchEditor =  
-// ジオメトリの種類を設定してスケッチを開始
-self.sketchEditor
-self.sketchEditor.start(with: AGSGeometryType.polygon)
-// スケッチ中のジオメトリの更新を監視
-NotificationCenter.default.addObserver(self, selector: #selector(ViewController.respondToGeometryChanged), name: NSNotification.Name.AGSSketchEditorGeometryDidChange, object: nil)
-
-・・・・・・
-
-func respondToGeometryChanged() {
-  // ジオメトリが更新された際の処理
-}
-```
+ジオメトリ ビルダー（`GeometryBuilder`）を使用すると、ゼロから新しいジオメトリを作成したり、既存のジオメトリを基に、ジオメトリを変更することができます。詳細は、[ArcGIS Runtime SDK for Android: ジオメトリの編集（英語）](https://developers.arcgis.com/android/latest/guide/geometries.htm)をご参照ください 。
 
 ## ローダブル パターン
 
 データを非同期でロードして状態を初期化するマップやレイヤー等のリソースは、ローダブル パターンが採用されています。各リソースのプロパティにアクセスするには、ローダブル パターンを使用して、リソースがロードされた後にアクセスすることが推奨されます。ローダブル パターンは、ロード状態の振る舞いをより均一にして且つ一貫性を持たせることで、非同期性をより明示的にします。ローダブル パターンでは、各リソースは自動的にリソースの状態をロードしません。それらは、開発者が明示的に実行したときに、遅延ロードします。
 各リソースの状態は、`NotLoaded（ロードが開始していない`、`Loading（ロード中）`、`Loaded（ロードに成功）`、`FailedToLoad（ロードに失敗）` のいずれかで監視することもできます。
 
-詳細は、[ArcGIS Runtime SDK for Android: ローダブル パターン（英語）](https://developers.arcgis.com/Android/latest/swift/guide/loadable-pattern.htm)をご参照ください。
+詳細は、[ArcGIS Runtime SDK for Android: ローダブル パターン（英語）](https://developers.arcgis.com/android/latest/guide/loadable-pattern.htm)をご参照ください。
 
 次のコードは、ローダブル パターンの基本的な使用方法の例を示しています。
-```javascript
-self.featureLayer.load(completion: {(error) -> Void in
-    if let error = error {
-        print(error)
-    }else {
-        // フィーチャ レイヤーのロードに成功
-    }
-})
+```java
+FeatureLayer featureLayer = new FeatureLayer(serviceFeatureTable);
+if(featureLayer.getLoadStatus().equals(LoadStatus.FAILED_TO_LOAD)){
+    Log.e("eTag","error");
+}else{
+    // フィーチャ レイヤーのロードに成功
+}
 ```
 
-## ブロックを使用した非同期プログラミング
-
+## ブロックを使用した非同期プログラミング☆
 非同期操作を実行するメソッドは、完了ブロックを引数として受け取ります。ブロックは操作が正常に完了したとき、または、エラーが発生したときに呼び出されます。操作が成功すると、その操作の結果がブロックに渡されます。それ以外の場合はエラーが渡されます。
 これは、デリゲートを使用して各非同期操作の結果とエラーをハンドリングしていた 10.2.x のプログラミング方法を置き換えます。
 
 次のコードは、例として端末の GPS の位置情報の取得開始の操作結果をハンドリングする方法を示しています。
-```javascript
+```java
 self.mapView.locationDisplay.start(completion: { (error) -> Void in
   if let error = error {
     // GPS の位置情報の取得に失敗
