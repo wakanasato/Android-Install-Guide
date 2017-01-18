@@ -1,31 +1,31 @@
-# �A�v���P�[�V�����̈ڍs�iAndroid�j
-## �ڍs�K�C�h�ɂ���
+# アプリケーションの移行（Android）
+## 移行ガイドについて
 
-���̈ڍs�K�C�h�́A���܂� ArcGIS Runtime SDK for Android �o�[�W���� 10.2.x ���g�p���ăA�v���P�[�V�������J������Ă����J���Ҍ����̃K�C�h�ł��B
+この移行ガイドは、今まで ArcGIS Runtime SDK for Android バージョン 10.2.x を使用してアプリケーションを開発されていた開発者向けのガイドです。
 
-ArcGIS Runtime SDK �o�[�W���� 100.x �͐V�����A�[�L�e�N�`�����g�p���ă[������J�����ꂽ������� ArcGIS Runtime �ł��B���̃o�[�W�����A�b�v�ɔ��� API �̍Đ݌v���s�Ȃ��Ă��܂��B���̃h�L�������g�ł́A�o�[�W���� 100.x �̕ύX�_�ɂ��Đ������܂��B
+ArcGIS Runtime SDK バージョン 100.x は新しいアーキテクチャを使用してゼロから開発された次世代の ArcGIS Runtime です。このバージョンアップに伴い API の再設計が行なわれています。このドキュメントでは、バージョン 100.x の変更点について説明します。
 
-ArcGIS Runtime SDK for Android �Ɋւ��ẮA[ESRI�W���p�� ���i�y�[�W](https://www.esrij.com/products/arcgis-runtime-sdk-for-Android)�����Q�Ƃ��������B
+ArcGIS Runtime SDK for Android に関しては、[ESRIジャパン 製品ページ](https://www.esrij.com/products/arcgis-runtime-sdk-for-Android)をご参照ください。
 
-�ȉ��́A�o�[�W���� 100.x �̎�ȕύX�_�ł��B
+以下は、バージョン 100.x の主な変更点です。
 
-* __[Gradle�t�@�C���̕ύX](#Gradle �Q�ƃv���W�F�N�g�̕ύX)__
-* __[�}�b�v�ƃV�[��](#�}�b�v�ƃV�[��)__
-* __[�r���[](#�r���[)__
-* __[���C���[ �N���X���̕ύX](#���C���[-�N���X���̕ύX)__
-* __[�t�B�[�`�� ���C���[�̕\��](#�t�B�[�`��-���C���[�̕\��)__
-* __[�t�B�[�`���̑���](#�t�B�[�`���̑���)__
-* __[�ʑ����\��](#�ʑ����\��)__
-* __[�O���t�B�b�N�X �I�[�o�[���C](#�O���t�B�b�N�X-�I�[�o�[���C)__
-* __[�W�I���g���ƃW�I���g�� �r���_�[](#�W�I���g���ƃW�I���g��-�r���_�[)__
-* __[�X�P�b�` �G�f�B�^�[](#�X�P�b�`-�G�f�B�^�[)__
-* __[���[�_�u�� �p�^�[��](#���[�_�u��-�p�^�[��)__
-* __[�u���b�N���g�p�����񓯊��v���O���~���O](#�u���b�N���g�p�����񓯊��v���O���~���O)__
-* __[���m�̐�������](#���m�̐�������)__
+* __[Gradleファイルの変更](#Gradle 参照プロジェクトの変更)__
+* __[マップとシーン](#マップとシーン)__
+* __[ビュー](#ビュー)__
+* __[レイヤー クラス名の変更](#レイヤー-クラス名の変更)__
+* __[フィーチャ レイヤーの表示](#フィーチャ-レイヤーの表示)__
+* __[フィーチャの操作](#フィーチャの操作)__
+* __[個別属性表示](#個別属性表示)__
+* __[グラフィックス オーバーレイ](#グラフィックス-オーバーレイ)__
+* __[ジオメトリとジオメトリ ビルダー](#ジオメトリとジオメトリ-ビルダー)__
+* __[スケッチ エディター](#スケッチ-エディター)__
+* __[ローダブル パターン](#ローダブル-パターン)__
+* __[ブロックを使用した非同期プログラミング](#ブロックを使用した非同期プログラミング)__
+* __[既知の制限事項](#既知の制限事項)__
 
-## Gradle �Q�ƃv���W�F�N�g�̕ύX
+## Gradle 参照プロジェクトの変更
 
-Android Studio �̃r���h �c�[���� Gradle ���g�p���Amaven���|�W�g���ƃ��C�u�����̎Q�Ƃ�ύX���܂��B
+Android Studio のビルド ツールは Gradle を使用し、mavenリポジトリとライブラリの参照を変更します。
 
 ```
     repositories {
@@ -39,235 +39,247 @@ Android Studio �̃r���h �c�[���� Gradle ���g�p���Amaven���|�W�g���ƃ��C�u�����̎
     }
 ```
 
-ArcGIS Runtime SDK for Android ���T�|�[�g����ŐV�̓�����́A[ESRI�W���p�� ���i�y�[�W�i������j](https://www.esrij.com/products/arcgis-runtime-sdk-for-Android/environments/)�����Q�Ƃ��������B
+ArcGIS Runtime SDK for Android がサポートする最新の動作環境は、[ESRIジャパン 製品ページ（動作環境）](https://www.esrij.com/products/arcgis-runtime-sdk-for-Android/environments/)をご参照ください。
 
 
-## �}�b�v�ƃV�[��
+## マップとシーン
 
-100.x �ł́A`AGSMap` �I�u�W�F�N�g�i2D�\���p�j�� `AGSScene` �I�u�W�F�N�g�i3D�\���p�j<sup>��1</sup> �� API �̃R�A�Ƃ��āAArcGIS �v���b�g�t�H�[���� Web GIS �@�\��v���ɗ��p�ł���悤�ɂȂ�܂����B
+100.x では、`AGSMap` オブジェクト（2D表示用）と `AGSScene` オブジェクト（3D表示用）<sup>※1</sup> を API のコアとして、ArcGIS プラットフォームの Web GIS 機能を迅速に利用できるようになりました。
 
-`AGSMap` �I�u�W�F�N�g�� `AGSScene` �I�u�W�F�N�g�� �A������\������ View �ƕ�������Ă��܂��B`AGSMap` �I�u�W�F�N�g�� `AGSScene` �I�u�W�F�N�g�ɂ� �A���샌�C���[�A�x�[�X�}�b�v�A�u�b�N�}�[�N���� ArcGIS �ŗL�̃f�[�^��ݒ�ł��A�A�v���P�[�V�����ŗ��p���邱�Ƃ��ł��܂��B
+`AGSMap` オブジェクトと `AGSScene` オブジェクトは 、それらを表示する View と分離されています。`AGSMap` オブジェクトと `AGSScene` オブジェクトには 、操作レイヤー、ベースマップ、ブックマーク等の ArcGIS 固有のデータを設定でき、アプリケーションで利用することができます。
 
-<sup>��1</sup> �o�[�W����100.0 �ł́A3D �֘A�̋@�\�̓x�[�^�@�\�Ƃ��Ē񋟂���Ă��܂�
+<sup>※1</sup> バージョン100.0 では、3D 関連の機能はベータ機能として提供されています
 
-## �r���[
+## ビュー
 
-`AGSMapView`�i2D�\���p�j�� `AGSSceneView`�i3D�\���p�j�́AUI �R���|�[�l���g�ł��B`AGSMapView` �N���X�� `map` �v���p�e�B�ɁA`AGSMap` �I�u�W�F�N�g���A`AGSMapSceneView` �N���X�� `scene` �v���p�e�B�ɂ� `AGSScene` �I�u�W�F�N�g��ݒ肵�܂��B
+`AGSMapView`（2D表示用）と `AGSSceneView`（3D表示用）は、UI コンポーネントです。`AGSMapView` クラスの `map` プロパティに、`AGSMap` オブジェクトを、`AGSMapSceneView` クラスの `scene` プロパティには `AGSScene` オブジェクトを設定します。
 
-100.x �ł́A�ȉ��̂悤�Ƀ}�b�v��\�����܂��B
+100.x では、以下のようにマップを表示します。
 ```javascript
-// �x�[�X�}�b�v���w�肵�ă}�b�v��������
+// ベースマップを指定してマップを初期化
 let map = AGSMap(basemap:AGSBasemap.imagery())
-// �}�b�v�r���[�Ƀ}�b�v��ݒ�
+// マップビューにマップを設定
 self.mapView.map = map
 ```
 
-## ���C���[ �N���X���̕ύX
+## レイヤー クラス名の変更
 
-�e���C���[�̃N���X�����ȉ��̂悤�ɕύX����Ă��܂��B
+各レイヤーのクラス名が以下のように変更されています。
 
-|���C���[|10.2.x �̃N���X��|100.x �̃N���X��|
+|レイヤー|10.2.x のクラス名|100.x のクラス名|
 |:--:|:--:|:--:|
-|ArcGIS Server �_�C�i�~�b�N �}�b�v �T�[�r�X ���C���[|AGSDynamicMapServiceLayer|AGSArcGISMapImageLayer|
-|�^�C�� �}�b�v �T�[�r�X ���C���[|AGSTiledMapServiceLayer|AGSArcGISTiledLayer|
-|�^�C�� �p�b�P�[�W ���C���[|AGSLocalTiledLayer|AGSArcGISTiledLayer|
+|ArcGIS Server ダイナミック マップ サービス レイヤー|ArcGISDynamicMapServiceLayer|ArcGISMapImageLayer|
+|タイル マップ サービス レイヤー|ArcGISTiledMapServiceLayer|ArcGISTiledLayer|
+|タイル パッケージ レイヤー|ArcGISLocalTiledLayer|ArcGISTiledLayer|
 
-���o�[�W������ 100.0 �ł́A10.2.x �Œ񋟂���Ă����A�ȉ��̃��C���[���T�|�[�g����Ă��܂���̂ŁA�����ӂ��������B
-* WMS �T�[�r�X ���C���[�i`AGSWMSLayer`�j
-* WMTS �T�[�r�X ���C���[�i`AGSWMTSLayer`�j
-* OpenStreetMap ���C���[�i`AGSOpenStreetMapLayer`�j
-* Bing Maps ���C���[�i`AGSBingMapLayer`�j
-* Web �^�C�� ���C���[�i`AGSWebTiledLayer`�j
+現バージョンの 100.0 では、10.2.x で提供されていた、以下のレイヤーがサポートされていませんので、ご注意ください。
+* WMS サービス レイヤー（`WMSLayer`）
+* WMTS サービス レイヤー（`WMTSLayer`）
+* OpenStreetMap レイヤー（`OpenStreetMapLayer`）
+* Bing Maps レイヤー（`BingMapsLayer`）
+* Web タイル レイヤー（`AGSWebTiledLayer`）
 
-100.x �ŃT�|�[�g����Ă��郌�C���[�̎�ނɂ��ẮA[ArcGIS Runtime SDK for Android: ���C���[�i�p��j](https://developers.arcgis.com/Android/latest/swift/guide/layers.htm)�����Q�Ƃ��������B
+100.x でサポートされているレイヤーの種類については、[ArcGIS Runtime SDK for Android: レイヤー（英語）](https://developers.arcgis.com/Android/latest/swift/guide/layers.htm)をご参照ください。
 
-�쐬�����e���C���[�́A�ȉ��̕��@�Ń}�b�v�ɒǉ����܂��B
+作成した各レイヤーは、以下の方法でマップに追加します。
 ```javascript
-// ���샌�C���[�Ƃ��ă}�b�v�ɒǉ�����
+// 操作レイヤーとしてマップに追加する
 self.map.operationalLayers.addObject(arcgis_map_image_layer)
 
-// �x�[�X�}�b�v�Ƃ��ă}�b�v�ɒǉ�����
+// ベースマップとしてマップに追加する
 self.map.basemap = AGSBasemap(baseLayer: arcgis_tiled_layer)
 ```
 
 
-## �t�B�[�`�� ���C���[�̕\��
+## フィーチャ レイヤーの表示
 
-�t�B�[�`�� �T�[�r�X��[���̃��[�J���Ɋi�[���ꂽ�W�I�f�[�^�x�[�X�̃f�[�^���}�b�v�ɕ\������ɂ̓t�B�[�`�� ���C���[���g�p���܂��B
-�t�B�[�`�� ���C���[��\������ɂ́A�͂��߂Ƀt�B�[�`�� �e�[�u�����쐬���܂��i�t�B�[�`�� �T�[�r�X�̃f�[�^���t�B�[�`�� ���C���[�ŕ\������ꍇ�� `AGSArcGISFeatureTable` �I�u�W�F�N�g�A�W�I�f�[�^�x�[�X�̃f�[�^��\������ꍇ�� `AGSGeodatabaseFeatureTable` �I�u�W�F�N�g���g�p���܂��j�B���ɍ쐬�����t�B�[�`�� �e�[�u���������Ƃ��� `AGSFeatureLayer` �I�u�W�F�N�g���쐬���A`AGSMap` �I�u�W�F�N�g�� `OperationalLayers` �ɒǉ����܂��B
+フィーチャ サービスや端末のローカルに格納されたジオデータベースのデータをマップに表示するにはフィーチャ レイヤーを使用します。
+フィーチャ レイヤーを表示するには、はじめにフィーチャ テーブルを作成します（フィーチャ サービスのデータをフィーチャ レイヤーで表示する場合は `AGSArcGISFeatureTable` オブジェクト、ジオデータベースのデータを表示する場合は `AGSGeodatabaseFeatureTable` オブジェクトを使用します）。次に作成したフィーチャ テーブルを引数として `AGSFeatureLayer` オブジェクトを作成し、`AGSMap` オブジェクトの `OperationalLayers` に追加します。
 
-���̃R�[�h�́A�t�B�[�`�� �T�[�r�X�̃f�[�^�� `AGSFeatureLayer` �Ƃ��ă}�b�v�ɒǉ�������@�������Ă��܂��B
+次のコードは、フィーチャ サービスのデータを `AGSFeatureLayer` としてマップに追加する方法を示しています。
 
-```javascript
-// �t�B�[�`�� �T�[�r�X�� URL ����t�B�[�`�� �e�[�u�����쐬
+```java
+// フィーチャ サービスの URL からフィーチャ テーブルを作成
 let featureTable = AGSServiceFeatureTable(url: URL(string: "https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/all_Japan_shikuchoson/FeatureServer/0")!)
-// �t�B�[�`�� �e�[�u������t�B�[�`�� ���C���[���쐬
+// フィーチャ テーブルからフィーチャ レイヤーを作成
 let featureLayer = AGSFeatureLayer(featureTable: featureTable)
-// �t�B�[�`�� ���C���[���}�b�v�̑��샌�C���[�ɒǉ�
+// フィーチャ レイヤーをマップの操作レイヤーに追加
 self.map.operationalLayers.add(featureLayer)
 ```
 
-## �t�B�[�`���̑���
+## フィーチャの操作
 
-�t�B�[�`���̌�����ҏW�̓t�B�[�`�� �e�[�u�� �i`AGSArcGISFeatureTable` �܂��� `AGSGeodatabaseFeatureTable`�j�ɑ΂��čs���܂��B
+フィーチャの検索や編集はフィーチャ テーブル （`ServiceFeatureTable` または `GeodatabaseFeatureTable`）に対して行います。
 
-�t�B�[�`�� �T�[�r�X����쐬�����t�B�[�`�� �e�[�u���i`AGSArcGISFeatureTable`�j�̏ꍇ�A�t�B�[�`�� �e�[�u���̃t�B�[�`���́A�}�b�v��Ƀ����_�����O���邽�߂ɕK�v�ŏ����̏�񂾂����܂ނ悤�ɍœK������Ă��܂��B����ɂ��A�t�B�[�`����\�����邽�߂̑ҋ@���ԂƑш敝�̏���팸����܂��B�t�B�[�`���̕ҏW�₷�ׂĂ̑�������\������悤�ȏꍇ�͊��S�ȏ����擾���邽�߂ɁA[���[�_�u�� �p�^�[��](#���[�_�u��-�p�^�[��)�����g�p���āA�t�B�[�`���𖾎��I�Ƀ��[�h���Ă����K�v������܂��B
+フィーチャ サービスから作成したフィーチャ テーブル（`ServiceFeatureTable`）の場合、フィーチャ テーブルのフィーチャは、マップ上にレンダリングするために必要最小限の情報だけを含むように最適化されています。これにより、フィーチャを表示するための待機時間と帯域幅の消費が削減されます。フィーチャの編集やすべての属性情報を表示するような場合は完全な情報を取得するために、[ローダブル パターン](#ローダブル-パターン)等を使用して、フィーチャを明示的にロードしておく必要があります。
 
 
-#### �t�B�[�`���̃��N�G�X�g ���[�h
-�t�B�[�`�� �T�[�r�X����t�B�[�`�����擾����ꍇ�́A
-���N�G�X�g ���[�h�̐ݒ�ɂ���ăt�B�[�`���̎擾�p�x�Ƃ�[����ł̃f�[�^�̃L���b�V�����@�𐧌䂵�܂��B���N�G�X�g ���[�h�ɂ́A`OnInteractionCache`�A `OnInteractionNoCache`�A`ManualCache` ������܂��B���N�G�X�g ���[�h�̓t�B�[�`�� �e�[�u���������������O�ɁA`AGSServiceFeatureTable` �� `featureRequestMode` �v���p�e�B���g�p���Đݒ�ł��܂��B
+#### フィーチャのリクエスト モード
+フィーチャ サービスからフィーチャを取得する場合は、
+リクエスト モードの設定によってフィーチャの取得頻度とや端末上でのデータのキャッシュ方法を制御します。リクエスト モードには、`ON_INTERACTION_CACHE`、 `ON_INTERACTION_NO_CACHE`、`MANUAL_CACHE ` があります。リクエスト モードはフィーチャ テーブルが初期化される前に、`ServiceFeatureTable` の `setFeatureRequestMode` メソッドを使用して設定できます。
 
-* `OnInteractionCache`: ���[�U�[�̑���ɂ��}�b�v�̕\���̈悪�ύX�����ƁA�t�B�[�`���������I�Ƀ��N�G�X�g����܂��B���N�G�X�g���ꂽ���ׂẴf�[�^�̓��[�J���ɃL���b�V������܂��B�f�[�^���L���b�V�����ꃋ���߁A���ɕ\�����ꂽ�̈�Ƀ}�b�v���ړ����Ă��A�ēx�t�B�[�`���̓��N�G�X�g����܂���B�T�[�o�[��̃f�[�^���ύX�����\�������Ȃ��ÓI�ȃf�[�^�ɓK�������[�h�ł��B
-* `OnInteractionNoCache`: ���[�U�[�̑���ɂ��}�b�v�̕\���̈悪�ύX�����ƁA�t�B�[�`���������I�Ƀ��N�G�X�g����܂����A�L���b�V���͂���܂���B���ɕ\�����ꂽ�̈�Ƀ}�b�v���ړ�����ƁA�ēx�t�B�[�`�������N�G�X�g����܂��B�T�[�o�[��̃f�[�^���p���I�ɍX�V�����\��������ꍇ�ɓK�������[�h�ł��B
-* `ManualCache`: ���[�U�[�ɂ��}�b�v����ł́A�t�B�[�`���͎����I�Ƀ��N�G�X�g����܂���B���̃��[�h���g�p����ꍇ�́A`AGSServiceFeatureTable` �� `populateFromService` ���\�b�h���g�p���Ė����I�Ƀf�[�^�����N�G�X�g����K�v������܂��B
+* `ON_INTERACTION_CACHE`: ユーザーの操作によりマップの表示領域が変更されると、フィーチャが自動的にリクエストされます。リクエストされたすべてのデータはローカルにキャッシュされます。データがキャッシュされルため、既に表示された領域にマップが移動しても、再度フィーチャはリクエストされません。サーバー上のデータが変更される可能性が少ない静的なデータに適したモードです。
+* `ON_INTERACTION_NO_CACHE`: ユーザーの操作によりマップの表示領域が変更されると、フィーチャが自動的にリクエストされますが、キャッシュはされません。既に表示された領域にマップが移動すると、再度フィーチャがリクエストされます。サーバー上のデータが継続的に更新される可能性がある場合に適したモードです。
+* `MANUAL_CACHE`: ユーザーによるマップ操作では、フィーチャは自動的にリクエストされません。このモードを使用する場合は、`ServiceFeatureTable` の `populateFromServiceAsync` メソッドを使用して明示的にデータをリクエストする必要があります。
 
-  �ȉ��̃R�[�h�� `populateFromService` ���\�b�h���g�p���āA�T�[�o�[��̂��ׂẴt�B�[�`�����擾������@�̗�ł��B
+  以下のコードは `populateFromServiceAsync` メソッドを使用して、サーバー上のすべてのフィーチャを取得する方法の例です。
 
-  ```javascript
-// �t�B�[�`���̌����p�����[�^�[��ݒ�
-let params = AGSQueryParameters()
-// ���ׂẴt�B�[�`�����擾����悤�ɏ�����ݒ�
-params.whereClause = "1 = 1"
-// �������ʂɃt�B�[�`���̂��ׂĂ̑������ioutFields �̔z��� "*" ���w��j���܂߂�
-self.featureTable.populateFromService(with: params, clearCache: true, outFields: ["*"]) {(result, error) -> Void in
-   if let error = error {
-       // �t�B�[�`���̎擾�Ɏ��s
-       print("Error:\(error.localizedDescription)")
-   } else {
-     �@// �t�B�[�`���̎擾�ɐ����i�t�B�[�`������\���j
-       print(result?.featureEnumerator().allObjects.count ?? "0")
-   }
-}
+  ```java
+// フィーチャの検索パラメーターを設定
+QueryParameters queryParameters = new QueryParameters();
+// すべてのフィーチャを取得するように条件を設定
+queryParameters.setWhereClause("1=1");
+// 検索結果にフィーチャのすべての属性情報（outFields の配列に "*" を指定）を含める
+ArrayList<String> outFields = new ArrayList<>();
+outFields.add("*");
+serviceFeatureTable.populateFromServiceAsync(queryParameters,true,outFields);
 ```
 
-���N�G�X�g ���[�h�̏ڍׂ́A
-[ArcGIS Runtime SDK for Android: �t�B�[�`�� ���N�G�X�g ���[�h�i�p��j](https://developers.arcgis.com/Android/latest/swift/guide/layers.htm#GUID-925AD533-12E7-4E93-AB88-3F9577906818)�����Q�Ƃ��������B
+リクエスト モードの詳細は、
+[ArcGIS Runtime SDK for Android: フィーチャ リクエスト モード（英語）](https://developers.arcgis.com/android/latest/guide/layers.htm#ESRI_SECTION1_272346C9CB0049938539D5F8970624F2)をご参照ください。
 
 
-#### �t�B�[�`���̕ҏW
-�t�B�[�`���̕ҏW�̓t�B�[�`�� �e�[�u���ɑ΂��čs���܂��B�t�B�[�`�� �T�[�r�X�܂��̓W�I�f�[�^�x�[�X�̃f�[�^����쐬�����t�B�[�`�� �e�[�u���̂ǂ����ҏW����ꍇ���������@�ɈႢ�͂���܂���B
+#### フィーチャの編集
+フィーチャの編集はフィーチャ テーブルに対して行います。フィーチャ サービスまたはジオデータベースのデータから作成したフィーチャ テーブルのどちらを編集する場合も実装方法に違いはありません。
 
-�t�B�[�`���̕ҏW���@�́A
-[ArcGIS Runtime SDK for Android: �t�B�[�`���̕ҏW�i�p��j](https://developers.arcgis.com/Android/latest/swift/guide/edit-features.htm)�����Q�Ƃ��������B
+フィーチャの編集方法は、
+[ArcGIS Runtime SDK for Android: フィーチャの編集（英語）](https://developers.arcgis.com/android/latest/guide/edit-features.htm)をご参照ください。
 
-#### �t�B�[�`���̌���
-�t�B�[�`���̌����̓t�B�[�`�� �e�[�u���ɑ΂��čs���܂��B�t�B�[�`�� �T�[�r�X�܂��̓W�I�f�[�^�x�[�X�̃f�[�^����쐬�����t�B�[�`�� �e�[�u���̂ǂ����ҏW����ꍇ���������@�ɈႢ�͂���܂���B�������s���ɂ�
-`AGSArcGISFeatureTable` �܂��� `AGSGeodatabaseFeatureTable` �N���X�� `queryFeaturesWithParameters` ���\�b�h���g�p���܂��B
+#### フィーチャの検索
+フィーチャの検索はフィーチャ テーブルに対して行います。フィーチャ サービスまたはジオデータベースのデータから作成したフィーチャ テーブルのどちらを編集する場合も実装方法に違いはありません。検索を行うには
+`ServiceFeatureTable` または `GeodatabaseFeatureTable` クラスの `queryFeaturesAsync` メソッドを使用します。
 
-���̃R�[�h�́A�t�B�[�`�� �T�[�r�X����쐬�����t�B�[�`�� �e�[�u������t�B�[�`��������������@�������Ă��܂��B
-```javascript
-featureTable.queryFeatures(with: queryParameters, fields: .loadAll, completion:{ (result, error) -> Void in
-           if let error = error {   
-               print("Error:\(error.localizedDescription)")
-           } else {
-               let enumr = result?.featureEnumerator()
-               for feature in enumr! {
-                   // �������ʂ̃t�B�[�`�����擾
-                   let feature = feature as! AGSArcGISFeature
-               }
-           }
-       })
-```
-
-## �ʑ����\��
-
-�}�b�v��œ���̏ꏊ���^�b�v���āA���̈ʒu�ɂ���t�B�[�`�������ׂẴ��C���[���猟�����Ď擾���邱�Ƃ��ł��܂��B���̑���̓r���[�ɑ΂��čs���܂��B���̃R�[�h�́A`AGSMapView` �N���X�� `identifyLayers` ���\�b�h���g�p���ăt�B�[�`�����擾������@�������Ă��܂��B
-```javascript
-self.mapView.identifyLayers(atScreenPoint: screenPoint, tolerance: 10, returnPopupsOnly: true, completion: { (results, error)  -> Void in
-    if let error = error {
-        print(error)
-    } else {
-        for identifyLayerResult in results! {
-            for geoElement in identifyLayerResult.geoElements {
-                // AGSGeoElement �I�u�W�F�N�g�̎擾
+次のコードは、フィーチャ サービスから作成したフィーチャ テーブルからフィーチャを検索する方法を示しています。
+```java
+final ListenableFuture<FeatureQueryResult> queryResult  = serviceFeatureTable.queryFeaturesAsync(queryParameters);
+queryResult.addDoneListener(new Runnable() {
+    @Override
+    public void run() {
+        // call get on the future to get the result
+        try {
+            FeatureQueryResult result = queryResult.get();
+            for (Iterator<Feature> features = result.iterator(); features.hasNext();) {
+                // 検索結果のフィーチャを取得
+                Feature feature = features.next();
+                ・・・
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
         }
+
+
     }
-})
+});
 ```
 
-## �O���t�B�b�N�X �I�[�o�[���C
+## 個別属性表示
 
-�O���t�B�b�N�́A�}�b�v��Ɉꎞ�I�ȃf�[�^��\�����邽�߂Ɏg�p����܂��B`AGSMapView` �� `AGSSceneView` �I�u�W�F�N�g�ɂ̓O���t�B�b�N��\�����邽�߂̃O���t�B�b�N�X �I�[�o�[���C�i`AGSGraphicsOverlay`�j���܂܂�Ă��܂��B
-�O���t�B�b�N�X �I�[�o�[���C���g�p���邱�ƂŁA�}�b�v��̃��C���[�̏������ύX����Ă��A�O���t�B�b�N����ɍŏ�ʂɕ\������܂��B�ڍׂ́A[ArcGIS Runtime SDK for Android: �O���t�B�b�N�X �I�[�o�[���C�̒ǉ��i�p��j](https://developers.arcgis.com/Android/latest/swift/guide/add-graphics-overlays-to-your-app.htm)�����Q�Ƃ��������B
+マップ上で特定の場所をタップして、その位置にあるフィーチャをすべてのレイヤーから検索して取得することができます。この操作はビューに対して行います。次のコードは、`MapView` クラスの `identifyLayersAsync` メソッドを使用してフィーチャを取得する方法を示しています。
+```java
+final ListenableFuture<List<IdentifyLayerResult>> identifyLayersResult = mapView.identifyLayersAsync(screenPoint,10,true);
+        identifyLayersResult.addDoneListener(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    List<IdentifyLayerResult> identifyResult = identifyLayersResult.get();
+                    for(IdentifyLayerResult identifyLayerResult : identifyResult){
+                        // GeoElement オブジェクトの取得
+                        List<GeoElement> geoElement = identifyLayerResult.getElements();
+                        ・・・
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
-���̃R�[�h�́A`AGSMapView` �I�u�W�F�N�g�ɁA�O���t�B�b�N�X �I�[�o�[���C���g�p���ăO���t�B�b�N��ǉ�������@�������Ă��܂��B
-
-```javascript
-// �W�I���g���ƃV���{����ݒ肵�ăO���t�B�b�N���쐬
-let pointGraphic = AGSGraphic(geometry: pointGeometry, symbol: poitnSymbol, attributes: nil)
-// �O���t�B�b�N�X �I�[�o�[���C�ɍ쐬�����O���t�B�b�N��ǉ�
-let graphicsOverlay = AGSGraphicsOverlay()
-graphicsOverlay.graphics.add(pointGraphic)
-// AGSMapView �� GraphicsOverlays �ɍ쐬�����O���t�B�b�N�X �I�[�o�[���C��ǉ�
-self.mapView.graphicsOverlays.add(graphicsOverlay)
 ```
 
-## �W�I���g���ƃW�I���g�� �r���_�[
+## グラフィックス オーバーレイ
 
-`AGSGeometry` �I�u�W�F�N�g�̃R���X�g���N�^���g�p����ƁA���m�̍��W���g�p���ăW�I���g�����쐬�ł��܂����A�쐬��ɂ��̃W�I���g����ύX���邱�Ƃ͂ł��܂���B
+グラフィックは、マップ上に一時的なデータを表示するために使用されます。`MapView` オブジェクトにはグラフィックを表示するためのグラフィックス オーバーレイ（`GraphicsOverlay`）が含まれています。
+グラフィックス オーバーレイを使用することで、マップ上のレイヤーの順序が変更されても、グラフィックが常に最上位に表示されます。詳細は、[ArcGIS Runtime SDK for Android: グラフィックス オーバーレイの追加（英語）](https://developers.arcgis.com/android/latest/guide/add-graphics-overlays-to-your-app.htm)をご参照ください。
 
-�W�I���g�� �r���_�[�i`AGSGeometryBuilder`�j���g�p����ƁA�[������V�����W�I���g�����쐬������A�����̃W�I���g������ɁA�W�I���g����ύX���邱�Ƃ��ł��܂��B�ڍׂ́A[ArcGIS Runtime SDK for Android: �W�I���g���̕ҏW�i�p��j](https://developers.arcgis.com/Android/latest/swift/guide/edit-geometries.htm)�����Q�Ƃ������� �B
+次のコードは、`MapView` オブジェクトに、グラフィックス オーバーレイを使用してグラフィックを追加する方法を示しています。
 
-## �X�P�b�` �G�f�B�^�[
-�X�P�b�` �G�f�B�^�[�i`AGSSketchEditor`�j���g�p����ƁA���[�U�[���}�b�v��őΘb�I�ɃW�I���g�����X�P�b�`���邱�Ƃ��ł��܂��B
+```java
+// ジオメトリとシンボルを設定してグラフィックを作成
+Graphic graphic = new Graphic(geometry,symbol);
+// グラフィックス オーバーレイに作成したグラフィックを追加
+GraphicsOverlay graphicsOverlay = new GraphicsOverlay();
+graphicsOverlay.getGraphics().add(graphic);
+// MapView の GraphicsOverlays に作成したグラフィックス オーバーレイを追加
+mapView.getGraphicsOverlays().add(graphicsOverlay);
+```
 
-���̃R�[�h�́A`AGSSketchEditor` �̎g�p���@�̗�������Ă��܂��B
+## ジオメトリとジオメトリ ビルダー
+
+`AGSGeometry` オブジェクトのコンストラクタを使用すると、既知の座標を使用してジオメトリを作成できますが、作成後にそのジオメトリを変更することはできません。
+
+ジオメトリ ビルダー（`AGSGeometryBuilder`）を使用すると、ゼロから新しいジオメトリを作成したり、既存のジオメトリを基に、ジオメトリを変更することができます。詳細は、[ArcGIS Runtime SDK for Android: ジオメトリの編集（英語）](https://developers.arcgis.com/Android/latest/swift/guide/edit-geometries.htm)をご参照ください 。
+
+## スケッチ エディター
+スケッチ エディター（`AGSSketchEditor`）を使用すると、ユーザーがマップ上で対話的にジオメトリをスケッチすることができます。
+
+次のコードは、`AGSSketchEditor` の使用方法の例を示しています。
 
 ```javascript
-// �}�b�v �r���[�ɃX�P�b�` �G�f�B�^�[��ݒ�
+// マップ ビューにスケッチ エディターを設定
 self.sketchEditor = AGSSketchEditor()
 self.mapView.sketchEditor =  
-// �W�I���g���̎�ނ�ݒ肵�ăX�P�b�`���J�n
+// ジオメトリの種類を設定してスケッチを開始
 self.sketchEditor
 self.sketchEditor.start(with: AGSGeometryType.polygon)
-// �X�P�b�`���̃W�I���g���̍X�V���Ď�
+// スケッチ中のジオメトリの更新を監視
 NotificationCenter.default.addObserver(self, selector: #selector(ViewController.respondToGeometryChanged), name: NSNotification.Name.AGSSketchEditorGeometryDidChange, object: nil)
 
-�E�E�E�E�E�E
+・・・・・・
 
 func respondToGeometryChanged() {
-  // �W�I���g�����X�V���ꂽ�ۂ̏���
+  // ジオメトリが更新された際の処理
 }
 ```
 
-## ���[�_�u�� �p�^�[��
+## ローダブル パターン
 
-�f�[�^��񓯊��Ń��[�h���ď�Ԃ�����������}�b�v�⃌�C���[���̃��\�[�X�́A���[�_�u�� �p�^�[�����̗p����Ă��܂��B�e���\�[�X�̃v���p�e�B�ɃA�N�Z�X����ɂ́A���[�_�u�� �p�^�[�����g�p���āA���\�[�X�����[�h���ꂽ��ɃA�N�Z�X���邱�Ƃ���������܂��B���[�_�u�� �p�^�[���́A���[�h��Ԃ̐U�镑�������ψ�ɂ��Ċ���ѐ����������邱�ƂŁA�񓯊�������薾���I�ɂ��܂��B���[�_�u�� �p�^�[���ł́A�e���\�[�X�͎����I�Ƀ��\�[�X�̏�Ԃ����[�h���܂���B�����́A�J���҂������I�Ɏ��s�����Ƃ��ɁA�x�����[�h���܂��B
-�e���\�[�X�̏�Ԃ́A`NotLoaded�i���[�h���J�n���Ă��Ȃ�`�A`Loading�i���[�h���j`�A`Loaded�i���[�h�ɐ����j`�A`FailedToLoad�i���[�h�Ɏ��s�j` �̂����ꂩ�ŊĎ����邱�Ƃ��ł��܂��B
+データを非同期でロードして状態を初期化するマップやレイヤー等のリソースは、ローダブル パターンが採用されています。各リソースのプロパティにアクセスするには、ローダブル パターンを使用して、リソースがロードされた後にアクセスすることが推奨されます。ローダブル パターンは、ロード状態の振る舞いをより均一にして且つ一貫性を持たせることで、非同期性をより明示的にします。ローダブル パターンでは、各リソースは自動的にリソースの状態をロードしません。それらは、開発者が明示的に実行したときに、遅延ロードします。
+各リソースの状態は、`NotLoaded（ロードが開始していない`、`Loading（ロード中）`、`Loaded（ロードに成功）`、`FailedToLoad（ロードに失敗）` のいずれかで監視することもできます。
 
-�ڍׂ́A[ArcGIS Runtime SDK for Android: ���[�_�u�� �p�^�[���i�p��j](https://developers.arcgis.com/Android/latest/swift/guide/loadable-pattern.htm)�����Q�Ƃ��������B
+詳細は、[ArcGIS Runtime SDK for Android: ローダブル パターン（英語）](https://developers.arcgis.com/Android/latest/swift/guide/loadable-pattern.htm)をご参照ください。
 
-���̃R�[�h�́A���[�_�u�� �p�^�[���̊�{�I�Ȏg�p���@�̗�������Ă��܂��B
+次のコードは、ローダブル パターンの基本的な使用方法の例を示しています。
 ```javascript
 self.featureLayer.load(completion: {(error) -> Void in
     if let error = error {
         print(error)
     }else {
-        // �t�B�[�`�� ���C���[�̃��[�h�ɐ���
+        // フィーチャ レイヤーのロードに成功
     }
 })
 ```
 
-## �u���b�N���g�p�����񓯊��v���O���~���O
+## ブロックを使用した非同期プログラミング
 
-�񓯊���������s���郁�\�b�h�́A�����u���b�N�������Ƃ��Ď󂯎��܂��B�u���b�N�͑��삪����Ɋ��������Ƃ��A�܂��́A�G���[�����������Ƃ��ɌĂяo����܂��B���삪��������ƁA���̑���̌��ʂ��u���b�N�ɓn����܂��B����ȊO�̏ꍇ�̓G���[���n����܂��B
-����́A�f���Q�[�g���g�p���Ċe�񓯊�����̌��ʂƃG���[���n���h�����O���Ă��� 10.2.x �̃v���O���~���O���@��u�������܂��B
+非同期操作を実行するメソッドは、完了ブロックを引数として受け取ります。ブロックは操作が正常に完了したとき、または、エラーが発生したときに呼び出されます。操作が成功すると、その操作の結果がブロックに渡されます。それ以外の場合はエラーが渡されます。
+これは、デリゲートを使用して各非同期操作の結果とエラーをハンドリングしていた 10.2.x のプログラミング方法を置き換えます。
 
-���̃R�[�h�́A��Ƃ��Ē[���� GPS �̈ʒu���̎擾�J�n�̑��쌋�ʂ��n���h�����O������@�������Ă��܂��B
+次のコードは、例として端末の GPS の位置情報の取得開始の操作結果をハンドリングする方法を示しています。
 ```javascript
 self.mapView.locationDisplay.start(completion: { (error) -> Void in
   if let error = error {
-    // GPS �̈ʒu���̎擾�Ɏ��s
+    // GPS の位置情報の取得に失敗
     print("Error:\(error.localizedDescription)")
   } else {
-    // GPS �̈ʒu���̎擾�ɐ���
+    // GPS の位置情報の取得に成功
   }
 })
 ```
-## ���m�̐�������
-���o�[�W���� 100.0 �ł̊��m�̐����������A[ArcGIS Runtime SDK for Android: �����[�X �m�[�g�i�p��j](https://developers.arcgis.com/Android/latest/swift/guide/release-notes.htm#GUID-2D204730-60B6-4004-BCB1-63F654F70AA3)�ɋL�ڂ���Ă��܂��̂ŁA���Q�Ƃ��������B
+## 既知の制限事項
+現バージョン 100.0 での既知の制限事項が、[ArcGIS Runtime SDK for Android: リリース ノート（英語）](https://developers.arcgis.com/android/latest/guide/release-notes.htm#GUID-861F8CA6-2FAC-44EB-A7B8-F99225A4EA0F)に記載されていますので、ご参照ください。
 
-## �֘A�����N
-* [ArcGIS Runtime SDK for Android: �����[�X �m�[�g�i�p��j](https://developers.arcgis.com/Android/latest/swift/guide/release-notes.htm)
+## 関連リンク
+* [ArcGIS Runtime SDK for Android: リリース ノート（英語）](https://developers.arcgis.com/android/latest/guide/release-notes.htm)
