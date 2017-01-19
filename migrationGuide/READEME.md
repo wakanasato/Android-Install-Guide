@@ -42,22 +42,23 @@ Android Studio のビルド ツールは Gradle を使用し、mavenリポジト
 ArcGIS Runtime SDK for Android がサポートする最新の動作環境は、[ESRIジャパン 製品ページ（動作環境）](https://www.esrij.com/products/arcgis-runtime-sdk-for-Android/environments/)をご参照ください。
 
 
-## マップとシーン☆
-100.x では、`AGSMap` オブジェクト（2D表示用）と `AGSScene` オブジェクト（3D表示用）<sup>※1</sup> を API のコアとして、ArcGIS プラットフォームの Web GIS 機能を迅速に利用できるようになりました。
+## マップ
+100.x では、`ArcGISMap` オブジェクトを API のコアとして、ArcGIS プラットフォームの Web GIS 機能を迅速に利用できるようになりました。
 
-`AGSMap` オブジェクトと `AGSScene` オブジェクトは 、それらを表示する View と分離されています。`AGSMap` オブジェクトと `AGSScene` オブジェクトには 、操作レイヤー、ベースマップ、ブックマーク等の ArcGIS 固有のデータを設定でき、アプリケーションで利用することができます。
+`ArcGISMap` オブジェクトは 、それを表示する View と分離されています。`ArcGISMap` オブジェクトには 、操作レイヤー、ベースマップ、ブックマーク等の ArcGIS 固有のデータを設定でき、アプリケーションで利用することができます。
 
-<sup>※1</sup> バージョン100.0 では、3D 関連の機能はベータ機能として提供されています
-
-## ビュー☆
-`AGSMapView`（2D表示用）と `AGSSceneView`（3D表示用）は、UI コンポーネントです。`AGSMapView` クラスの `map` プロパティに、`AGSMap` オブジェクトを、`AGSMapSceneView` クラスの `scene` プロパティには `AGSScene` オブジェクトを設定します。
+## ビュー
+`MapView`（2D表示用）と `SceneView`（3D表示用）<sup>※1</sup>は、UI コンポーネントです。`MapView` クラスの `map` プロパティに、`ArcGISMap` オブジェクトを設定します。
+<sup>※1</sup> バージョン100.0 では、3D 関連の機能は未対応です。
 
 100.x では、以下のようにマップを表示します。
-```javascript
+```java
 // ベースマップを指定してマップを初期化
-let map = AGSMap(basemap:AGSBasemap.imagery())
+ArcGISMap mArcGISMap = new ArcGISMap();
+mArcGISMap.setBasemap(Basemap.createTopographic());
 // マップビューにマップを設定
-self.mapView.map = map
+MapView mMapView =  ((MapView) findViewById(R.id.mapView));
+mMapView.setMap(mArcGISMap);
 ```
 
 ## レイヤー クラス名の変更☆
@@ -81,7 +82,6 @@ self.mapView.map = map
 作成した各レイヤーは、以下の方法でマップに追加します。
 ```java
 // 操作レイヤーとしてマップに追加する
-ArcGISMap mArcGISMap = new ArcGISMap();
 mArcGISMap.getOperationalLayers().add(arcgis_map_image_layer)
 //self.map.operationalLayers.addObject(arcgis_map_image_layer)
 
@@ -90,7 +90,6 @@ Basemap mBasemap = new Basemap();
 mBasemap.getBaseLayers().add(arcgis_tiled_layer);
 //self.map.basemap = AGSBasemap(baseLayer: arcgis_tiled_layer)
 ```
-
 
 ## フィーチャ レイヤーの表示
 フィーチャ サービスや端末のローカルに格納されたジオデータベースのデータをマップに表示するにはフィーチャ レイヤーを使用します。
