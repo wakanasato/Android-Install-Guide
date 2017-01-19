@@ -18,9 +18,8 @@ ArcGIS Runtime SDK for Android に関しては、[ESRIジャパン 製品ペー�
 * __[個別属性表示](#個別属性表示)__
 * __[グラフィックス オーバーレイ](#グラフィックス-オーバーレイ)__
 * __[ジオメトリとジオメトリ ビルダー](#ジオメトリとジオメトリ-ビルダー)__
-* __[スケッチ エディター](#スケッチ-エディター)__
 * __[ローダブル パターン](#ローダブル-パターン)__
-* __[ブロックを使用した非同期プログラミング](#ブロックを使用した非同期プログラミング)__
+* __[新しい同期パターン](#新しい同期パターン)__
 * __[既知の制限事項](#既知の制限事項)__
 
 ## Gradle 参照プロジェクトの変更
@@ -49,6 +48,7 @@ ArcGIS Runtime SDK for Android がサポートする最新の動作環境は、[
 
 ## ビュー
 `MapView`（2D表示用）と `SceneView`（3D表示用）<sup>※1</sup>は、UI コンポーネントです。`MapView` クラスの `map` プロパティに、`ArcGISMap` オブジェクトを設定します。
+
 <sup>※1</sup> バージョン100.0 では、3D 関連の機能は未対応です。
 
 100.x では、以下のようにマップを表示します。
@@ -61,7 +61,7 @@ MapView mMapView =  ((MapView) findViewById(R.id.mapView));
 mMapView.setMap(mArcGISMap);
 ```
 
-## レイヤー クラス名の変更☆
+## レイヤー クラス名の変更
 各レイヤーのクラス名が以下のように変更されています。
 
 |レイヤー|10.2.x のクラス名|100.x のクラス名|
@@ -71,11 +71,12 @@ mMapView.setMap(mArcGISMap);
 |タイル パッケージ レイヤー|ArcGISLocalTiledLayer|ArcGISTiledLayer|
 
 現バージョンの 100.0 では、10.2.x で提供されていた、以下のレイヤーがサポートされていませんので、ご注意ください。
+* ArcGIS Server イメージ サービス レイヤー（`ArcGISImageServiceLayer`）
+* KML サービス レイヤー（`KMLLayer`）
 * WMS サービス レイヤー（`WMSLayer`）
 * WMTS サービス レイヤー（`WMTSLayer`）
 * OpenStreetMap レイヤー（`OpenStreetMapLayer`）
 * Bing Maps レイヤー（`BingMapsLayer`）
-* Web タイル レイヤー（`AGSWebTiledLayer`）
 
 100.x でサポートされているレイヤーの種類については、[ArcGIS Runtime SDK for Android: レイヤー（英語）](https://developers.arcgis.com/android/latest/guide/layers.htm)をご参照ください。
 
@@ -83,12 +84,10 @@ mMapView.setMap(mArcGISMap);
 ```java
 // 操作レイヤーとしてマップに追加する
 mArcGISMap.getOperationalLayers().add(arcgis_map_image_layer)
-//self.map.operationalLayers.addObject(arcgis_map_image_layer)
 
 // ベースマップとしてマップに追加する
 Basemap mBasemap = new Basemap();
 mBasemap.getBaseLayers().add(arcgis_tiled_layer);
-//self.map.basemap = AGSBasemap(baseLayer: arcgis_tiled_layer)
 ```
 
 ## フィーチャ レイヤーの表示
@@ -121,9 +120,9 @@ mArcGISMap.getOperationalLayers().add(featureLayer);
 * `ON_INTERACTION_NO_CACHE`: ユーザーの操作によりマップの表示領域が変更されると、フィーチャが自動的にリクエストされますが、キャッシュはされません。既に表示された領域にマップが移動すると、再度フィーチャがリクエストされます。サーバー上のデータが継続的に更新される可能性がある場合に適したモードです。
 * `MANUAL_CACHE`: ユーザーによるマップ操作では、フィーチャは自動的にリクエストされません。このモードを使用する場合は、`ServiceFeatureTable` の `populateFromServiceAsync` メソッドを使用して明示的にデータをリクエストする必要があります。
 
-  以下のコードは `populateFromServiceAsync` メソッドを使用して、サーバー上のすべてのフィーチャを取得する方法の例です。
+以下のコードは `populateFromServiceAsync` メソッドを使用して、サーバー上のすべてのフィーチャを取得する方法の例です。
 
-  ```java
+```java
 // フィーチャの検索パラメーターを設定
 QueryParameters queryParameters = new QueryParameters();
 // すべてのフィーチャを取得するように条件を設定
@@ -143,6 +142,7 @@ serviceFeatureTable.populateFromServiceAsync(queryParameters,true,outFields);
 
 フィーチャの編集方法は、
 [ArcGIS Runtime SDK for Android: フィーチャの編集（英語）](https://developers.arcgis.com/android/latest/guide/edit-features.htm)をご参照ください。
+
 
 #### フィーチャの検索
 フィーチャの検索はフィーチャ テーブルに対して行います。フィーチャ サービスまたはジオデータベースのデータから作成したフィーチャ テーブルのどちらを編集する場合も実装方法に違いはありません。検索を行うには
@@ -172,6 +172,7 @@ queryResult.addDoneListener(new Runnable() {
     }
 });
 ```
+
 
 ## 個別属性表示
 
@@ -221,6 +222,7 @@ mapView.getGraphicsOverlays().add(graphicsOverlay);
 
 ジオメトリ ビルダー（`GeometryBuilder`）を使用すると、ゼロから新しいジオメトリを作成したり、既存のジオメトリを基に、ジオメトリを変更することができます。詳細は、[ArcGIS Runtime SDK for Android: ジオメトリの編集（英語）](https://developers.arcgis.com/android/latest/guide/geometries.htm)をご参照ください 。
 
+
 ## ローダブル パターン
 
 データを非同期でロードして状態を初期化するマップやレイヤー等のリソースは、ローダブル パターンが採用されています。各リソースのプロパティにアクセスするには、ローダブル パターンを使用して、リソースがロードされた後にアクセスすることが推奨されます。ローダブル パターンは、ロード状態の振る舞いをより均一にして且つ一貫性を持たせることで、非同期性をより明示的にします。ローダブル パターンでは、各リソースは自動的にリソースの状態をロードしません。それらは、開発者が明示的に実行したときに、遅延ロードします。
@@ -238,21 +240,9 @@ if(featureLayer.getLoadStatus().equals(LoadStatus.FAILED_TO_LOAD)){
 }
 ```
 
-## ブロックを使用した非同期プログラミング☆
-非同期操作を実行するメソッドは、完了ブロックを引数として受け取ります。ブロックは操作が正常に完了したとき、または、エラーが発生したときに呼び出されます。操作が成功すると、その操作の結果がブロックに渡されます。それ以外の場合はエラーが渡されます。
-これは、デリゲートを使用して各非同期操作の結果とエラーをハンドリングしていた 10.2.x のプログラミング方法を置き換えます。
+## 新しい同期パターン
+Java 言語で　`ListenableFuture`　というインターフェースで馴染みのある　Future パターンが拡張されました。この新しい API は、メソッドの完了時に必要な数のリスナーを追加できます。
 
-次のコードは、例として端末の GPS の位置情報の取得開始の操作結果をハンドリングする方法を示しています。
-```java
-self.mapView.locationDisplay.start(completion: { (error) -> Void in
-  if let error = error {
-    // GPS の位置情報の取得に失敗
-    print("Error:\(error.localizedDescription)")
-  } else {
-    // GPS の位置情報の取得に成功
-  }
-})
-```
 ## 既知の制限事項
 現バージョン 100.0 での既知の制限事項が、[ArcGIS Runtime SDK for Android: リリース ノート（英語）](https://developers.arcgis.com/android/latest/guide/release-notes.htm#GUID-861F8CA6-2FAC-44EB-A7B8-F99225A4EA0F)に記載されていますので、ご参照ください。
 
