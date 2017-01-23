@@ -24,7 +24,7 @@ ArcGIS Runtime SDK for Android に関しては、[ESRIジャパン 製品ペー�
 
 ## Gradle 参照プロジェクトの変更
 
-Android Studio のビルド ツールは Gradle を使用し、mavenリポジトリとライブラリの参照を変更します。
+Android Studio のビルド ツールは Gradle を使用し、maven リポジトリとライブラリの参照を変更します。
 
 ```
     repositories {
