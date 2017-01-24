@@ -28,7 +28,7 @@ ArcGIS Runtime SDK のライブラリをローカル環境にダウンロード�
 
 1. ダウンロードしたサンプル プロジェクト（arcgis-dev-resources/startup/android/map）を Android Studio で開きます。
 
-1. `MainActivity.java` の 30 行目の `<Web マップ ID>` と記載されている箇所に [Web マップの作成](../create-webmap)で作成した Web マップ ID を上書きします。32 行目の以下のコードでは、上で設定した Web マップ ID を含んだ WebMap の URL で ArcGISMap オブジジェクトを作成します。
+1. `MainActivity.java` の 23 行目の `<Web マップ ID>` と記載されている箇所に [Web マップの作成](../create-webmap)で作成した Web マップ ID を上書きします。32 行目の以下のコードでは、上で設定した Web マップ ID を含んだ WebMap の URL で ArcGISMap オブジジェクトを作成します。
  ```java
   mArcGISMap = new ArcGISMap("http://www.arcgis.com/home/item.html?id=<Web マップ ID>");
  ```
@@ -50,7 +50,7 @@ Android の位置情報サービスと連携し、端末の現在位置を地図
 では以下に倣ってソース コードを修正・追加してみてください。
 
 1. 現在位置の変化を受け取るための [LocationListner](http://developer.android.com/intl/ja/reference/android/location/LocationListener.html) を実装します。今回はすでに実装してあるコードを有効化します。
- `MainActivity.java` の 41 行目から 70 行目までのコメント化されたコードをコメント解除してください。（コメント解除したい範囲を選択して `Ctrl + /` を押下）
+ `MainActivity.java` の 35 行目から 50 行目までのコメント化されたコードをコメント解除してください。（コメント解除したい範囲を選択して `Ctrl + /` を押下）
  ```java
   // LocationListner を実装
  private class MyLocationListener implements LocationDisplay.LocationChangedListener{
@@ -73,7 +73,7 @@ Android の位置情報サービスと連携し、端末の現在位置を地図
 ```
  この中で現在位置を取得しています。
  
-1. `onCreate` メソッド（38 行目）へ以下のコードを追加します。
+1. `onCreate` メソッドの 27 ～　31 行目のコメントを解除してください。現在地を取得するためのコードを定義しています。
  ```java
  // MapView 上に現在位置を表示するために LocationDisplay を取得
  mLocationDisplay = mMapView.getLocationDisplay();
