@@ -67,39 +67,39 @@ ArcGIS Runtime SDK for Android がサポートする最新の動作環境につ�
 Project ツールウィンドウ で「Android」を選択して「Manifests」フォルダの AndroidManifest.xml をダブルクリックして開きます。
 インターネットへのアクセス許可するための Permission を追加します。使用する機能に応じて、必要な Permission を追加してください。
 
-```
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-feature android:glEsVersion="0x00020000" android:required="true" />
-```
+	```java
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-feature android:glEsVersion="0x00020000" android:required="true" />
+	```
 
  <img src="http://apps.esrij.com/arcgis-dev/guide/img/install-android/2_1.addPermission.png" >
 
 1.	Project ツールウィンドウ で「Project」を選択して build.gradle をダブルクリックして開きます。
 ArcGIS の Maven リポジトリの URL を追加します。
 
-```
-allprojects {
-    repositories {
-        jcenter()
-        // esri arcgis maven リポジトリの追加
-        maven {
-            url 'https://esri.bintray.com/arcgis'
-        }
-    }
-}
-```
+	```java
+	allprojects {
+	    repositories {
+	        jcenter()
+	        // esri arcgis maven リポジトリの追加
+	        maven {
+	            url 'https://esri.bintray.com/arcgis'
+	        }
+	    }
+	}
+	```
 
  <img src="http://apps.esrij.com/arcgis-dev/guide/img/install-android/2_2.addMaven.png" >
 
 
 1.	Project ツールウィンドウ で「Android」を選択して [Gradle Scripts] の下にある build.gradle (Module: app) をダブルクリックして開きます。dependencies セクション内に「compile 'com.esri.arcgisruntime:arcgis-android:100.0.0'」を追加します。
 
-```
-dependencies {
-    compile 'com.esri.arcgisruntime:arcgis-android:100.0.0'
-    …
-}
-```
+	```java
+	dependencies {
+	    compile 'com.esri.arcgisruntime:arcgis-android:100.0.0'
+	    …
+	}
+	```
 
  <img src="http://apps.esrij.com/arcgis-dev/guide/img/install-android/2_3.addRuntimeVersion.png" >
 
@@ -119,55 +119,55 @@ ArcGIS の機能を実装する準備ができたので、アプリケーショ�
 
 1.	左下の [Text] タブをクリックして XML 形式で開きます。TextView 部分を全て削除して以下の MapView エレメントを追加します。
 
-```
-<com.esri.arcgisruntime.mapping.view.MapView
-    android:id="@+id/mapView"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
-</com.esri.arcgisruntime.mapping.view.MapView>
-```
+	```java
+	<com.esri.arcgisruntime.mapping.view.MapView
+	    android:id="@+id/mapView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+	</com.esri.arcgisruntime.mapping.view.MapView>
+	```
 
  <img src="http://apps.esrij.com/arcgis-dev/guide/img/install-android/3_2.addMapviewElement.png" >
 
 1.	Project ツールウィンドウで [app] → [res] → [java] と展開し MainActivity クラスを ダブルクリックして開き、地図表示のためのコードを設定します。
 
-* MainActivity クラスへ次のクラスをインポートします。
+ * MainActivity クラスへ次のクラスをインポートします。
 
-```
-import com.esri.arcgisruntime.mapping.view.MapView;
-import com.esri.arcgisruntime.mapping.Map;
-import com.esri.arcgisruntime.mapping.Basemap;
-```
-* MainActivity クラスの先頭に次のクラス変数宣言を追加します。
+	```java
+	import com.esri.arcgisruntime.mapping.view.MapView;
+	import com.esri.arcgisruntime.mapping.Map;
+	import com.esri.arcgisruntime.mapping.Basemap;
+	```
+ * MainActivity クラスの先頭に次のクラス変数宣言を追加します。
 
-```
-private MapView mMapView;
-```
-* onCreate() メソッド内の setContentView() を呼び出している後に以下のコードを追加します。
+	```java
+	private MapView mMapView;
+	```
+ * onCreate() メソッド内の setContentView() を呼び出している後に以下のコードを追加します。
 このコードは、レイアウトに定義している MapView の参照を取得し、ベースマップのタイプや初期表示の範囲、縮尺レベルを設定した地図を MapView に設定します。
 ここではベースマップに地形図を設定し、初期表示範囲は永田町付近を表示するようにしています。
 
-```
-mMapView = (MapView) findViewById(R.id.mapView);
-Map map = new Map(Basemap.Type.TOPOGRAPHIC, 34.0405, -118.2450, 8);
-mMapView.setMap(map);
-```
-* MainActivity クラスへ onPause() メソッド(一時停止)と onResume() メソッド(再開)を追加します。2つのメソッドへはそれぞれ次のコードを追加します。
+	```java
+	mMapView = (MapView) findViewById(R.id.mapView);
+	Map map = new Map(Basemap.Type.TOPOGRAPHIC, 34.0405, -118.2450, 8);
+	mMapView.setMap(map);
+	```
+ * MainActivity クラスへ onPause() メソッド(一時停止)と onResume() メソッド(再開)を追加します。2つのメソッドへはそれぞれ次のコードを追加します。
 
-```
-@Override
-protected void onPause(){
-    mMapView.pause();
-    super.onPause();
-}
-@Override
-protected void onResume(){
-    super.onResume();
-    mMapView.resume();
-}
-```
+	```java
+	@Override
+	protected void onPause(){
+	    mMapView.pause();
+	    super.onPause();
+	}
+	@Override
+	protected void onResume(){
+	    super.onResume();
+	    mMapView.resume();
+	}
+	```
 
-* MainActivity は以下のようになります。
+ * MainActivity は以下のようになります。
 
  <img src="http://apps.esrij.com/arcgis-dev/guide/img/install-android/3_3.finishMapViewElement.png" >
 
