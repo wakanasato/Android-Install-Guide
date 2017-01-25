@@ -38,13 +38,13 @@ ArcGIS Runtime SDK for Android がサポートする最新の動作環境につ�
 
 <img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/1_1.StartupAndroid.png" >
 
-1. [Application name] にアプリケーションの名称を入力します。ここでは「HelloMap」としています。
+1.  [Application name] にアプリケーションの名称を入力します。ここでは「HelloMap」としています。
 [Company Domain] にドメインを、[Project Location] に作成するディレクトリを入力して [Next] をクリックします。
 ここではドメインを「tutorials.esri.com」としています。
 
 <img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/1_2.makeProject.png" >
 
-1. [Phone and Tablet] のみにチェックを入れ [Minimum SDK] のドロップダウン リストから 「API 16: Android 4.1」を選択して [Next] をクリックします。
+1.  [Phone and Tablet] のみにチェックを入れ [Minimum SDK] のドロップダウン リストから 「API 16: Android 4.1」を選択して [Next] をクリックします。
 
 <img src="https://s3-us-west-2.amazonaws.com/satowakaworkspace/installGuideImg/1_3.choseAndroidVersion.png" >
 
