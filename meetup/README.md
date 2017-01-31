@@ -1,11 +1,11 @@
-﻿
-#resas2arcgis を使ってみようハンズオン
 
- 1. ArcGIS for Developers アカウント作成(事前)※未作成者は受付時対応
- 以下のサイトから [Get a Free Account] をクリックします(登録にはメールアドレスが必要です)。
+##resas2arcgis を使ってみようハンズオン
+
+ ### ArcGIS for Developers アカウント作成(事前)※未作成者は受付時対応
+  以下のサイトから [Get a Free Account] をクリックします(登録にはメールアドレスが必要です)。
   <https://developers.arcgis.com/>
 
- 1. シェープファイルをダウンロード(ArcGIS Open Data フィルタリング)
+ ### シェープファイルをダウンロード(ArcGIS Open Data フィルタリング)
  オープンデータ カタログ サイトの [ArcGIS Open Data](http://opendata.arcgis.com/)から市区町村の境界データをダウンロードします。
 [全国市区町村界データ](http://arcg.is/2iTeKD9)のページにアクセス。
 選んだ都道府県でフィルタリングをしてシェープファイルでダウンロードします。
