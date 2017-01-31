@@ -6,6 +6,8 @@
   以下のサイトから [Get a Free Account] をクリックします(登録にはメールアドレスが必要です)。<br>
   <https://developers.arcgis.com/>
 
+  1.	データを可視化してみたい都道府県を選ぶ（受付時）
+  
   1.	シェープファイルをダウンロード(ArcGIS Open Data フィルタリング)
  
   オープンデータ カタログ サイトの [ArcGIS Open Data](http://opendata.arcgis.com/)から市区町村の境界データをダウンロードします。<br>
@@ -48,13 +50,13 @@
 
   RESAS API のデータをArcGIS の指定のフィーチャ レイヤーに入力するために、以下のパラメータを入力します。
 
-   *	RESAS API URL：入力したデータのRESAS API のURLを指定します。
-   *	RESAS Mapping field：ArcGIS のフィーチャ レイヤーへ入力したい、RESAS データのフィールド名を入力します。
+   *	RESAS API URL：RESAS API のURLを指定します。
+   *	RESAS Mapping field：ArcGIS と RESAS API に共通値がある RESAS API データのフィールド名を入力します。
    *	RESAS API Key　：RESAS API を使用するためのKey (個人で取得)を入力します。
-   *	ArcGIS Online Feature Layer：ArcGIS の　フィーチャ レイヤーのURLを入力します。取得方法は[7.フィーチャ レイヤー](#)の REST エンドポイント URL の取得(コピー)を参照してください。
-   *	Specified RESAS API Data hierarchy：RESAS API のデータ内の階層を入力します。フィーチャレイヤーへ入力したいデータの階層を指定します。
-   *	Specified ArcGIS Feature Layer field : unique Field：RESAS API のデータとマッピングさせたいArcGIS フィーチャ レイヤーのフィールド名を入力します。
-   *	Specified ArcGIS Feature Layer field : new Data Filed :　ArcGIS のフィーチャレイヤーで新たに更新したいフィールドを指定します。
+   *	ArcGIS Online Feature Layer：ArcGIS のフィーチャ レイヤーのURLを入力します。取得方法は[1.	フィーチャ レイヤーの REST エンドポイント URL の取得(コピー)](1.	フィーチャ レイヤーの REST エンドポイント URL の取得(コピー))を参照してください。
+   *	Specified RESAS API Data hierarchy：RESAS API のデータ取得結果の階層を入力します。
+   *	Specified ArcGIS Feature Layer field : unique Field：ArcGIS と RESAS API に共通値がある ArcGIS フィーチャ レイヤーのフィールド名を入力します。
+   *	Specified ArcGIS Feature Layer field : new Data Filed :　ArcGIS フィーチャ レイヤーで新たに更新したいフィールドを指定します。
 
   1.	実行
 
