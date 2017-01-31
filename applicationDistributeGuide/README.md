@@ -10,13 +10,12 @@ ArcGIS Runtime SDK for Android を使用して開発したアプリケーショ�
 1. __[ライセンスの認証](#ライセンスの認証)__
   * __[Lite ライセンスの認証](#lite-ライセンスの認証)__
   * __[Basic ライセンスの認証](#basic-ライセンスの認証)__
-  * __[Standard または Advanced ライセンスの認証](#standard-または-advanced-ライセンスの認証)__
 1. __[アプリケーションへの帰属の追加](#アプリケーションへの帰属の追加)__
 
 
 ## 使用するライセンスの選択
 
-ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライセンス レベルがあります。開発したアプリケーションが使用する機能に応じて、適切なライセンス レベルを選択してください。
+ArcGIS Runtime SDK for Android には Lite、Basic の 2 つのライセンス レベルがあります。開発したアプリケーションが使用する機能に応じて、適切なライセンス レベルを選択してください。
 
 各ライセンスで利用可能な機能の概要は以下の表をご参照ください。
 
@@ -24,11 +23,8 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
 |:-----|:-----|
 | Lite | ・地図表示<br>・フィーチャの表示/検索<br>・ルート検索<br>・住所検索 |
 | Basic | ・Lite ライセンスで利用できるすべての機能<br>・フィーチャ編集<br>・ArcGIS Online の解析サービスの使用<br>・ArcGIS Online/Portal for ArcGIS のコンテンツの編集 |
-| Standard | ・Basic ライセンスで利用できるすべての機能<br>・画像ファイルやシェープファイルなどの直接参照<br>・ローカル サーバーの標準的な機能（WPF API のみ)|
-| Advanced | ・Standard ライセンスで利用できるすべての機能<br>・ローカル サーバーの高度な機能（WPF API のみ) |
 
-
-ライセンスの詳細は[ESRIジャパン製品ページ](http://www.esrij.com/products/arcgis-runtime-sdk-for-ios/details/license/)をご参照ください。
+ライセンスの詳細は[ESRIジャパン製品ページ](http://www.esrij.com/products/arcgis-runtime-sdk-for-android/details/license/)をご参照ください。
 
 ## ライセンスの認証
 
@@ -63,7 +59,7 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
 
  1. 次に、アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してアプリケーションにコピーしたライセンスキーを設定します。
 
- ```
+  ```java
  // ライセンスキーを設定して認証
  ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud#########,day-month-year,####################");
  ```
@@ -75,7 +71,7 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
 
  アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してライセンスを取得します。
 
- ```
+  ```java
   // namedユーザー情報で ArcGIS Online または ArcGISポータルに接続します。   
   UserCredential credential = new UserCredential("user", "password");
   
@@ -97,7 +93,6 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
         // エラーステータスが返ってきた場合のコードをここに作成します。
       }
       // 文字列のライセンス情報を取得します。
-      // ※ローカルにライセンス情報を保存する場合はここで保存処理を行うコードを追加します。
       String licenseJson = licenseInfo.toJson();
 
       // 取得したライセンスを設定します。
@@ -115,7 +110,7 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
  以下のコードを使用して取得したライセンス情報を配列で出力することができます。出力したライセンス情報は任意の方法でローカルに保存してください。
  以下のコードのように、を使用して取得したライセンス情報を配列で出力することができます。出力したライセンス情報は任意の方法でローカルに保存してください。
 
- ```
+  ```java
   // オンラインで作成し、文字列で保存したライセンス情報を取得します。
   LicenseInfo licenseInfo = new LicenseInfo(licenseJSONstring);
 
@@ -145,18 +140,14 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
 
   配布パックのライセンスキーを使用してアプリケーションを Basic レベルで認証するには以下のコードを使用します。
 
-  ```javascript
+  ```java
   // ライセンスキーを設定して認証
-  do {
-   let result = try AGSArcGISRuntimeEnvironment.setLicenseKey("runtimelite,1000,rud#########,day-month-year,####################")
-   print("License Result: \(result.licenseStatus)")
-  }
-  catch let error as NSError {
-   // 認証に失敗した場合はエラーを出力
-   print("Error: \(error)")
+  LicenseResult licenseResult = ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud#########,day-month-year,####################");
+  if(licenseResult.equals(LicenseStatus.INVALID)){
+      // ログインに失敗したときの処理を記述する
+      return;
   }
   ```
-
 
 * __ArcGIS Online / Portal for ArcGIS へのログインによる認証__
 
@@ -164,27 +155,34 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
 
  アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してライセンスを取得します。
 
- ```javascript
-  // ArcGIS Online / Portal for ArcGIS へロクインし認証情報を取得       
-  let theURL = URL(string: "https://www.arcgis.com")
-  let portal = AGSPortal(url: theURL!, loginRequired: true)
+ ```java
+ // namedユーザー情報で ArcGIS Online または ArcGISポータルに接続します。   
+  UserCredential credential = new UserCredential("user", "password");
+  
+  //ArcGIS Online またはご自分の portal の URL を設定します。
+  Portal portal = new Portal("https://your-org.arcgis.com/");
+  portal.setCredential(credential);
 
-  portal.load { (error) in
-   if let error = error {
-    print(error)
-   }
-   else {
-    // ArcGIS Online / Portal for ArcGIS からライセンスを取得            
-    let licenseInfo = portal.portalInfo?.licenseInfo
-    do {
-     // ArcGIS Runtime にライセンスを設定
-     let result = try AGSArcGISRuntimeEnvironment.setLicenseInfo(licenseInfo!)
+  // ポータルの情報を同期してロードします。
+  portal.loadAsync();
+  portal.addDoneLoadingListener(new Runnable() {
+
+    @Override
+    public void run() {
+      // ポータルからライセンス情報を取得します。
+      LicenseInfo licenseInfo = null;
+      try {
+        licenseInfo = portal.getPortalInfo().getLicenseInfo();
+      } catch (Exception e) {
+        // エラーステータスが返ってきた場合のコードをここに作成します。
+      }
+      // 文字列のライセンス情報を取得します。
+      String licenseJson = licenseInfo.toJson();
+
+      // 取得したライセンスを設定します。
+      ArcGISRuntimeEnvironment.setLicense(licenseInfo);
+
     }
-    catch let error as NSError {
-     print("Error: \(error.localizedDescription)")
-    }
-   ｝
-  ｝
  ```
 
  __アプリケーションが ArcGIS Online / Portal for ArcGIS に常にログインできない場合__
@@ -193,60 +191,13 @@ ArcGIS Runtime SDK には Lite、Basic、Standard、Advanced の 4 つのライ�
 
  この方法を使用する場合、少なくとも 30 日に 1 回はアプリケーションから ArcGIS Online / Portal for ArcGIS にログインし、ローカルのライセンス情報を更新する必要があります。最後にログインしてから 30 日以上経過した場合は、ライセンスが無効となり Basic ライセンスを必要とする機能が使用できなくなります。
 
- 出力したライセンス情報は任意の方法でローカルに保存してください。以下のコードでは、ライセンス情報を配列で出力し、AGSKeychainItem クラスを使用して Keychain に保存しています（iOS シミュレータで実行する場合は、Xcode の Capabilities 設定画面で [Keychain Sharing] を ON にしてください）。
+  ```java
+  // オンラインで作成し、文字列で保存したライセンス情報を取得します。
+  LicenseInfo licenseInfo = new LicenseInfo(licenseJSONstring);
 
-  ```javascript
-  var licenseDictionary: NSDictionary?
-  do {
-   // ライセンス情報を配列で出力
-   let licenseDictionary = try licenseInfo?.toJSON() as! NSDictionary?
-  } catch {
-   print("ライセンス情報が無効です")
-  }
-  // 出力した配列を Keychain に保存
-  self.keychainItem = AGSKeychainItem(identifier: "<一意な値>", accessGroup: nil, acrossDevices: false)
-  self.keychainItem.writeObject(toKeychain: licenseDictionary!, completion: { (writeError) in
-   if let error = writeError {
-    print("Keychain への書き込みのエラー \(error)")
-   }
-  })
-
-  ・・・・・・
-
-  // Keychain からライセンス情報を取得
-  self.keychainItem = AGSKeychainItem(identifier: "<一意な値>", accessGroup: nil, acrossDevices: false)                
-  let licenseDictionary = self.keychainItem.readObjectFromKeychain() as? NSDictionary
-  let licenseInfo = try! AGSLicenseInfo.fromJSON(licenseDictionary!) as? AGSLicenseInfo
-  do {
-   // ライセンスキーを設定して認証
-   let result = try AGSArcGISRuntimeEnvironment.setLicenseInfo(licenseInfo!)
-  } catch let error as NSError {
-   print("Error: \(error.localizedDescription)")
-  }
+  // 作成したライセンス情報を設定します。
+  ArcGISRuntimeEnvironment.setLicense(licenseInfo);
  ```
-
-## Standard または Advanced ライセンスの認証
-
-アプリケーションを Standard または Advanced レベルで認証するには、ArcGIS Runtime Standard または Advanced 配布パックを購入する必要があります。
-
-ArcGIS Runtime Standard または Advanced の配布パックを購入し、取得したライセンスキーを利用して、アプリケーションを  Standard または Advanced ライセンスで認証することができます。
-
-ArcGIS Runtime Standard または Advanced 配布パックの購入については [ESRIジャパン](https://esrij.smartseminar.jp/public/application/add/356)にお問合せください。ArcGIS Runtime の配布パックをご購入頂いた場合、ESRIジャパンよりライセンスキーをメールにてお送りします。
-
-配布パックのライセンスキーを使用してアプリケーションを Standard または Advanced レベルで認証するには以下のコードを使用します。
-
-```javascript
-// ライセンスキーを設定して認証
-do {
- let result = try AGSArcGISRuntimeEnvironment.setLicenseKey("runtimelite,1000,rud#########,day-month-year,####################")
- print("License Result: \(result.licenseStatus)")
-}
-catch let error as NSError {
- // 認証に失敗した場合はエラーを出力
- print("Error: \(error)")
-}
-```
-
 
 ## アプリケーションへの帰属の追加
 

@@ -1,31 +1,30 @@
-# ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ÌˆÚsiAndroidj
-## ˆÚsƒKƒCƒh‚É‚Â‚¢‚Ä
+# ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®ç§»è¡Œï¼ˆAndroidï¼‰
+## ç§»è¡Œã‚¬ã‚¤ãƒ‰ã«ã¤ã„ã¦
 
-‚±‚ÌˆÚsƒKƒCƒh‚ÍA¡‚Ü‚Å ArcGIS Runtime SDK for Android ƒo[ƒWƒ‡ƒ“ 10.2.x ‚ğg—p‚µ‚ÄƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ğŠJ”­‚³‚ê‚Ä‚¢‚½ŠJ”­ÒŒü‚¯‚ÌƒKƒCƒh‚Å‚·B
+ã“ã®ç§»è¡Œã‚¬ã‚¤ãƒ‰ã¯ã€ä»Šã¾ã§ ArcGIS Runtime SDK for Android ãƒãƒ¼ã‚¸ãƒ§ãƒ³ 10.2.x ã‚’ä½¿ç”¨ã—ã¦ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’é–‹ç™ºã•ã‚Œã¦ã„ãŸé–‹ç™ºè€…å‘ã‘ã®ã‚¬ã‚¤ãƒ‰ã§ã™ã€‚
 
-ArcGIS Runtime SDK ƒo[ƒWƒ‡ƒ“ 100.x ‚ÍV‚µ‚¢ƒA[ƒLƒeƒNƒ`ƒƒ‚ğg—p‚µ‚Äƒ[ƒ‚©‚çŠJ”­‚³‚ê‚½Ÿ¢‘ã‚Ì ArcGIS Runtime ‚Å‚·B‚±‚Ìƒo[ƒWƒ‡ƒ“ƒAƒbƒv‚É”º‚¢ API ‚ÌÄİŒv‚ªs‚È‚í‚ê‚Ä‚¢‚Ü‚·B‚±‚ÌƒhƒLƒ…ƒƒ“ƒg‚Å‚ÍAƒo[ƒWƒ‡ƒ“ 100.x ‚Ì•ÏX“_‚É‚Â‚¢‚Äà–¾‚µ‚Ü‚·B
+ArcGIS Runtime SDK ãƒãƒ¼ã‚¸ãƒ§ãƒ³ 100.x ã¯æ–°ã—ã„ã‚¢ãƒ¼ã‚­ãƒ†ã‚¯ãƒãƒ£ã‚’ä½¿ç”¨ã—ã¦ã‚¼ãƒ­ã‹ã‚‰é–‹ç™ºã•ã‚ŒãŸæ¬¡ä¸–ä»£ã® ArcGIS Runtime ã§ã™ã€‚ã“ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—ã«ä¼´ã„ API ã®å†è¨­è¨ˆãŒè¡Œãªã‚ã‚Œã¦ã„ã¾ã™ã€‚ã“ã®ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã§ã¯ã€ãƒãƒ¼ã‚¸ãƒ§ãƒ³ 100.x ã®å¤‰æ›´ç‚¹ã«ã¤ã„ã¦èª¬æ˜ã—ã¾ã™ã€‚
 
-ArcGIS Runtime SDK for Android ‚ÉŠÖ‚µ‚Ä‚ÍA[ESRIƒWƒƒƒpƒ“ »•iƒy[ƒW](https://www.esrij.com/products/arcgis-runtime-sdk-for-Android)‚ğ‚²QÆ‚­‚¾‚³‚¢B
+ArcGIS Runtime SDK for Android ã«é–¢ã—ã¦ã¯ã€[ESRIã‚¸ãƒ£ãƒ‘ãƒ³ è£½å“ãƒšãƒ¼ã‚¸](https://www.esrij.com/products/arcgis-runtime-sdk-for-Android)ã‚’ã”å‚ç…§ãã ã•ã„ã€‚
 
-ˆÈ‰º‚ÍAƒo[ƒWƒ‡ƒ“ 100.x ‚Ìå‚È•ÏX“_‚Å‚·B
+ä»¥ä¸‹ã¯ã€ãƒãƒ¼ã‚¸ãƒ§ãƒ³ 100.x ã®ä¸»ãªå¤‰æ›´ç‚¹ã§ã™ã€‚
 
-* __[Gradleƒtƒ@ƒCƒ‹‚Ì•ÏX](#Gradle QÆƒvƒƒWƒFƒNƒg‚Ì•ÏX)__
-* __[ƒ}ƒbƒv‚ÆƒV[ƒ“](#ƒ}ƒbƒv‚ÆƒV[ƒ“)__
-* __[ƒrƒ…[](#ƒrƒ…[)__
-* __[ƒŒƒCƒ„[ ƒNƒ‰ƒX–¼‚Ì•ÏX](#ƒŒƒCƒ„[-ƒNƒ‰ƒX–¼‚Ì•ÏX)__
-* __[ƒtƒB[ƒ`ƒƒ ƒŒƒCƒ„[‚Ì•\¦](#ƒtƒB[ƒ`ƒƒ-ƒŒƒCƒ„[‚Ì•\¦)__
-* __[ƒtƒB[ƒ`ƒƒ‚Ì‘€ì](#ƒtƒB[ƒ`ƒƒ‚Ì‘€ì)__
-* __[ŒÂ•Ê‘®«•\¦](#ŒÂ•Ê‘®«•\¦)__
-* __[ƒOƒ‰ƒtƒBƒbƒNƒX ƒI[ƒo[ƒŒƒC](#ƒOƒ‰ƒtƒBƒbƒNƒX-ƒI[ƒo[ƒŒƒC)__
-* __[ƒWƒIƒƒgƒŠ‚ÆƒWƒIƒƒgƒŠ ƒrƒ‹ƒ_[](#ƒWƒIƒƒgƒŠ‚ÆƒWƒIƒƒgƒŠ-ƒrƒ‹ƒ_[)__
-* __[ƒXƒPƒbƒ` ƒGƒfƒBƒ^[](#ƒXƒPƒbƒ`-ƒGƒfƒBƒ^[)__
-* __[ƒ[ƒ_ƒuƒ‹ ƒpƒ^[ƒ“](#ƒ[ƒ_ƒuƒ‹-ƒpƒ^[ƒ“)__
-* __[ƒuƒƒbƒN‚ğg—p‚µ‚½”ñ“¯ŠúƒvƒƒOƒ‰ƒ~ƒ“ƒO](#ƒuƒƒbƒN‚ğg—p‚µ‚½”ñ“¯ŠúƒvƒƒOƒ‰ƒ~ƒ“ƒO)__
-* __[Šù’m‚Ì§ŒÀ–€](#Šù’m‚Ì§ŒÀ–€)__
+* __[Gradle å‚ç…§ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å¤‰æ›´](#gradle-å‚ç…§ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å¤‰æ›´)__
+* __[ãƒãƒƒãƒ—](#ãƒãƒƒãƒ—)__
+* __[ãƒ“ãƒ¥ãƒ¼](#ãƒ“ãƒ¥ãƒ¼)__
+* __[ãƒ¬ã‚¤ãƒ¤ãƒ¼ ã‚¯ãƒ©ã‚¹åã®å¤‰æ›´](#ãƒ¬ã‚¤ãƒ¤ãƒ¼-ã‚¯ãƒ©ã‚¹åã®å¤‰æ›´)__
+* __[ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®è¡¨ç¤º](#ãƒ•ã‚£ãƒ¼ãƒãƒ£-ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®è¡¨ç¤º)__
+* __[ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®æ“ä½œ](#ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®æ“ä½œ)__
+* __[å€‹åˆ¥å±æ€§è¡¨ç¤º](#å€‹åˆ¥å±æ€§è¡¨ç¤º)__
+* __[ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¹ ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤](#ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¹-ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤)__
+* __[ã‚¸ã‚ªãƒ¡ãƒˆãƒªã¨ã‚¸ã‚ªãƒ¡ãƒˆãƒª ãƒ“ãƒ«ãƒ€ãƒ¼](#ã‚¸ã‚ªãƒ¡ãƒˆãƒªã¨ã‚¸ã‚ªãƒ¡ãƒˆãƒª-ãƒ“ãƒ«ãƒ€ãƒ¼)__
+* __[ãƒ­ãƒ¼ãƒ€ãƒ–ãƒ« ãƒ‘ã‚¿ãƒ¼ãƒ³](#ãƒ­ãƒ¼ãƒ€ãƒ–ãƒ«-ãƒ‘ã‚¿ãƒ¼ãƒ³)__
+* __[æ–°ã—ã„åŒæœŸãƒ‘ã‚¿ãƒ¼ãƒ³](#æ–°ã—ã„åŒæœŸãƒ‘ã‚¿ãƒ¼ãƒ³)__
+* __[æ—¢çŸ¥ã®åˆ¶é™äº‹é …](#æ—¢çŸ¥ã®åˆ¶é™äº‹é …)__
 
-## Gradle QÆƒvƒƒWƒFƒNƒg‚Ì•ÏX
+## Gradle å‚ç…§ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å¤‰æ›´
 
-Android Studio ‚Ìƒrƒ‹ƒh ƒc[ƒ‹‚Í Gradle ‚ğg—p‚µAmavenƒŠƒ|ƒWƒgƒŠ‚Æƒ‰ƒCƒuƒ‰ƒŠ‚ÌQÆ‚ğ•ÏX‚µ‚Ü‚·B
+Android Studio ã®ãƒ“ãƒ«ãƒ‰ ãƒ„ãƒ¼ãƒ«ã¯ Gradle ã‚’ä½¿ç”¨ã—ã€maven ãƒªãƒã‚¸ãƒˆãƒªã¨ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®å‚ç…§ã‚’å¤‰æ›´ã—ã¾ã™ã€‚
 
 ```
     repositories {
@@ -39,235 +38,213 @@ Android Studio ‚Ìƒrƒ‹ƒh ƒc[ƒ‹‚Í Gradle ‚ğg—p‚µAmavenƒŠƒ|ƒWƒgƒŠ‚Æƒ‰ƒCƒuƒ‰ƒŠ‚Ì
     }
 ```
 
-ArcGIS Runtime SDK for Android ‚ªƒTƒ|[ƒg‚·‚éÅV‚Ì“®ìŠÂ‹«‚ÍA[ESRIƒWƒƒƒpƒ“ »•iƒy[ƒWi“®ìŠÂ‹«j](https://www.esrij.com/products/arcgis-runtime-sdk-for-Android/environments/)‚ğ‚²QÆ‚­‚¾‚³‚¢B
+ArcGIS Runtime SDK for Android ãŒã‚µãƒãƒ¼ãƒˆã™ã‚‹æœ€æ–°ã®å‹•ä½œç’°å¢ƒã¯ã€[ESRIã‚¸ãƒ£ãƒ‘ãƒ³ è£½å“ãƒšãƒ¼ã‚¸ï¼ˆå‹•ä½œç’°å¢ƒï¼‰](https://www.esrij.com/products/arcgis-runtime-sdk-for-Android/environments/)ã‚’ã”å‚ç…§ãã ã•ã„ã€‚
 
 
-## ƒ}ƒbƒv‚ÆƒV[ƒ“
+## ãƒãƒƒãƒ—
+100.x ã§ã¯ã€`ArcGISMap` ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ API ã®ã‚³ã‚¢ã¨ã—ã¦ã€ArcGIS ãƒ—ãƒ©ãƒƒãƒˆãƒ•ã‚©ãƒ¼ãƒ ã® Web GIS æ©Ÿèƒ½ã‚’è¿…é€Ÿã«åˆ©ç”¨ã§ãã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
 
-100.x ‚Å‚ÍA`AGSMap` ƒIƒuƒWƒFƒNƒgi2D•\¦—pj‚Æ `AGSScene` ƒIƒuƒWƒFƒNƒgi3D•\¦—pj<sup>¦1</sup> ‚ğ API ‚ÌƒRƒA‚Æ‚µ‚ÄAArcGIS ƒvƒ‰ƒbƒgƒtƒH[ƒ€‚Ì Web GIS ‹@”\‚ğv‘¬‚É—˜—p‚Å‚«‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
+`ArcGISMap` ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¯ ã€ãã‚Œã‚’è¡¨ç¤ºã™ã‚‹ View ã¨åˆ†é›¢ã•ã‚Œã¦ã„ã¾ã™ã€‚`ArcGISMap` ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã¯ ã€æ“ä½œãƒ¬ã‚¤ãƒ¤ãƒ¼ã€ãƒ™ãƒ¼ã‚¹ãƒãƒƒãƒ—ã€ãƒ–ãƒƒã‚¯ãƒãƒ¼ã‚¯ç­‰ã® ArcGIS å›ºæœ‰ã®ãƒ‡ãƒ¼ã‚¿ã‚’è¨­å®šã§ãã€ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§åˆ©ç”¨ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-`AGSMap` ƒIƒuƒWƒFƒNƒg‚Æ `AGSScene` ƒIƒuƒWƒFƒNƒg‚Í A‚»‚ê‚ç‚ğ•\¦‚·‚é View ‚Æ•ª—£‚³‚ê‚Ä‚¢‚Ü‚·B`AGSMap` ƒIƒuƒWƒFƒNƒg‚Æ `AGSScene` ƒIƒuƒWƒFƒNƒg‚É‚Í A‘€ìƒŒƒCƒ„[Aƒx[ƒXƒ}ƒbƒvAƒuƒbƒNƒ}[ƒN“™‚Ì ArcGIS ŒÅ—L‚Ìƒf[ƒ^‚ğİ’è‚Å‚«AƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Å—˜—p‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+## ãƒ“ãƒ¥ãƒ¼
+`MapView`ï¼ˆ2Dè¡¨ç¤ºç”¨ï¼‰ã¨ `SceneView`ï¼ˆ3Dè¡¨ç¤ºç”¨ï¼‰<sup>â€»1</sup>ã¯ã€UI ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã§ã™ã€‚`MapView` ã‚¯ãƒ©ã‚¹ã® `map` ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã«ã€`ArcGISMap` ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¨­å®šã—ã¾ã™ã€‚
 
-<sup>¦1</sup> ƒo[ƒWƒ‡ƒ“100.0 ‚Å‚ÍA3D ŠÖ˜A‚Ì‹@”\‚Íƒx[ƒ^‹@”\‚Æ‚µ‚Ä’ñ‹Ÿ‚³‚ê‚Ä‚¢‚Ü‚·
+<sup>â€»1</sup> ãƒãƒ¼ã‚¸ãƒ§ãƒ³100.0 ã§ã¯ã€3D é–¢é€£ã®æ©Ÿèƒ½ã¯æœªå¯¾å¿œã§ã™ã€‚
 
-## ƒrƒ…[
-
-`AGSMapView`i2D•\¦—pj‚Æ `AGSSceneView`i3D•\¦—pj‚ÍAUI ƒRƒ“ƒ|[ƒlƒ“ƒg‚Å‚·B`AGSMapView` ƒNƒ‰ƒX‚Ì `map` ƒvƒƒpƒeƒB‚ÉA`AGSMap` ƒIƒuƒWƒFƒNƒg‚ğA`AGSMapSceneView` ƒNƒ‰ƒX‚Ì `scene` ƒvƒƒpƒeƒB‚É‚Í `AGSScene` ƒIƒuƒWƒFƒNƒg‚ğİ’è‚µ‚Ü‚·B
-
-100.x ‚Å‚ÍAˆÈ‰º‚Ì‚æ‚¤‚Éƒ}ƒbƒv‚ğ•\¦‚µ‚Ü‚·B
-```javascript
-// ƒx[ƒXƒ}ƒbƒv‚ğw’è‚µ‚Äƒ}ƒbƒv‚ğ‰Šú‰»
-let map = AGSMap(basemap:AGSBasemap.imagery())
-// ƒ}ƒbƒvƒrƒ…[‚Éƒ}ƒbƒv‚ğİ’è
-self.mapView.map = map
+100.x ã§ã¯ã€ä»¥ä¸‹ã®ã‚ˆã†ã«ãƒãƒƒãƒ—ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚
+```java
+// ãƒ™ãƒ¼ã‚¹ãƒãƒƒãƒ—ã‚’æŒ‡å®šã—ã¦ãƒãƒƒãƒ—ã‚’åˆæœŸåŒ–
+ArcGISMap mArcGISMap = new ArcGISMap();
+mArcGISMap.setBasemap(Basemap.createTopographic());
+// ãƒãƒƒãƒ—ãƒ“ãƒ¥ãƒ¼ã«ãƒãƒƒãƒ—ã‚’è¨­å®š
+MapView mMapView =  ((MapView) findViewById(R.id.mapView));
+mMapView.setMap(mArcGISMap);
 ```
 
-## ƒŒƒCƒ„[ ƒNƒ‰ƒX–¼‚Ì•ÏX
+## ãƒ¬ã‚¤ãƒ¤ãƒ¼ ã‚¯ãƒ©ã‚¹åã®å¤‰æ›´
+å„ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ã‚¯ãƒ©ã‚¹åãŒä»¥ä¸‹ã®ã‚ˆã†ã«å¤‰æ›´ã•ã‚Œã¦ã„ã¾ã™ã€‚
 
-ŠeƒŒƒCƒ„[‚ÌƒNƒ‰ƒX–¼‚ªˆÈ‰º‚Ì‚æ‚¤‚É•ÏX‚³‚ê‚Ä‚¢‚Ü‚·B
-
-|ƒŒƒCƒ„[|10.2.x ‚ÌƒNƒ‰ƒX–¼|100.x ‚ÌƒNƒ‰ƒX–¼|
+|ãƒ¬ã‚¤ãƒ¤ãƒ¼|10.2.x ã®ã‚¯ãƒ©ã‚¹å|100.x ã®ã‚¯ãƒ©ã‚¹å|
 |:--:|:--:|:--:|
-|ArcGIS Server ƒ_ƒCƒiƒ~ƒbƒN ƒ}ƒbƒv ƒT[ƒrƒX ƒŒƒCƒ„[|AGSDynamicMapServiceLayer|AGSArcGISMapImageLayer|
-|ƒ^ƒCƒ‹ ƒ}ƒbƒv ƒT[ƒrƒX ƒŒƒCƒ„[|AGSTiledMapServiceLayer|AGSArcGISTiledLayer|
-|ƒ^ƒCƒ‹ ƒpƒbƒP[ƒW ƒŒƒCƒ„[|AGSLocalTiledLayer|AGSArcGISTiledLayer|
+|ArcGIS Server ãƒ€ã‚¤ãƒŠãƒŸãƒƒã‚¯ ãƒãƒƒãƒ— ã‚µãƒ¼ãƒ“ã‚¹ ãƒ¬ã‚¤ãƒ¤ãƒ¼|ArcGISDynamicMapServiceLayer|ArcGISMapImageLayer|
+|ã‚¿ã‚¤ãƒ« ãƒãƒƒãƒ— ã‚µãƒ¼ãƒ“ã‚¹ ãƒ¬ã‚¤ãƒ¤ãƒ¼|ArcGISTiledMapServiceLayer|ArcGISTiledLayer|
+|ã‚¿ã‚¤ãƒ« ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ ãƒ¬ã‚¤ãƒ¤ãƒ¼|ArcGISLocalTiledLayer|ArcGISTiledLayer|
 
-Œ»ƒo[ƒWƒ‡ƒ“‚Ì 100.0 ‚Å‚ÍA10.2.x ‚Å’ñ‹Ÿ‚³‚ê‚Ä‚¢‚½AˆÈ‰º‚ÌƒŒƒCƒ„[‚ªƒTƒ|[ƒg‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ‚Ì‚ÅA‚²’ˆÓ‚­‚¾‚³‚¢B
-* WMS ƒT[ƒrƒX ƒŒƒCƒ„[i`AGSWMSLayer`j
-* WMTS ƒT[ƒrƒX ƒŒƒCƒ„[i`AGSWMTSLayer`j
-* OpenStreetMap ƒŒƒCƒ„[i`AGSOpenStreetMapLayer`j
-* Bing Maps ƒŒƒCƒ„[i`AGSBingMapLayer`j
-* Web ƒ^ƒCƒ‹ ƒŒƒCƒ„[i`AGSWebTiledLayer`j
+ç¾ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã® 100.0 ã§ã¯ã€10.2.x ã§æä¾›ã•ã‚Œã¦ã„ãŸã€ä»¥ä¸‹ã®ãƒ¬ã‚¤ãƒ¤ãƒ¼ãŒã‚µãƒãƒ¼ãƒˆã•ã‚Œã¦ã„ã¾ã›ã‚“ã®ã§ã€ã”æ³¨æ„ãã ã•ã„ã€‚
+* ArcGIS Server ã‚¤ãƒ¡ãƒ¼ã‚¸ ã‚µãƒ¼ãƒ“ã‚¹ ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼ˆ`ArcGISImageServiceLayer`ï¼‰
+* KML ã‚µãƒ¼ãƒ“ã‚¹ ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼ˆ`KMLLayer`ï¼‰
+* WMS ã‚µãƒ¼ãƒ“ã‚¹ ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼ˆ`WMSLayer`ï¼‰
+* WMTS ã‚µãƒ¼ãƒ“ã‚¹ ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼ˆ`WMTSLayer`ï¼‰
+* OpenStreetMap ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼ˆ`OpenStreetMapLayer`ï¼‰
+* Bing Maps ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼ˆ`BingMapsLayer`ï¼‰
 
-100.x ‚ÅƒTƒ|[ƒg‚³‚ê‚Ä‚¢‚éƒŒƒCƒ„[‚Ìí—Ş‚É‚Â‚¢‚Ä‚ÍA[ArcGIS Runtime SDK for Android: ƒŒƒCƒ„[i‰pŒêj](https://developers.arcgis.com/Android/latest/swift/guide/layers.htm)‚ğ‚²QÆ‚­‚¾‚³‚¢B
+100.x ã§ã‚µãƒãƒ¼ãƒˆã•ã‚Œã¦ã„ã‚‹ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ç¨®é¡ã«ã¤ã„ã¦ã¯ã€[ArcGIS Runtime SDK for Android: ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼ˆè‹±èªï¼‰](https://developers.arcgis.com/android/latest/guide/layers.htm)ã‚’ã”å‚ç…§ãã ã•ã„ã€‚
 
-ì¬‚µ‚½ŠeƒŒƒCƒ„[‚ÍAˆÈ‰º‚Ì•û–@‚Åƒ}ƒbƒv‚É’Ç‰Á‚µ‚Ü‚·B
-```javascript
-// ‘€ìƒŒƒCƒ„[‚Æ‚µ‚Äƒ}ƒbƒv‚É’Ç‰Á‚·‚é
-self.map.operationalLayers.addObject(arcgis_map_image_layer)
+ä½œæˆã—ãŸå„ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¯ã€ä»¥ä¸‹ã®æ–¹æ³•ã§ãƒãƒƒãƒ—ã«è¿½åŠ ã—ã¾ã™ã€‚
+```java
+// æ“ä½œãƒ¬ã‚¤ãƒ¤ãƒ¼ã¨ã—ã¦ãƒãƒƒãƒ—ã«è¿½åŠ ã™ã‚‹
+mArcGISMap.getOperationalLayers().add(arcgis_map_image_layer)
 
-// ƒx[ƒXƒ}ƒbƒv‚Æ‚µ‚Äƒ}ƒbƒv‚É’Ç‰Á‚·‚é
-self.map.basemap = AGSBasemap(baseLayer: arcgis_tiled_layer)
+// ãƒ™ãƒ¼ã‚¹ãƒãƒƒãƒ—ã¨ã—ã¦ãƒãƒƒãƒ—ã«è¿½åŠ ã™ã‚‹
+Basemap mBasemap = new Basemap();
+mBasemap.getBaseLayers().add(arcgis_tiled_layer);
 ```
 
+## ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®è¡¨ç¤º
+ãƒ•ã‚£ãƒ¼ãƒãƒ£ ã‚µãƒ¼ãƒ“ã‚¹ã‚„ç«¯æœ«ã®ãƒ­ãƒ¼ã‚«ãƒ«ã«æ ¼ç´ã•ã‚ŒãŸã‚¸ã‚ªãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®ãƒ‡ãƒ¼ã‚¿ã‚’ãƒãƒƒãƒ—ã«è¡¨ç¤ºã™ã‚‹ã«ã¯ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’ä½¿ç”¨ã—ã¾ã™ã€‚
+ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’è¡¨ç¤ºã™ã‚‹ã«ã¯ã€ã¯ã˜ã‚ã«ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä½œæˆã—ã¾ã™ï¼ˆãƒ•ã‚£ãƒ¼ãƒãƒ£ ã‚µãƒ¼ãƒ“ã‚¹ã®ãƒ‡ãƒ¼ã‚¿ã‚’ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ¬ã‚¤ãƒ¤ãƒ¼ã§è¡¨ç¤ºã™ã‚‹å ´åˆã¯ `ArcGISFeatureTable` ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã€ã‚¸ã‚ªãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®ãƒ‡ãƒ¼ã‚¿ã‚’è¡¨ç¤ºã™ã‚‹å ´åˆã¯ `GeodatabaseFeatureTable` ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½¿ç”¨ã—ã¾ã™ï¼‰ã€‚æ¬¡ã«ä½œæˆã—ãŸãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’å¼•æ•°ã¨ã—ã¦ `FeatureLayer` ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã—ã€`ArcGISMap` ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã® `OperationalLayers` ã«è¿½åŠ ã—ã¾ã™ã€‚
 
-## ƒtƒB[ƒ`ƒƒ ƒŒƒCƒ„[‚Ì•\¦
+æ¬¡ã®ã‚³ãƒ¼ãƒ‰ã¯ã€ãƒ•ã‚£ãƒ¼ãƒãƒ£ ã‚µãƒ¼ãƒ“ã‚¹ã®ãƒ‡ãƒ¼ã‚¿ã‚’ `FeatureLayer` ã¨ã—ã¦ãƒãƒƒãƒ—ã«è¿½åŠ ã™ã‚‹æ–¹æ³•ã‚’ç¤ºã—ã¦ã„ã¾ã™ã€‚
 
-ƒtƒB[ƒ`ƒƒ ƒT[ƒrƒX‚â’[––‚Ìƒ[ƒJƒ‹‚ÉŠi”[‚³‚ê‚½ƒWƒIƒf[ƒ^ƒx[ƒX‚Ìƒf[ƒ^‚ğƒ}ƒbƒv‚É•\¦‚·‚é‚É‚ÍƒtƒB[ƒ`ƒƒ ƒŒƒCƒ„[‚ğg—p‚µ‚Ü‚·B
-ƒtƒB[ƒ`ƒƒ ƒŒƒCƒ„[‚ğ•\¦‚·‚é‚É‚ÍA‚Í‚¶‚ß‚ÉƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹‚ğì¬‚µ‚Ü‚·iƒtƒB[ƒ`ƒƒ ƒT[ƒrƒX‚Ìƒf[ƒ^‚ğƒtƒB[ƒ`ƒƒ ƒŒƒCƒ„[‚Å•\¦‚·‚éê‡‚Í `AGSArcGISFeatureTable` ƒIƒuƒWƒFƒNƒgAƒWƒIƒf[ƒ^ƒx[ƒX‚Ìƒf[ƒ^‚ğ•\¦‚·‚éê‡‚Í `AGSGeodatabaseFeatureTable` ƒIƒuƒWƒFƒNƒg‚ğg—p‚µ‚Ü‚·jBŸ‚Éì¬‚µ‚½ƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹‚ğˆø”‚Æ‚µ‚Ä `AGSFeatureLayer` ƒIƒuƒWƒFƒNƒg‚ğì¬‚µA`AGSMap` ƒIƒuƒWƒFƒNƒg‚Ì `OperationalLayers` ‚É’Ç‰Á‚µ‚Ü‚·B
-
-Ÿ‚ÌƒR[ƒh‚ÍAƒtƒB[ƒ`ƒƒ ƒT[ƒrƒX‚Ìƒf[ƒ^‚ğ `AGSFeatureLayer` ‚Æ‚µ‚Äƒ}ƒbƒv‚É’Ç‰Á‚·‚é•û–@‚ğ¦‚µ‚Ä‚¢‚Ü‚·B
-
-```javascript
-// ƒtƒB[ƒ`ƒƒ ƒT[ƒrƒX‚Ì URL ‚©‚çƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹‚ğì¬
-let featureTable = AGSServiceFeatureTable(url: URL(string: "https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/all_Japan_shikuchoson/FeatureServer/0")!)
-// ƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹‚©‚çƒtƒB[ƒ`ƒƒ ƒŒƒCƒ„[‚ğì¬
-let featureLayer = AGSFeatureLayer(featureTable: featureTable)
-// ƒtƒB[ƒ`ƒƒ ƒŒƒCƒ„[‚ğƒ}ƒbƒv‚Ì‘€ìƒŒƒCƒ„[‚É’Ç‰Á
-self.map.operationalLayers.add(featureLayer)
+```java
+// ãƒ•ã‚£ãƒ¼ãƒãƒ£ ã‚µãƒ¼ãƒ“ã‚¹ã® URL ã‹ã‚‰ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä½œæˆ
+ServiceFeatureTable serviceFeatureTable = new ServiceFeatureTable("https://services.arcgis.com/wlVTGRSYTzAbjjiC/arcgis/rest/services/all_Japan_shikuchoson/FeatureServer/0");
+// ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’ä½œæˆ
+FeatureLayer featureLayer = new FeatureLayer(serviceFeatureTable);
+// ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’ãƒãƒƒãƒ—ã®æ“ä½œãƒ¬ã‚¤ãƒ¤ãƒ¼ã«è¿½åŠ 
+mArcGISMap.getOperationalLayers().add(featureLayer);
 ```
 
-## ƒtƒB[ƒ`ƒƒ‚Ì‘€ì
+## ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®æ“ä½œ
 
-ƒtƒB[ƒ`ƒƒ‚ÌŒŸõ‚â•ÒW‚ÍƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹ i`AGSArcGISFeatureTable` ‚Ü‚½‚Í `AGSGeodatabaseFeatureTable`j‚É‘Î‚µ‚Äs‚¢‚Ü‚·B
+ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®æ¤œç´¢ã‚„ç·¨é›†ã¯ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ« ï¼ˆ`ServiceFeatureTable` ã¾ãŸã¯ `GeodatabaseFeatureTable`ï¼‰ã«å¯¾ã—ã¦è¡Œã„ã¾ã™ã€‚
 
-ƒtƒB[ƒ`ƒƒ ƒT[ƒrƒX‚©‚çì¬‚µ‚½ƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹i`AGSArcGISFeatureTable`j‚Ìê‡AƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹‚ÌƒtƒB[ƒ`ƒƒ‚ÍAƒ}ƒbƒvã‚ÉƒŒƒ“ƒ_ƒŠƒ“ƒO‚·‚é‚½‚ß‚É•K—vÅ¬ŒÀ‚Ìî•ñ‚¾‚¯‚ğŠÜ‚Ş‚æ‚¤‚ÉÅ“K‰»‚³‚ê‚Ä‚¢‚Ü‚·B‚±‚ê‚É‚æ‚èAƒtƒB[ƒ`ƒƒ‚ğ•\¦‚·‚é‚½‚ß‚Ì‘Ò‹@ŠÔ‚Æ‘Ñˆæ•‚ÌÁ”ï‚ªíŒ¸‚³‚ê‚Ü‚·BƒtƒB[ƒ`ƒƒ‚Ì•ÒW‚â‚·‚×‚Ä‚Ì‘®«î•ñ‚ğ•\¦‚·‚é‚æ‚¤‚Èê‡‚ÍŠ®‘S‚Èî•ñ‚ğæ“¾‚·‚é‚½‚ß‚ÉA[ƒ[ƒ_ƒuƒ‹ ƒpƒ^[ƒ“](#ƒ[ƒ_ƒuƒ‹-ƒpƒ^[ƒ“)“™‚ğg—p‚µ‚ÄAƒtƒB[ƒ`ƒƒ‚ğ–¾¦“I‚Éƒ[ƒh‚µ‚Ä‚¨‚­•K—v‚ª‚ ‚è‚Ü‚·B
+ãƒ•ã‚£ãƒ¼ãƒãƒ£ ã‚µãƒ¼ãƒ“ã‚¹ã‹ã‚‰ä½œæˆã—ãŸãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ«ï¼ˆ`ServiceFeatureTable`ï¼‰ã®å ´åˆã€ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒ•ã‚£ãƒ¼ãƒãƒ£ã¯ã€ãƒãƒƒãƒ—ä¸Šã«ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ã™ã‚‹ãŸã‚ã«å¿…è¦æœ€å°é™ã®æƒ…å ±ã ã‘ã‚’å«ã‚€ã‚ˆã†ã«æœ€é©åŒ–ã•ã‚Œã¦ã„ã¾ã™ã€‚ã“ã‚Œã«ã‚ˆã‚Šã€ãƒ•ã‚£ãƒ¼ãƒãƒ£ã‚’è¡¨ç¤ºã™ã‚‹ãŸã‚ã®å¾…æ©Ÿæ™‚é–“ã¨å¸¯åŸŸå¹…ã®æ¶ˆè²»ãŒå‰Šæ¸›ã•ã‚Œã¾ã™ã€‚ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®ç·¨é›†ã‚„ã™ã¹ã¦ã®å±æ€§æƒ…å ±ã‚’è¡¨ç¤ºã™ã‚‹ã‚ˆã†ãªå ´åˆã¯å®Œå…¨ãªæƒ…å ±ã‚’å–å¾—ã™ã‚‹ãŸã‚ã«ã€[ãƒ­ãƒ¼ãƒ€ãƒ–ãƒ« ãƒ‘ã‚¿ãƒ¼ãƒ³](#ãƒ­ãƒ¼ãƒ€ãƒ–ãƒ«-ãƒ‘ã‚¿ãƒ¼ãƒ³)ç­‰ã‚’ä½¿ç”¨ã—ã¦ã€ãƒ•ã‚£ãƒ¼ãƒãƒ£ã‚’æ˜ç¤ºçš„ã«ãƒ­ãƒ¼ãƒ‰ã—ã¦ãŠãå¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
 
 
-#### ƒtƒB[ƒ`ƒƒ‚ÌƒŠƒNƒGƒXƒg ƒ‚[ƒh
-ƒtƒB[ƒ`ƒƒ ƒT[ƒrƒX‚©‚çƒtƒB[ƒ`ƒƒ‚ğæ“¾‚·‚éê‡‚ÍA
-ƒŠƒNƒGƒXƒg ƒ‚[ƒh‚Ìİ’è‚É‚æ‚Á‚ÄƒtƒB[ƒ`ƒƒ‚Ìæ“¾•p“x‚Æ‚â’[––ã‚Å‚Ìƒf[ƒ^‚ÌƒLƒƒƒbƒVƒ…•û–@‚ğ§Œä‚µ‚Ü‚·BƒŠƒNƒGƒXƒg ƒ‚[ƒh‚É‚ÍA`OnInteractionCache`A `OnInteractionNoCache`A`ManualCache` ‚ª‚ ‚è‚Ü‚·BƒŠƒNƒGƒXƒg ƒ‚[ƒh‚ÍƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹‚ª‰Šú‰»‚³‚ê‚é‘O‚ÉA`AGSServiceFeatureTable` ‚Ì `featureRequestMode` ƒvƒƒpƒeƒB‚ğg—p‚µ‚Äİ’è‚Å‚«‚Ü‚·B
+#### ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®ãƒªã‚¯ã‚¨ã‚¹ãƒˆ ãƒ¢ãƒ¼ãƒ‰
+ãƒ•ã‚£ãƒ¼ãƒãƒ£ ã‚µãƒ¼ãƒ“ã‚¹ã‹ã‚‰ãƒ•ã‚£ãƒ¼ãƒãƒ£ã‚’å–å¾—ã™ã‚‹å ´åˆã¯ã€
+ãƒªã‚¯ã‚¨ã‚¹ãƒˆ ãƒ¢ãƒ¼ãƒ‰ã®è¨­å®šã«ã‚ˆã£ã¦ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®å–å¾—é »åº¦ã¨ã‚„ç«¯æœ«ä¸Šã§ã®ãƒ‡ãƒ¼ã‚¿ã®ã‚­ãƒ£ãƒƒã‚·ãƒ¥æ–¹æ³•ã‚’åˆ¶å¾¡ã—ã¾ã™ã€‚ãƒªã‚¯ã‚¨ã‚¹ãƒˆ ãƒ¢ãƒ¼ãƒ‰ã«ã¯ã€`ON_INTERACTION_CACHE`ã€ `ON_INTERACTION_NO_CACHE`ã€`MANUAL_CACHE ` ãŒã‚ã‚Šã¾ã™ã€‚ãƒªã‚¯ã‚¨ã‚¹ãƒˆ ãƒ¢ãƒ¼ãƒ‰ã¯ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ«ãŒåˆæœŸåŒ–ã•ã‚Œã‚‹å‰ã«ã€`ServiceFeatureTable` ã® `setFeatureRequestMode` ãƒ¡ã‚½ãƒƒãƒ‰ã‚’ä½¿ç”¨ã—ã¦è¨­å®šã§ãã¾ã™ã€‚
 
-* `OnInteractionCache`: ƒ†[ƒU[‚Ì‘€ì‚É‚æ‚èƒ}ƒbƒv‚Ì•\¦—Ìˆæ‚ª•ÏX‚³‚ê‚é‚ÆAƒtƒB[ƒ`ƒƒ‚ª©“®“I‚ÉƒŠƒNƒGƒXƒg‚³‚ê‚Ü‚·BƒŠƒNƒGƒXƒg‚³‚ê‚½‚·‚×‚Ä‚Ìƒf[ƒ^‚Íƒ[ƒJƒ‹‚ÉƒLƒƒƒbƒVƒ…‚³‚ê‚Ü‚·Bƒf[ƒ^‚ªƒLƒƒƒbƒVƒ…‚³‚êƒ‹‚½‚ßAŠù‚É•\¦‚³‚ê‚½—Ìˆæ‚Éƒ}ƒbƒv‚ªˆÚ“®‚µ‚Ä‚àAÄ“xƒtƒB[ƒ`ƒƒ‚ÍƒŠƒNƒGƒXƒg‚³‚ê‚Ü‚¹‚ñBƒT[ƒo[ã‚Ìƒf[ƒ^‚ª•ÏX‚³‚ê‚é‰Â”\«‚ª­‚È‚¢Ã“I‚Èƒf[ƒ^‚É“K‚µ‚½ƒ‚[ƒh‚Å‚·B
-* `OnInteractionNoCache`: ƒ†[ƒU[‚Ì‘€ì‚É‚æ‚èƒ}ƒbƒv‚Ì•\¦—Ìˆæ‚ª•ÏX‚³‚ê‚é‚ÆAƒtƒB[ƒ`ƒƒ‚ª©“®“I‚ÉƒŠƒNƒGƒXƒg‚³‚ê‚Ü‚·‚ªAƒLƒƒƒbƒVƒ…‚Í‚³‚ê‚Ü‚¹‚ñBŠù‚É•\¦‚³‚ê‚½—Ìˆæ‚Éƒ}ƒbƒv‚ªˆÚ“®‚·‚é‚ÆAÄ“xƒtƒB[ƒ`ƒƒ‚ªƒŠƒNƒGƒXƒg‚³‚ê‚Ü‚·BƒT[ƒo[ã‚Ìƒf[ƒ^‚ªŒp‘±“I‚ÉXV‚³‚ê‚é‰Â”\«‚ª‚ ‚éê‡‚É“K‚µ‚½ƒ‚[ƒh‚Å‚·B
-* `ManualCache`: ƒ†[ƒU[‚É‚æ‚éƒ}ƒbƒv‘€ì‚Å‚ÍAƒtƒB[ƒ`ƒƒ‚Í©“®“I‚ÉƒŠƒNƒGƒXƒg‚³‚ê‚Ü‚¹‚ñB‚±‚Ìƒ‚[ƒh‚ğg—p‚·‚éê‡‚ÍA`AGSServiceFeatureTable` ‚Ì `populateFromService` ƒƒ\ƒbƒh‚ğg—p‚µ‚Ä–¾¦“I‚Éƒf[ƒ^‚ğƒŠƒNƒGƒXƒg‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B
+* `ON_INTERACTION_CACHE`: ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®æ“ä½œã«ã‚ˆã‚Šãƒãƒƒãƒ—ã®è¡¨ç¤ºé ˜åŸŸãŒå¤‰æ›´ã•ã‚Œã‚‹ã¨ã€ãƒ•ã‚£ãƒ¼ãƒãƒ£ãŒè‡ªå‹•çš„ã«ãƒªã‚¯ã‚¨ã‚¹ãƒˆã•ã‚Œã¾ã™ã€‚ãƒªã‚¯ã‚¨ã‚¹ãƒˆã•ã‚ŒãŸã™ã¹ã¦ã®ãƒ‡ãƒ¼ã‚¿ã¯ãƒ­ãƒ¼ã‚«ãƒ«ã«ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã•ã‚Œã¾ã™ã€‚ãƒ‡ãƒ¼ã‚¿ãŒã‚­ãƒ£ãƒƒã‚·ãƒ¥ã•ã‚Œãƒ«ãŸã‚ã€æ—¢ã«è¡¨ç¤ºã•ã‚ŒãŸé ˜åŸŸã«ãƒãƒƒãƒ—ãŒç§»å‹•ã—ã¦ã‚‚ã€å†åº¦ãƒ•ã‚£ãƒ¼ãƒãƒ£ã¯ãƒªã‚¯ã‚¨ã‚¹ãƒˆã•ã‚Œã¾ã›ã‚“ã€‚ã‚µãƒ¼ãƒãƒ¼ä¸Šã®ãƒ‡ãƒ¼ã‚¿ãŒå¤‰æ›´ã•ã‚Œã‚‹å¯èƒ½æ€§ãŒå°‘ãªã„é™çš„ãªãƒ‡ãƒ¼ã‚¿ã«é©ã—ãŸãƒ¢ãƒ¼ãƒ‰ã§ã™ã€‚
+* `ON_INTERACTION_NO_CACHE`: ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®æ“ä½œã«ã‚ˆã‚Šãƒãƒƒãƒ—ã®è¡¨ç¤ºé ˜åŸŸãŒå¤‰æ›´ã•ã‚Œã‚‹ã¨ã€ãƒ•ã‚£ãƒ¼ãƒãƒ£ãŒè‡ªå‹•çš„ã«ãƒªã‚¯ã‚¨ã‚¹ãƒˆã•ã‚Œã¾ã™ãŒã€ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã¯ã•ã‚Œã¾ã›ã‚“ã€‚æ—¢ã«è¡¨ç¤ºã•ã‚ŒãŸé ˜åŸŸã«ãƒãƒƒãƒ—ãŒç§»å‹•ã™ã‚‹ã¨ã€å†åº¦ãƒ•ã‚£ãƒ¼ãƒãƒ£ãŒãƒªã‚¯ã‚¨ã‚¹ãƒˆã•ã‚Œã¾ã™ã€‚ã‚µãƒ¼ãƒãƒ¼ä¸Šã®ãƒ‡ãƒ¼ã‚¿ãŒç¶™ç¶šçš„ã«æ›´æ–°ã•ã‚Œã‚‹å¯èƒ½æ€§ãŒã‚ã‚‹å ´åˆã«é©ã—ãŸãƒ¢ãƒ¼ãƒ‰ã§ã™ã€‚
+* `MANUAL_CACHE`: ãƒ¦ãƒ¼ã‚¶ãƒ¼ã«ã‚ˆã‚‹ãƒãƒƒãƒ—æ“ä½œã§ã¯ã€ãƒ•ã‚£ãƒ¼ãƒãƒ£ã¯è‡ªå‹•çš„ã«ãƒªã‚¯ã‚¨ã‚¹ãƒˆã•ã‚Œã¾ã›ã‚“ã€‚ã“ã®ãƒ¢ãƒ¼ãƒ‰ã‚’ä½¿ç”¨ã™ã‚‹å ´åˆã¯ã€`ServiceFeatureTable` ã® `populateFromServiceAsync` ãƒ¡ã‚½ãƒƒãƒ‰ã‚’ä½¿ç”¨ã—ã¦æ˜ç¤ºçš„ã«ãƒ‡ãƒ¼ã‚¿ã‚’ãƒªã‚¯ã‚¨ã‚¹ãƒˆã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
 
-  ˆÈ‰º‚ÌƒR[ƒh‚Í `populateFromService` ƒƒ\ƒbƒh‚ğg—p‚µ‚ÄAƒT[ƒo[ã‚Ì‚·‚×‚Ä‚ÌƒtƒB[ƒ`ƒƒ‚ğæ“¾‚·‚é•û–@‚Ì—á‚Å‚·B
+ä»¥ä¸‹ã®ã‚³ãƒ¼ãƒ‰ã¯ `populateFromServiceAsync` ãƒ¡ã‚½ãƒƒãƒ‰ã‚’ä½¿ç”¨ã—ã¦ã€ã‚µãƒ¼ãƒãƒ¼ä¸Šã®ã™ã¹ã¦ã®ãƒ•ã‚£ãƒ¼ãƒãƒ£ã‚’å–å¾—ã™ã‚‹æ–¹æ³•ã®ä¾‹ã§ã™ã€‚
 
-  ```javascript
-// ƒtƒB[ƒ`ƒƒ‚ÌŒŸõƒpƒ‰ƒ[ƒ^[‚ğİ’è
-let params = AGSQueryParameters()
-// ‚·‚×‚Ä‚ÌƒtƒB[ƒ`ƒƒ‚ğæ“¾‚·‚é‚æ‚¤‚ÉğŒ‚ğİ’è
-params.whereClause = "1 = 1"
-// ŒŸõŒ‹‰Ê‚ÉƒtƒB[ƒ`ƒƒ‚Ì‚·‚×‚Ä‚Ì‘®«î•ñioutFields ‚Ì”z—ñ‚É "*" ‚ğw’èj‚ğŠÜ‚ß‚é
-self.featureTable.populateFromService(with: params, clearCache: true, outFields: ["*"]) {(result, error) -> Void in
-   if let error = error {
-       // ƒtƒB[ƒ`ƒƒ‚Ìæ“¾‚É¸”s
-       print("Error:\(error.localizedDescription)")
-   } else {
-     @// ƒtƒB[ƒ`ƒƒ‚Ìæ“¾‚É¬Œ÷iƒtƒB[ƒ`ƒƒ”‚ğ•\¦j
-       print(result?.featureEnumerator().allObjects.count ?? "0")
-   }
-}
+```java
+// ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®æ¤œç´¢ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ã‚’è¨­å®š
+QueryParameters queryParameters = new QueryParameters();
+// ã™ã¹ã¦ã®ãƒ•ã‚£ãƒ¼ãƒãƒ£ã‚’å–å¾—ã™ã‚‹ã‚ˆã†ã«æ¡ä»¶ã‚’è¨­å®š
+queryParameters.setWhereClause("1=1");
+// æ¤œç´¢çµæœã«ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®ã™ã¹ã¦ã®å±æ€§æƒ…å ±ï¼ˆoutFields ã®é…åˆ—ã« "*" ã‚’æŒ‡å®šï¼‰ã‚’å«ã‚ã‚‹
+ArrayList<String> outFields = new ArrayList<>();
+outFields.add("*");
+serviceFeatureTable.populateFromServiceAsync(queryParameters,true,outFields);
 ```
 
-ƒŠƒNƒGƒXƒg ƒ‚[ƒh‚ÌÚ×‚ÍA
-[ArcGIS Runtime SDK for Android: ƒtƒB[ƒ`ƒƒ ƒŠƒNƒGƒXƒg ƒ‚[ƒhi‰pŒêj](https://developers.arcgis.com/Android/latest/swift/guide/layers.htm#GUID-925AD533-12E7-4E93-AB88-3F9577906818)‚ğ‚²QÆ‚­‚¾‚³‚¢B
+ãƒªã‚¯ã‚¨ã‚¹ãƒˆ ãƒ¢ãƒ¼ãƒ‰ã®è©³ç´°ã¯ã€
+[ArcGIS Runtime SDK for Android: ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒªã‚¯ã‚¨ã‚¹ãƒˆ ãƒ¢ãƒ¼ãƒ‰ï¼ˆè‹±èªï¼‰](https://developers.arcgis.com/android/latest/guide/layers.htm#ESRI_SECTION1_272346C9CB0049938539D5F8970624F2)ã‚’ã”å‚ç…§ãã ã•ã„ã€‚
 
 
-#### ƒtƒB[ƒ`ƒƒ‚Ì•ÒW
-ƒtƒB[ƒ`ƒƒ‚Ì•ÒW‚ÍƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹‚É‘Î‚µ‚Äs‚¢‚Ü‚·BƒtƒB[ƒ`ƒƒ ƒT[ƒrƒX‚Ü‚½‚ÍƒWƒIƒf[ƒ^ƒx[ƒX‚Ìƒf[ƒ^‚©‚çì¬‚µ‚½ƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹‚Ì‚Ç‚¿‚ç‚ğ•ÒW‚·‚éê‡‚àÀ‘••û–@‚Éˆá‚¢‚Í‚ ‚è‚Ü‚¹‚ñB
+#### ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®ç·¨é›†
+ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®ç·¨é›†ã¯ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ«ã«å¯¾ã—ã¦è¡Œã„ã¾ã™ã€‚ãƒ•ã‚£ãƒ¼ãƒãƒ£ ã‚µãƒ¼ãƒ“ã‚¹ã¾ãŸã¯ã‚¸ã‚ªãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®ãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ä½œæˆã—ãŸãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ«ã®ã©ã¡ã‚‰ã‚’ç·¨é›†ã™ã‚‹å ´åˆã‚‚å®Ÿè£…æ–¹æ³•ã«é•ã„ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 
-ƒtƒB[ƒ`ƒƒ‚Ì•ÒW•û–@‚ÍA
-[ArcGIS Runtime SDK for Android: ƒtƒB[ƒ`ƒƒ‚Ì•ÒWi‰pŒêj](https://developers.arcgis.com/Android/latest/swift/guide/edit-features.htm)‚ğ‚²QÆ‚­‚¾‚³‚¢B
+ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®ç·¨é›†æ–¹æ³•ã¯ã€
+[ArcGIS Runtime SDK for Android: ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®ç·¨é›†ï¼ˆè‹±èªï¼‰](https://developers.arcgis.com/android/latest/guide/edit-features.htm)ã‚’ã”å‚ç…§ãã ã•ã„ã€‚
 
-#### ƒtƒB[ƒ`ƒƒ‚ÌŒŸõ
-ƒtƒB[ƒ`ƒƒ‚ÌŒŸõ‚ÍƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹‚É‘Î‚µ‚Äs‚¢‚Ü‚·BƒtƒB[ƒ`ƒƒ ƒT[ƒrƒX‚Ü‚½‚ÍƒWƒIƒf[ƒ^ƒx[ƒX‚Ìƒf[ƒ^‚©‚çì¬‚µ‚½ƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹‚Ì‚Ç‚¿‚ç‚ğ•ÒW‚·‚éê‡‚àÀ‘••û–@‚Éˆá‚¢‚Í‚ ‚è‚Ü‚¹‚ñBŒŸõ‚ğs‚¤‚É‚Í
-`AGSArcGISFeatureTable` ‚Ü‚½‚Í `AGSGeodatabaseFeatureTable` ƒNƒ‰ƒX‚Ì `queryFeaturesWithParameters` ƒƒ\ƒbƒh‚ğg—p‚µ‚Ü‚·B
 
-Ÿ‚ÌƒR[ƒh‚ÍAƒtƒB[ƒ`ƒƒ ƒT[ƒrƒX‚©‚çì¬‚µ‚½ƒtƒB[ƒ`ƒƒ ƒe[ƒuƒ‹‚©‚çƒtƒB[ƒ`ƒƒ‚ğŒŸõ‚·‚é•û–@‚ğ¦‚µ‚Ä‚¢‚Ü‚·B
-```javascript
-featureTable.queryFeatures(with: queryParameters, fields: .loadAll, completion:{ (result, error) -> Void in
-           if let error = error {   
-               print("Error:\(error.localizedDescription)")
-           } else {
-               let enumr = result?.featureEnumerator()
-               for feature in enumr! {
-                   // ŒŸõŒ‹‰Ê‚ÌƒtƒB[ƒ`ƒƒ‚ğæ“¾
-                   let feature = feature as! AGSArcGISFeature
-               }
-           }
-       })
-```
+#### ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®æ¤œç´¢
+ãƒ•ã‚£ãƒ¼ãƒãƒ£ã®æ¤œç´¢ã¯ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ«ã«å¯¾ã—ã¦è¡Œã„ã¾ã™ã€‚ãƒ•ã‚£ãƒ¼ãƒãƒ£ ã‚µãƒ¼ãƒ“ã‚¹ã¾ãŸã¯ã‚¸ã‚ªãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®ãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ä½œæˆã—ãŸãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ«ã®ã©ã¡ã‚‰ã‚’ç·¨é›†ã™ã‚‹å ´åˆã‚‚å®Ÿè£…æ–¹æ³•ã«é•ã„ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚æ¤œç´¢ã‚’è¡Œã†ã«ã¯
+`ServiceFeatureTable` ã¾ãŸã¯ `GeodatabaseFeatureTable` ã‚¯ãƒ©ã‚¹ã® `queryFeaturesAsync` ãƒ¡ã‚½ãƒƒãƒ‰ã‚’ä½¿ç”¨ã—ã¾ã™ã€‚
 
-## ŒÂ•Ê‘®«•\¦
-
-ƒ}ƒbƒvã‚Å“Á’è‚ÌêŠ‚ğƒ^ƒbƒv‚µ‚ÄA‚»‚ÌˆÊ’u‚É‚ ‚éƒtƒB[ƒ`ƒƒ‚ğ‚·‚×‚Ä‚ÌƒŒƒCƒ„[‚©‚çŒŸõ‚µ‚Äæ“¾‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B‚±‚Ì‘€ì‚Íƒrƒ…[‚É‘Î‚µ‚Äs‚¢‚Ü‚·BŸ‚ÌƒR[ƒh‚ÍA`AGSMapView` ƒNƒ‰ƒX‚Ì `identifyLayers` ƒƒ\ƒbƒh‚ğg—p‚µ‚ÄƒtƒB[ƒ`ƒƒ‚ğæ“¾‚·‚é•û–@‚ğ¦‚µ‚Ä‚¢‚Ü‚·B
-```javascript
-self.mapView.identifyLayers(atScreenPoint: screenPoint, tolerance: 10, returnPopupsOnly: true, completion: { (results, error)  -> Void in
-    if let error = error {
-        print(error)
-    } else {
-        for identifyLayerResult in results! {
-            for geoElement in identifyLayerResult.geoElements {
-                // AGSGeoElement ƒIƒuƒWƒFƒNƒg‚Ìæ“¾
+æ¬¡ã®ã‚³ãƒ¼ãƒ‰ã¯ã€ãƒ•ã‚£ãƒ¼ãƒãƒ£ ã‚µãƒ¼ãƒ“ã‚¹ã‹ã‚‰ä½œæˆã—ãŸãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰ãƒ•ã‚£ãƒ¼ãƒãƒ£ã‚’æ¤œç´¢ã™ã‚‹æ–¹æ³•ã‚’ç¤ºã—ã¦ã„ã¾ã™ã€‚
+```java
+final ListenableFuture<FeatureQueryResult> queryResult  = serviceFeatureTable.queryFeaturesAsync(queryParameters);
+queryResult.addDoneListener(new Runnable() {
+    @Override
+    public void run() {
+        // call get on the future to get the result
+        try {
+            FeatureQueryResult result = queryResult.get();
+            for (Iterator<Feature> features = result.iterator(); features.hasNext();) {
+                // æ¤œç´¢çµæœã®ãƒ•ã‚£ãƒ¼ãƒãƒ£ã‚’å–å¾—
+                Feature feature = features.next();
+                ãƒ»ãƒ»ãƒ»
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
         }
+
+
     }
-})
+});
 ```
 
-## ƒOƒ‰ƒtƒBƒbƒNƒX ƒI[ƒo[ƒŒƒC
 
-ƒOƒ‰ƒtƒBƒbƒN‚ÍAƒ}ƒbƒvã‚Éˆê“I‚Èƒf[ƒ^‚ğ•\¦‚·‚é‚½‚ß‚Ég—p‚³‚ê‚Ü‚·B`AGSMapView` ‚Æ `AGSSceneView` ƒIƒuƒWƒFƒNƒg‚É‚ÍƒOƒ‰ƒtƒBƒbƒN‚ğ•\¦‚·‚é‚½‚ß‚ÌƒOƒ‰ƒtƒBƒbƒNƒX ƒI[ƒo[ƒŒƒCi`AGSGraphicsOverlay`j‚ªŠÜ‚Ü‚ê‚Ä‚¢‚Ü‚·B
-ƒOƒ‰ƒtƒBƒbƒNƒX ƒI[ƒo[ƒŒƒC‚ğg—p‚·‚é‚±‚Æ‚ÅAƒ}ƒbƒvã‚ÌƒŒƒCƒ„[‚Ì‡˜‚ª•ÏX‚³‚ê‚Ä‚àAƒOƒ‰ƒtƒBƒbƒN‚ªí‚ÉÅãˆÊ‚É•\¦‚³‚ê‚Ü‚·BÚ×‚ÍA[ArcGIS Runtime SDK for Android: ƒOƒ‰ƒtƒBƒbƒNƒX ƒI[ƒo[ƒŒƒC‚Ì’Ç‰Ái‰pŒêj](https://developers.arcgis.com/Android/latest/swift/guide/add-graphics-overlays-to-your-app.htm)‚ğ‚²QÆ‚­‚¾‚³‚¢B
+## å€‹åˆ¥å±æ€§è¡¨ç¤º
 
-Ÿ‚ÌƒR[ƒh‚ÍA`AGSMapView` ƒIƒuƒWƒFƒNƒg‚ÉAƒOƒ‰ƒtƒBƒbƒNƒX ƒI[ƒo[ƒŒƒC‚ğg—p‚µ‚ÄƒOƒ‰ƒtƒBƒbƒN‚ğ’Ç‰Á‚·‚é•û–@‚ğ¦‚µ‚Ä‚¢‚Ü‚·B
+ãƒãƒƒãƒ—ä¸Šã§ç‰¹å®šã®å ´æ‰€ã‚’ã‚¿ãƒƒãƒ—ã—ã¦ã€ãã®ä½ç½®ã«ã‚ã‚‹ãƒ•ã‚£ãƒ¼ãƒãƒ£ã‚’ã™ã¹ã¦ã®ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‹ã‚‰æ¤œç´¢ã—ã¦å–å¾—ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚ã“ã®æ“ä½œã¯ãƒ“ãƒ¥ãƒ¼ã«å¯¾ã—ã¦è¡Œã„ã¾ã™ã€‚æ¬¡ã®ã‚³ãƒ¼ãƒ‰ã¯ã€`MapView` ã‚¯ãƒ©ã‚¹ã® `identifyLayersAsync` ãƒ¡ã‚½ãƒƒãƒ‰ã‚’ä½¿ç”¨ã—ã¦ãƒ•ã‚£ãƒ¼ãƒãƒ£ã‚’å–å¾—ã™ã‚‹æ–¹æ³•ã‚’ç¤ºã—ã¦ã„ã¾ã™ã€‚
+```java
+final ListenableFuture<List<IdentifyLayerResult>> identifyLayersResult = mapView.identifyLayersAsync(screenPoint,10,true);
+        identifyLayersResult.addDoneListener(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    List<IdentifyLayerResult> identifyResult = identifyLayersResult.get();
+                    for(IdentifyLayerResult identifyLayerResult : identifyResult){
+                        // GeoElement ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å–å¾—
+                        List<GeoElement> geoElement = identifyLayerResult.getElements();
+                        ãƒ»ãƒ»ãƒ»
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
-```javascript
-// ƒWƒIƒƒgƒŠ‚ÆƒVƒ“ƒ{ƒ‹‚ğİ’è‚µ‚ÄƒOƒ‰ƒtƒBƒbƒN‚ğì¬
-let pointGraphic = AGSGraphic(geometry: pointGeometry, symbol: poitnSymbol, attributes: nil)
-// ƒOƒ‰ƒtƒBƒbƒNƒX ƒI[ƒo[ƒŒƒC‚Éì¬‚µ‚½ƒOƒ‰ƒtƒBƒbƒN‚ğ’Ç‰Á
-let graphicsOverlay = AGSGraphicsOverlay()
-graphicsOverlay.graphics.add(pointGraphic)
-// AGSMapView ‚Ì GraphicsOverlays ‚Éì¬‚µ‚½ƒOƒ‰ƒtƒBƒbƒNƒX ƒI[ƒo[ƒŒƒC‚ğ’Ç‰Á
-self.mapView.graphicsOverlays.add(graphicsOverlay)
 ```
 
-## ƒWƒIƒƒgƒŠ‚ÆƒWƒIƒƒgƒŠ ƒrƒ‹ƒ_[
+## ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¹ ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤
 
-`AGSGeometry` ƒIƒuƒWƒFƒNƒg‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ğg—p‚·‚é‚ÆAŠù’m‚ÌÀ•W‚ğg—p‚µ‚ÄƒWƒIƒƒgƒŠ‚ğì¬‚Å‚«‚Ü‚·‚ªAì¬Œã‚É‚»‚ÌƒWƒIƒƒgƒŠ‚ğ•ÏX‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB
+ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã¯ã€ãƒãƒƒãƒ—ä¸Šã«ä¸€æ™‚çš„ãªãƒ‡ãƒ¼ã‚¿ã‚’è¡¨ç¤ºã™ã‚‹ãŸã‚ã«ä½¿ç”¨ã•ã‚Œã¾ã™ã€‚`MapView` ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã¯ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚’è¡¨ç¤ºã™ã‚‹ãŸã‚ã®ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¹ ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤ï¼ˆ`GraphicsOverlay`ï¼‰ãŒå«ã¾ã‚Œã¦ã„ã¾ã™ã€‚
+ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¹ ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤ã‚’ä½¿ç”¨ã™ã‚‹ã“ã¨ã§ã€ãƒãƒƒãƒ—ä¸Šã®ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®é †åºãŒå¤‰æ›´ã•ã‚Œã¦ã‚‚ã€ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ãŒå¸¸ã«æœ€ä¸Šä½ã«è¡¨ç¤ºã•ã‚Œã¾ã™ã€‚è©³ç´°ã¯ã€[ArcGIS Runtime SDK for Android: ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¹ ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤ã®è¿½åŠ ï¼ˆè‹±èªï¼‰](https://developers.arcgis.com/android/latest/guide/add-graphics-overlays-to-your-app.htm)ã‚’ã”å‚ç…§ãã ã•ã„ã€‚
 
-ƒWƒIƒƒgƒŠ ƒrƒ‹ƒ_[i`AGSGeometryBuilder`j‚ğg—p‚·‚é‚ÆAƒ[ƒ‚©‚çV‚µ‚¢ƒWƒIƒƒgƒŠ‚ğì¬‚µ‚½‚èAŠù‘¶‚ÌƒWƒIƒƒgƒŠ‚ğŠî‚ÉAƒWƒIƒƒgƒŠ‚ğ•ÏX‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·BÚ×‚ÍA[ArcGIS Runtime SDK for Android: ƒWƒIƒƒgƒŠ‚Ì•ÒWi‰pŒêj](https://developers.arcgis.com/Android/latest/swift/guide/edit-geometries.htm)‚ğ‚²QÆ‚­‚¾‚³‚¢ B
+æ¬¡ã®ã‚³ãƒ¼ãƒ‰ã¯ã€`MapView` ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¹ ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤ã‚’ä½¿ç”¨ã—ã¦ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚’è¿½åŠ ã™ã‚‹æ–¹æ³•ã‚’ç¤ºã—ã¦ã„ã¾ã™ã€‚
 
-## ƒXƒPƒbƒ` ƒGƒfƒBƒ^[
-ƒXƒPƒbƒ` ƒGƒfƒBƒ^[i`AGSSketchEditor`j‚ğg—p‚·‚é‚ÆAƒ†[ƒU[‚ªƒ}ƒbƒvã‚Å‘Î˜b“I‚ÉƒWƒIƒƒgƒŠ‚ğƒXƒPƒbƒ`‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+```java
+// ã‚¸ã‚ªãƒ¡ãƒˆãƒªã¨ã‚·ãƒ³ãƒœãƒ«ã‚’è¨­å®šã—ã¦ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚’ä½œæˆ
+Graphic graphic = new Graphic(geometry,symbol);
+// ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¹ ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤ã«ä½œæˆã—ãŸã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚’è¿½åŠ 
+GraphicsOverlay graphicsOverlay = new GraphicsOverlay();
+graphicsOverlay.getGraphics().add(graphic);
+// MapView ã® GraphicsOverlays ã«ä½œæˆã—ãŸã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¹ ã‚ªãƒ¼ãƒãƒ¼ãƒ¬ã‚¤ã‚’è¿½åŠ 
+mapView.getGraphicsOverlays().add(graphicsOverlay);
+```
 
-Ÿ‚ÌƒR[ƒh‚ÍA`AGSSketchEditor` ‚Ìg—p•û–@‚Ì—á‚ğ¦‚µ‚Ä‚¢‚Ü‚·B
+## ã‚¸ã‚ªãƒ¡ãƒˆãƒªã¨ã‚¸ã‚ªãƒ¡ãƒˆãƒª ãƒ“ãƒ«ãƒ€ãƒ¼
 
-```javascript
-// ƒ}ƒbƒv ƒrƒ…[‚ÉƒXƒPƒbƒ` ƒGƒfƒBƒ^[‚ğİ’è
-self.sketchEditor = AGSSketchEditor()
-self.mapView.sketchEditor =  
-// ƒWƒIƒƒgƒŠ‚Ìí—Ş‚ğİ’è‚µ‚ÄƒXƒPƒbƒ`‚ğŠJn
-self.sketchEditor
-self.sketchEditor.start(with: AGSGeometryType.polygon)
-// ƒXƒPƒbƒ`’†‚ÌƒWƒIƒƒgƒŠ‚ÌXV‚ğŠÄ‹
-NotificationCenter.default.addObserver(self, selector: #selector(ViewController.respondToGeometryChanged), name: NSNotification.Name.AGSSketchEditorGeometryDidChange, object: nil)
+`Geometry` ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã‚’ä½¿ç”¨ã™ã‚‹ã¨ã€æ—¢çŸ¥ã®åº§æ¨™ã‚’ä½¿ç”¨ã—ã¦ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚’ä½œæˆã§ãã¾ã™ãŒã€ä½œæˆå¾Œã«ãã®ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚’å¤‰æ›´ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚
 
-EEEEEE
+ã‚¸ã‚ªãƒ¡ãƒˆãƒª ãƒ“ãƒ«ãƒ€ãƒ¼ï¼ˆ`GeometryBuilder`ï¼‰ã‚’ä½¿ç”¨ã™ã‚‹ã¨ã€ã‚¼ãƒ­ã‹ã‚‰æ–°ã—ã„ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚’ä½œæˆã—ãŸã‚Šã€æ—¢å­˜ã®ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚’åŸºã«ã€ã‚¸ã‚ªãƒ¡ãƒˆãƒªã‚’å¤‰æ›´ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚è©³ç´°ã¯ã€[ArcGIS Runtime SDK for Android: ã‚¸ã‚ªãƒ¡ãƒˆãƒªã®ç·¨é›†ï¼ˆè‹±èªï¼‰](https://developers.arcgis.com/android/latest/guide/geometries.htm)ã‚’ã”å‚ç…§ãã ã•ã„ ã€‚
 
-func respondToGeometryChanged() {
-  // ƒWƒIƒƒgƒŠ‚ªXV‚³‚ê‚½Û‚Ìˆ—
+
+## ãƒ­ãƒ¼ãƒ€ãƒ–ãƒ« ãƒ‘ã‚¿ãƒ¼ãƒ³
+
+ãƒ‡ãƒ¼ã‚¿ã‚’éåŒæœŸã§ãƒ­ãƒ¼ãƒ‰ã—ã¦çŠ¶æ…‹ã‚’åˆæœŸåŒ–ã™ã‚‹ãƒãƒƒãƒ—ã‚„ãƒ¬ã‚¤ãƒ¤ãƒ¼ç­‰ã®ãƒªã‚½ãƒ¼ã‚¹ã¯ã€ãƒ­ãƒ¼ãƒ€ãƒ–ãƒ« ãƒ‘ã‚¿ãƒ¼ãƒ³ãŒæ¡ç”¨ã•ã‚Œã¦ã„ã¾ã™ã€‚å„ãƒªã‚½ãƒ¼ã‚¹ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã«ã‚¢ã‚¯ã‚»ã‚¹ã™ã‚‹ã«ã¯ã€ãƒ­ãƒ¼ãƒ€ãƒ–ãƒ« ãƒ‘ã‚¿ãƒ¼ãƒ³ã‚’ä½¿ç”¨ã—ã¦ã€ãƒªã‚½ãƒ¼ã‚¹ãŒãƒ­ãƒ¼ãƒ‰ã•ã‚ŒãŸå¾Œã«ã‚¢ã‚¯ã‚»ã‚¹ã™ã‚‹ã“ã¨ãŒæ¨å¥¨ã•ã‚Œã¾ã™ã€‚ãƒ­ãƒ¼ãƒ€ãƒ–ãƒ« ãƒ‘ã‚¿ãƒ¼ãƒ³ã¯ã€ãƒ­ãƒ¼ãƒ‰çŠ¶æ…‹ã®æŒ¯ã‚‹èˆã„ã‚’ã‚ˆã‚Šå‡ä¸€ã«ã—ã¦ä¸”ã¤ä¸€è²«æ€§ã‚’æŒãŸã›ã‚‹ã“ã¨ã§ã€éåŒæœŸæ€§ã‚’ã‚ˆã‚Šæ˜ç¤ºçš„ã«ã—ã¾ã™ã€‚ãƒ­ãƒ¼ãƒ€ãƒ–ãƒ« ãƒ‘ã‚¿ãƒ¼ãƒ³ã§ã¯ã€å„ãƒªã‚½ãƒ¼ã‚¹ã¯è‡ªå‹•çš„ã«ãƒªã‚½ãƒ¼ã‚¹ã®çŠ¶æ…‹ã‚’ãƒ­ãƒ¼ãƒ‰ã—ã¾ã›ã‚“ã€‚ãã‚Œã‚‰ã¯ã€é–‹ç™ºè€…ãŒæ˜ç¤ºçš„ã«å®Ÿè¡Œã—ãŸã¨ãã«ã€é…å»¶ãƒ­ãƒ¼ãƒ‰ã—ã¾ã™ã€‚
+å„ãƒªã‚½ãƒ¼ã‚¹ã®çŠ¶æ…‹ã¯ã€`NotLoadedï¼ˆãƒ­ãƒ¼ãƒ‰ãŒé–‹å§‹ã—ã¦ã„ãªã„`ã€`Loadingï¼ˆãƒ­ãƒ¼ãƒ‰ä¸­ï¼‰`ã€`Loadedï¼ˆãƒ­ãƒ¼ãƒ‰ã«æˆåŠŸï¼‰`ã€`FailedToLoadï¼ˆãƒ­ãƒ¼ãƒ‰ã«å¤±æ•—ï¼‰` ã®ã„ãšã‚Œã‹ã§ç›£è¦–ã™ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ã€‚
+
+è©³ç´°ã¯ã€[ArcGIS Runtime SDK for Android: ãƒ­ãƒ¼ãƒ€ãƒ–ãƒ« ãƒ‘ã‚¿ãƒ¼ãƒ³ï¼ˆè‹±èªï¼‰](https://developers.arcgis.com/android/latest/guide/loadable-pattern.htm)ã‚’ã”å‚ç…§ãã ã•ã„ã€‚
+
+æ¬¡ã®ã‚³ãƒ¼ãƒ‰ã¯ã€ãƒ­ãƒ¼ãƒ€ãƒ–ãƒ« ãƒ‘ã‚¿ãƒ¼ãƒ³ã®åŸºæœ¬çš„ãªä½¿ç”¨æ–¹æ³•ã®ä¾‹ã‚’ç¤ºã—ã¦ã„ã¾ã™ã€‚
+```java
+FeatureLayer featureLayer = new FeatureLayer(serviceFeatureTable);
+if(featureLayer.getLoadStatus().equals(LoadStatus.FAILED_TO_LOAD)){
+    Log.e("eTag","error");
+}else{
+    // ãƒ•ã‚£ãƒ¼ãƒãƒ£ ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ãƒ­ãƒ¼ãƒ‰ã«æˆåŠŸ
 }
 ```
 
-## ƒ[ƒ_ƒuƒ‹ ƒpƒ^[ƒ“
+## æ–°ã—ã„åŒæœŸãƒ‘ã‚¿ãƒ¼ãƒ³
+Java è¨€èªã§ã€€`ListenableFuture`ã€€ã¨ã„ã†ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ãƒ¼ã‚¹ã§é¦´æŸ“ã¿ã®ã‚ã‚‹ã€€Future ãƒ‘ã‚¿ãƒ¼ãƒ³ãŒæ‹¡å¼µã•ã‚Œã¾ã—ãŸã€‚ã“ã®æ–°ã—ã„ API ã¯ã€ãƒ¡ã‚½ãƒƒãƒ‰ã®å®Œäº†æ™‚ã«å¿…è¦ãªæ•°ã®ãƒªã‚¹ãƒŠãƒ¼ã‚’è¿½åŠ ã§ãã¾ã™ã€‚
 
-ƒf[ƒ^‚ğ”ñ“¯Šú‚Åƒ[ƒh‚µ‚Äó‘Ô‚ğ‰Šú‰»‚·‚éƒ}ƒbƒv‚âƒŒƒCƒ„[“™‚ÌƒŠƒ\[ƒX‚ÍAƒ[ƒ_ƒuƒ‹ ƒpƒ^[ƒ“‚ªÌ—p‚³‚ê‚Ä‚¢‚Ü‚·BŠeƒŠƒ\[ƒX‚ÌƒvƒƒpƒeƒB‚ÉƒAƒNƒZƒX‚·‚é‚É‚ÍAƒ[ƒ_ƒuƒ‹ ƒpƒ^[ƒ“‚ğg—p‚µ‚ÄAƒŠƒ\[ƒX‚ªƒ[ƒh‚³‚ê‚½Œã‚ÉƒAƒNƒZƒX‚·‚é‚±‚Æ‚ª„§‚³‚ê‚Ü‚·Bƒ[ƒ_ƒuƒ‹ ƒpƒ^[ƒ“‚ÍAƒ[ƒhó‘Ô‚ÌU‚é•‘‚¢‚ğ‚æ‚è‹Ïˆê‚É‚µ‚ÄŠ‚ÂˆêŠÑ«‚ğ‚½‚¹‚é‚±‚Æ‚ÅA”ñ“¯Šú«‚ğ‚æ‚è–¾¦“I‚É‚µ‚Ü‚·Bƒ[ƒ_ƒuƒ‹ ƒpƒ^[ƒ“‚Å‚ÍAŠeƒŠƒ\[ƒX‚Í©“®“I‚ÉƒŠƒ\[ƒX‚Ìó‘Ô‚ğƒ[ƒh‚µ‚Ü‚¹‚ñB‚»‚ê‚ç‚ÍAŠJ”­Ò‚ª–¾¦“I‚ÉÀs‚µ‚½‚Æ‚«‚ÉA’x‰„ƒ[ƒh‚µ‚Ü‚·B
-ŠeƒŠƒ\[ƒX‚Ìó‘Ô‚ÍA`NotLoadediƒ[ƒh‚ªŠJn‚µ‚Ä‚¢‚È‚¢`A`Loadingiƒ[ƒh’†j`A`Loadediƒ[ƒh‚É¬Œ÷j`A`FailedToLoadiƒ[ƒh‚É¸”sj` ‚Ì‚¢‚¸‚ê‚©‚ÅŠÄ‹‚·‚é‚±‚Æ‚à‚Å‚«‚Ü‚·B
+## æ—¢çŸ¥ã®åˆ¶é™äº‹é …
+ç¾ãƒãƒ¼ã‚¸ãƒ§ãƒ³ 100.0 ã§ã®æ—¢çŸ¥ã®åˆ¶é™äº‹é …ãŒã€[ArcGIS Runtime SDK for Android: ãƒªãƒªãƒ¼ã‚¹ ãƒãƒ¼ãƒˆï¼ˆè‹±èªï¼‰](https://developers.arcgis.com/android/latest/guide/release-notes.htm#GUID-861F8CA6-2FAC-44EB-A7B8-F99225A4EA0F)ã«è¨˜è¼‰ã•ã‚Œã¦ã„ã¾ã™ã®ã§ã€ã”å‚ç…§ãã ã•ã„ã€‚
 
-Ú×‚ÍA[ArcGIS Runtime SDK for Android: ƒ[ƒ_ƒuƒ‹ ƒpƒ^[ƒ“i‰pŒêj](https://developers.arcgis.com/Android/latest/swift/guide/loadable-pattern.htm)‚ğ‚²QÆ‚­‚¾‚³‚¢B
-
-Ÿ‚ÌƒR[ƒh‚ÍAƒ[ƒ_ƒuƒ‹ ƒpƒ^[ƒ“‚ÌŠî–{“I‚Èg—p•û–@‚Ì—á‚ğ¦‚µ‚Ä‚¢‚Ü‚·B
-```javascript
-self.featureLayer.load(completion: {(error) -> Void in
-    if let error = error {
-        print(error)
-    }else {
-        // ƒtƒB[ƒ`ƒƒ ƒŒƒCƒ„[‚Ìƒ[ƒh‚É¬Œ÷
-    }
-})
-```
-
-## ƒuƒƒbƒN‚ğg—p‚µ‚½”ñ“¯ŠúƒvƒƒOƒ‰ƒ~ƒ“ƒO
-
-”ñ“¯Šú‘€ì‚ğÀs‚·‚éƒƒ\ƒbƒh‚ÍAŠ®—¹ƒuƒƒbƒN‚ğˆø”‚Æ‚µ‚Äó‚¯æ‚è‚Ü‚·BƒuƒƒbƒN‚Í‘€ì‚ª³í‚ÉŠ®—¹‚µ‚½‚Æ‚«A‚Ü‚½‚ÍAƒGƒ‰[‚ª”­¶‚µ‚½‚Æ‚«‚ÉŒÄ‚Ño‚³‚ê‚Ü‚·B‘€ì‚ª¬Œ÷‚·‚é‚ÆA‚»‚Ì‘€ì‚ÌŒ‹‰Ê‚ªƒuƒƒbƒN‚É“n‚³‚ê‚Ü‚·B‚»‚êˆÈŠO‚Ìê‡‚ÍƒGƒ‰[‚ª“n‚³‚ê‚Ü‚·B
-‚±‚ê‚ÍAƒfƒŠƒQ[ƒg‚ğg—p‚µ‚ÄŠe”ñ“¯Šú‘€ì‚ÌŒ‹‰Ê‚ÆƒGƒ‰[‚ğƒnƒ“ƒhƒŠƒ“ƒO‚µ‚Ä‚¢‚½ 10.2.x ‚ÌƒvƒƒOƒ‰ƒ~ƒ“ƒO•û–@‚ğ’u‚«Š·‚¦‚Ü‚·B
-
-Ÿ‚ÌƒR[ƒh‚ÍA—á‚Æ‚µ‚Ä’[––‚Ì GPS ‚ÌˆÊ’uî•ñ‚Ìæ“¾ŠJn‚Ì‘€ìŒ‹‰Ê‚ğƒnƒ“ƒhƒŠƒ“ƒO‚·‚é•û–@‚ğ¦‚µ‚Ä‚¢‚Ü‚·B
-```javascript
-self.mapView.locationDisplay.start(completion: { (error) -> Void in
-  if let error = error {
-    // GPS ‚ÌˆÊ’uî•ñ‚Ìæ“¾‚É¸”s
-    print("Error:\(error.localizedDescription)")
-  } else {
-    // GPS ‚ÌˆÊ’uî•ñ‚Ìæ“¾‚É¬Œ÷
-  }
-})
-```
-## Šù’m‚Ì§ŒÀ–€
-Œ»ƒo[ƒWƒ‡ƒ“ 100.0 ‚Å‚ÌŠù’m‚Ì§ŒÀ–€‚ªA[ArcGIS Runtime SDK for Android: ƒŠƒŠ[ƒX ƒm[ƒgi‰pŒêj](https://developers.arcgis.com/Android/latest/swift/guide/release-notes.htm#GUID-2D204730-60B6-4004-BCB1-63F654F70AA3)‚É‹LÚ‚³‚ê‚Ä‚¢‚Ü‚·‚Ì‚ÅA‚²QÆ‚­‚¾‚³‚¢B
-
-## ŠÖ˜AƒŠƒ“ƒN
-* [ArcGIS Runtime SDK for Android: ƒŠƒŠ[ƒX ƒm[ƒgi‰pŒêj](https://developers.arcgis.com/Android/latest/swift/guide/release-notes.htm)
+## é–¢é€£ãƒªãƒ³ã‚¯
+* [ArcGIS Runtime SDK for Android: ãƒªãƒªãƒ¼ã‚¹ ãƒãƒ¼ãƒˆï¼ˆè‹±èªï¼‰](https://developers.arcgis.com/android/latest/guide/release-notes.htm)
