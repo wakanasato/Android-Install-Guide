@@ -1,4 +1,18 @@
+##resas2arcgis
+ 
+ このサービスは [RESAS API](https://opendata.resas-portal.go.jp/) から取得できるデータを ArcGIS へ簡単に入力できるようにした開発したサービスです。<br>
+ 
+ * RESAS API とは？
+ 内閣官房（まち・ひと・しごと創生本部事務局）が地方創生の実現に向けて、地域に紐付いた官民ビッグデータ（産業、人口、観光、農業等）を分かりやすく「見える化」したシステムです。
 
+##サービス使用時に必要なURL
+
+ * [ArcGIS Developers](https://developers.arcgis.com/)    ： 開発者アカウントの作成
+ * [ArcGIS Open Data](http://opendata.arcgis.com/)    ： RESAS API データを追加するためのデータ取得
+ * [ArcGIS Online](https://www.arcgis.com/home/)    ： Web マップを作成します
+ * [RESAS API 仕様書](https://opendata.resas-portal.go.jp/docs/api/v1/index.html)    ： データの取得方法など定義しています
+ * [resas2arcgis](https://resas2arcgis.herokuapp.com)   ： これでデータ追加します☆
+ 
 ##resas2arcgis を使ってみようハンズオン
 
   1.	ArcGIS for Developers アカウント作成(事前)※未作成者は受付時対応
