@@ -62,15 +62,15 @@
 
  1.	resas2arcgis(Heroku)パラメーター入力
 
-  RESAS API のデータをArcGIS の指定のフィーチャ レイヤーに入力するために、以下のパラメータを入力します。<br>
-  
+  RESAS API のデータをArcGIS の指定のフィーチャ レイヤーに入力するために、以下のパラメータを入力します。
+  
    * RESAS API URL：RESAS API のURLを指定します。
-   *	RESAS Mapping field：ArcGIS と RESAS API に共通値がある RESAS API データのフィールド名を入力します。
-   *	RESAS API Key　：RESAS API を使用するためのKey (個人で取得)を入力します。
+   *	RESAS Mapping field：ArcGIS と RESAS API に共通値がある RESAS API データのフィールド名を入力します。
+   *	RESAS API Key：RESAS API を使用するためのKey (個人で取得)を入力します。
    *	ArcGIS Online Feature Layer：ArcGIS のフィーチャ レイヤーのURLを入力します。取得方法は[1.	フィーチャ レイヤーの REST エンドポイント URL の取得(コピー)](1.	フィーチャ レイヤーの REST エンドポイント URL の取得(コピー))を参照してください。
    *	Specified RESAS API Data hierarchy：RESAS API のデータ取得結果の階層を入力します。
-   *	Specified ArcGIS Feature Layer field : unique Field：ArcGIS と RESAS API に共通値がある ArcGIS フィーチャ レイヤーのフィールド名を入力します。
-   *	Specified ArcGIS Feature Layer field : new Data Filed :　ArcGIS フィーチャ レイヤーで新たに更新したいフィールドを指定します。
+   *	Specified ArcGIS Feature Layer field：unique Field：ArcGIS と RESAS API に共通値がある ArcGIS フィーチャ レイヤーのフィールド名を入力します。
+   *	Specified ArcGIS Feature Layer field：new Data Filed：ArcGIS フィーチャ レイヤーで新たに更新したいフィールドを指定します。
 
 
  1.	実行
