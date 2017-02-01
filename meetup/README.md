@@ -7,11 +7,11 @@
 
 ##サービス使用時に必要なURL
 
- * [ArcGIS Developers](https://developers.arcgis.com/)    ： 開発者アカウントの作成
- * [ArcGIS Open Data 全国市区町村界データ](http://arcg.is/2iTeKD9) ： RESAS API データを追加するためのデータ取得
- * [ArcGIS Online](https://www.arcgis.com/home/)    ： Web マップを作成します
- * [RESAS API 仕様書](https://opendata.resas-portal.go.jp/docs/api/v1/index.html)    ： データの取得方法など定義しています
- * [resas2arcgis](https://resas2arcgis.herokuapp.com)   ： これでデータ追加します☆
+ 1.	[ArcGIS Developers](https://developers.arcgis.com/)    ： 開発者アカウントの作成
+ 1.	[ArcGIS Open Data 全国市区町村界データ](http://arcg.is/2iTeKD9) ： RESAS API データを追加するためのデータ取得
+ 1.	[ArcGIS Online](https://www.arcgis.com/home/)    ： Web マップを作成します
+ 1.	[RESAS API 仕様書](https://opendata.resas-portal.go.jp/docs/api/v1/index.html)    ： データの取得方法など定義しています
+ 1.	[resas2arcgis](https://resas2arcgis.herokuapp.com)   ： これでデータ追加します☆
  
 ##resas2arcgis を使ってみようハンズオン
 
