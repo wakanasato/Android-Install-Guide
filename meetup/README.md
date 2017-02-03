@@ -10,7 +10,7 @@
  
  * [サービス使用時に必要なURL](#サービス使用時に必要なurl)
  * [resas2arcgis を使ってみようハンズオン](#resas2arcgis-を使ってみようハンズオン)
- * [REST を使った再帰的呼び出し方法(API仕様)](#rest-を使った再帰的呼び出し方法(api仕様))
+ * [RESTを使った再帰的呼び出し方法(API仕様)](#restを使った再帰的呼び出し方法(api仕様))
 
 ##サービス使用時に必要なURL
 
@@ -96,7 +96,9 @@
   [データ可視化のワークフロー](http://bit.ly/2k6EI2Y)
 
 ##REST を使った再帰的呼び出し方法(API仕様)
-
+ 
+ resas2arcgis も REST で処理が実行されます。よってプログラミングに明るい方でしたら、下記の仕様で処理を実行することが可能です。
+ 
  * Request
    ```java
    POST https://resas2arcgis.herokuapp.com/api/uploadarc
