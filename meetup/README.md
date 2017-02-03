@@ -6,6 +6,12 @@
  * RESAS API とは？<br>
  内閣官房（まち・ひと・しごと創生本部事務局）が地方創生の実現に向けて、地域に紐付いた官民ビッグデータ（産業、人口、観光、農業等）を分かりやすく「見える化」したシステムです。
 
+##Index
+ 
+ * [サービス使用時に必要なURL](#サービス使用時に必要なURL)
+ * [resas2arcgis を使ってみようハンズオン](#resas2arcgis-を使ってみようハンズオン)
+ * [REST を使った再帰的呼び出し方法(API仕様)](#地図表示の実装)
+
 ##サービス使用時に必要なURL
 
  1.	[ArcGIS Developers](https://developers.arcgis.com/)    ： 開発者アカウントの作成
@@ -88,4 +94,39 @@
   参考ページ：<br>
   [ArcGIS Online 上のデータを可視化するための方法](http://bit.ly/2jnqSZi)<br>
   [データ可視化のワークフロー](http://bit.ly/2k6EI2Y)
+
+##REST を使った再帰的呼び出し方法(API仕様)
+
+ * Request
+   ```java
+   POST https://resas2arcgis.herokuapp.com/api/uploadarc
+   ```
+
+ * Parameters　
+ 
+ |header|項目名称|
+ |:--:|:--:|
+ |resasurl|RESAS API URL|
+ |mappingfact|RESAS API Key|
+ |resaskey|RESAS Mapping Field|
+ |agollayer|RESAS API Data Hierarchy|
+ |hierarchy|ArcGIS Feature Layer|
+ |ufield|ArcGIS Unique Field|
+ |nfield|ArcGIS New Data Field|
+ 
+ * Example(curl or JS?)
+
+   ```java
+   (function(){
+   var xhr = new XMLHttpRequest();
+   xhr.onreadystatechange = function(){
+       if (this.readyState==4 && this.status==200) {
+           // responseをhogehogeする
+       }
+   };
+   xhr.responseType = 'json';
+   xhr.open('GET',endpoint,true);
+   xhr.send();
+   })();
+   ```
 
