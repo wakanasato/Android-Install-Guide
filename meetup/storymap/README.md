@@ -2,7 +2,7 @@
 
 ## ストーリーマップとは？
 Web マップを使って、より分かりやすいマップアプリを作成できる機能です。
-ストーリーマップカスケード以外のストーリーマップ(https://www.esrij.com/cgi-bin/wp/wp-content/uploads/documents/StoryMap_Guide.pdf)を試してみたい方は、こちらをごらんください。
+[ストーリーマップカスケード以外のストーリーマップ](https://www.esrij.com/cgi-bin/wp/wp-content/uploads/documents/StoryMap_Guide.pdf)を試してみたい方は、こちらをごらんください。
 
 ## ストーリーマップ カスケードとは？
 
@@ -11,14 +11,14 @@ Story Map Cascade℠ (ストーリー マップ カスケード) アプリを利
 
 ## 手順
 
-1. [Webマップを作成する]
-1. [ひな型のアプリ作成する]
-1. [タイトルや画像などを編集する]
-1. [保存する]
-1. [作成したストーリーマップを共有する]
+1. [Webマップを作成する](# Webマップを作成する)
+1. [ひな型のアプリ作成する](# ひな型のアプリ作成する)
+1. [タイトルや画像などを編集する](# タイトルや画像などを編集する)
+1. [保存する](# 保存する)
+1. [作成したストーリーマップを共有する](# 作成したストーリーマップを共有する)
 
 ## Webマップを作成する
-Web マップの作成方法(http://esrijapan.github.io/arcgis-dev-resources/create-webmap/)を参考に、作成します。
+[Web マップの作成方法](http://esrijapan.github.io/arcgis-dev-resources/create-webmap/)を参考に、作成します。
 
 ## ひな型のアプリ作成する
 作成したWeb マップの詳細画面から[Webアプリの作成]→[テンプレートを使用]を選択します。
