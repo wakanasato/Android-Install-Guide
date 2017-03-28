@@ -46,6 +46,7 @@ Web マップの作成方法(http://esrijapan.github.io/arcgis-dev-resources/cre
 ## 保存する
 左ペインの[保存する]ボタンを選択して保存します。
 
+![img](img/5.png)
 
 ## 作成したストーリーマップを共有する
 左ペインの[共有]から、どのレベルに公開するか選択できます。
