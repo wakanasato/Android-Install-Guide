@@ -80,9 +80,8 @@ if(licenseResult.getLicenseStatus() == LicenseStatus.VALID){
     Log.d(TAG,"ライセンスは有効です:" + licenseResult.getLicenseStatus());
 }else{
     // TODO ライセンスが無効の場合の処理
-    Log.d(TAG,"ライセンスは有効です:"+ licenseResult.getLicenseStatus());
+    Log.d(TAG,"ライセンスは無効です:" + licenseResult.getLicenseStatus());
 }
-
  ```
 
 ## 配布パックのライセンスキーを使用した認証
@@ -93,17 +92,16 @@ if(licenseResult.getLicenseStatus() == LicenseStatus.VALID){
 
   アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用して配布パックのライセンスキーを設定します。
 
-  ```javascript
-  // ライセンスキーを設定して認証
-  do {
-   let result = try AGSArcGISRuntimeEnvironment.setLicenseKey("runtimelite,1000,rud#########,day-month-year,####################")
-   print("License Result: \(result.licenseStatus)")
-  }
-  catch let error as NSError {
-   // 認証に失敗した場合はエラーを出力
-   print("Error: \(error)")
-  }
-  ```
+ ```java
+ // ライセンスキーを設定して認証
+ LicenseResult licenseResult = ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud#########,day-month-year,####################");
+if(licenseResult.getLicenseStatus() == LicenseStatus.VALID){
+    Log.d(TAG,"ライセンスは有効です:" + licenseResult.getLicenseStatus());
+}else{
+    // TODO ライセンスが無効の場合の処理
+    Log.d(TAG,"ライセンスは無効です:" + licenseResult.getLicenseStatus());
+}
+ ```
 
 ## 指定ユーザー アカウントを使用した認証
 
@@ -111,27 +109,36 @@ if(licenseResult.getLicenseStatus() == LicenseStatus.VALID){
 
  アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してライセンスを取得します。
 
- ```javascript
- // ArcGIS Online / Portal for ArcGIS へロクインし認証情報を取得       
- let theURL = URL(string: "https://www.arcgis.com")
- let portal = AGSPortal(url: theURL!, loginRequired: true)
+ ```java
+// ユーザー アカウント情報で ArcGIS Online / ArcGISポータルへログインし認証情報を取得します
+UserCredential credential = new UserCredential("user", "password");
 
- portal.load { (error) in
-  if let error = error {
-   print(error)
-  }
-  else {
-   // ArcGIS Online / Portal for ArcGIS からライセンスを取得            
-   let licenseInfo = portal.portalInfo?.licenseInfo
-   do {
-    // ArcGIS Runtime にライセンスを設定
-    let result = try AGSArcGISRuntimeEnvironment.setLicenseInfo(licenseInfo!)
-   }
-   catch let error as NSError {
-    print("Error: \(error.localizedDescription)")
-   }
-  ｝
- ｝
+//ArcGIS Online またはご自分の portal の URL を設定します
+final Portal portal = new Portal("https://www.arcgis.com",true);
+portal.setCredential(credential);
+
+// ポータルの情報を同期してロードします。
+portal.loadAsync();
+portal.addDoneLoadingListener(new Runnable() {
+    @Override
+    public void run() {
+        if (portal.getLoadStatus() == LoadStatus.LOADED) {
+
+            // ポータルからライセンス情報を取得します
+            LicenseInfo licenseInfo = portal.getPortalInfo().getLicenseInfo();
+
+            // 取得したライセンスを設定します
+            LicenseResult licenseResult = ArcGISRuntimeEnvironment.setLicense(licenseInfo);
+            
+            if(licenseResult.getLicenseStatus() == LicenseStatus.VALID){
+                Log.d(TAG,"ライセンスは有効です:" + licenseResult.getLicenseStatus());
+            }else{
+                // TODO ライセンスが無効の場合の処理
+                Log.d(TAG,"ライセンスは無効です:"+ licenseResult.getLicenseStatus());
+            }
+        }
+    }
+});
  ```
 
  __アプリケーションが ArcGIS Online / Portal for ArcGIS に常にログインできない場合__
