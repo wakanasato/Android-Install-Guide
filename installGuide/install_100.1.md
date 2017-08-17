@@ -111,11 +111,12 @@ if(licenseResult.getLicenseStatus() == LicenseStatus.VALID){
 
  ```java
 // ユーザー アカウント情報で ArcGIS Online / ArcGISポータルへログインし認証情報を取得します
-UserCredential credential = new UserCredential("user", "password");
+// ログインのための入力フォームが表示されます。
+DefaultAuthenticationChallengeHandler handler = new DefaultAuthenticationChallengeHandler(this);
+AuthenticationManager.setAuthenticationChallengeHandler(handler);
 
 //ArcGIS Online またはご自分の portal の URL を設定します
 final Portal portal = new Portal("https://www.arcgis.com",true);
-portal.setCredential(credential);
 
 // ポータルの情報を同期してロードします。
 portal.loadAsync();
