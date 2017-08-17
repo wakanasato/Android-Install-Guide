@@ -73,17 +73,17 @@ ArcGIS Runtime Lite のライセンスキーを ArcGIS for Developers のサイ�
 
 4. 次に、アプリケーションのコードにおいて ArcGIS Runtime SDK の機能が呼び出される前に、以下のコードを使用してアプリケーションにコピーしたライセンスキーを設定します。
 
- ```javascript
-do {
+ ```java
  // ライセンスキーを設定して認証
- let result = try AGSArcGISRuntimeEnvironment.setLicenseKey("runtimelite,1000,rud#########,none,####################")
- print("License Result: \(result.licenseStatus)")
+ LicenseResult licenseResult = ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud#########,day-month-year,####################");
+if(licenseResult.getLicenseStatus() == LicenseStatus.VALID){
+    Log.d(TAG,"ライセンスは有効です:" + licenseResult.getLicenseStatus());
+}else{
+    // TODO ライセンスが無効の場合の処理
+    Log.d(TAG,"ライセンスは有効です:"+ licenseResult.getLicenseStatus());
 }
-catch let error as NSError {
- // 認証に失敗した場合はエラーを出力
- print("Error: \(error)")
-}
-```
+
+ ```
 
 ## 配布パックのライセンスキーを使用した認証
 
