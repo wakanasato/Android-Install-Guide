@@ -134,7 +134,7 @@ portal.addDoneLoadingListener(new Runnable() {
                 Log.d(TAG,"ライセンスは有効です:" + licenseResult.getLicenseStatus());
             }else{
                 // TODO ライセンスが無効の場合の処理
-                Log.d(TAG,"ライセンスは無効です:"+ licenseResult.getLicenseStatus());
+                Log.d(TAG,"ライセンスは無効です:" + licenseResult.getLicenseStatus());
             }
         }
     }
@@ -148,12 +148,16 @@ portal.addDoneLoadingListener(new Runnable() {
  この方法を使用する場合、少なくとも 30 日に 1 回はアプリケーションから ArcGIS Online / Portal for ArcGIS にログインし、ローカルのライセンス情報を更新する必要があります。最後にログインしてから 30 日以上経過した場合は、ライセンスが無効となり該当するライセンスを必要とする機能が使用できなくなります。
 
   ```java
-  // オンラインで作成し、文字列で保存したライセンス情報を取得します。
-  LicenseInfo licenseInfo = new LicenseInfo(licenseJSONstring);
+  // ネットワーク接続可能時に Json 形式でライセンス情報を取得します。
+  LicenseInfo licenseInfo = portal.getPortalInfo().getLicenseInfo();
+　String licenseInfoJson = licenseInfo.toJson();
+
+  // オフライン状態の場合は、作成済みの文字列で保存したライセンス情報を取得します。
+  LicenseInfo licenseInfo = new LicenseInfo(licenseInfoJson);
 
   // 作成したライセンス情報を設定します。
   ArcGISRuntimeEnvironment.setLicense(licenseInfo);
- ```
+  ```
 
 ## アプリケーションへの帰属の追加
 
