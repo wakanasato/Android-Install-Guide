@@ -147,40 +147,13 @@ portal.addDoneLoadingListener(new Runnable() {
 
  この方法を使用する場合、少なくとも 30 日に 1 回はアプリケーションから ArcGIS Online / Portal for ArcGIS にログインし、ローカルのライセンス情報を更新する必要があります。最後にログインしてから 30 日以上経過した場合は、ライセンスが無効となり該当するライセンスを必要とする機能が使用できなくなります。
 
- 出力したライセンス情報は任意の方法でローカルに保存してください。以下のコードでは、ライセンス情報を配列で出力し、AGSKeychainItem クラスを使用して Keychain に保存しています（Android シミュレータで実行する場合は、Xcode の Capabilities 設定画面で [Keychain Sharing] を ON にしてください）。
+  ```java
+  // オンラインで作成し、文字列で保存したライセンス情報を取得します。
+  LicenseInfo licenseInfo = new LicenseInfo(licenseJSONstring);
 
- ```javascript
- var licenseDictionary: NSDictionary?
- do {
-  // ライセンス情報を配列で出力
-  let licenseDictionary = try licenseInfo?.toJSON() as! NSDictionary?
- } catch {
-  print("ライセンス情報が無効です")
- }
- // 出力した配列を Keychain に保存
- self.keychainItem = AGSKeychainItem(identifier: "<一意な値>", accessGroup: nil, acrossDevices: false)
- self.keychainItem.writeObject(toKeychain: licenseDictionary!, completion: { (writeError) in
-  if let error = writeError {
-   print("Keychain への書き込みのエラー \(error)")
-  }
- })
-
- ・・・・・・
-
- // Keychain からライセンス情報を取得
- self.keychainItem = AGSKeychainItem(identifier: "<一意な値>", accessGroup: nil, acrossDevices: false)                
- let licenseDictionary = self.keychainItem.readObjectFromKeychain() as? NSDictionary
- let licenseInfo = try! AGSLicenseInfo.fromJSON(licenseDictionary!) as? AGSLicenseInfo
- do {
-  // ライセンスキーを設定して認証
-  let result = try AGSArcGISRuntimeEnvironment.setLicenseInfo(licenseInfo!)
- } catch let error as NSError {
-  print("Error: \(error.localizedDescription)")
- }
+  // 作成したライセンス情報を設定します。
+  ArcGISRuntimeEnvironment.setLicense(licenseInfo);
  ```
-
-
-
 
 ## アプリケーションへの帰属の追加
 
