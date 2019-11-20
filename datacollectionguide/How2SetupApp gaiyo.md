@@ -40,17 +40,17 @@ ArcGIS for Developers（開発者アカウント）をお持ちでない方は�
 
 # ハンズオンの手順
 
-提供しているマテリアルを使用して、ハンズオンは次の順番で作業します。
+提供しているマテリアルを使用し、次の順番でData Collection for .NETアプリ(以下、アプリ)を構築します。
 
  1. [アプリで使用する地図データの作成]()
- 1. [地図データを反映した Data Collection for .NETアプリの実行]()
+ 1. [地図データを反映したアプリの実行]()
  1. [アプリの操作方法]()
 
 （※別ページにリンクしてます）
 
 ## ハンズオンで使用したアプリについて
 
-ハンズオンで使用したアプリは、米国Esri 社が GitHub で公開する *[Data Collection for .NET](https://developers.arcgis.com/example-apps/data-collection-dotnet/)* 
+ハンズオンで使用したアプリ（サンプルプロジェクト）は、米国Esri 社が GitHub で公開する *[Data Collection for .NET](https://developers.arcgis.com/example-apps/data-collection-dotnet/)* 
 アプリを元に、ESRIジャパンにてローカライズしたものです。改修も行っており、フィーチャに対して画像を添付できる機能を追加しています。
 アプリの技術的な仕様や改修内容については、次の内容をそれぞれご参照ください。
 
