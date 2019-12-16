@@ -42,8 +42,8 @@ ArcGIS for Developers（開発者アカウント）をお持ちでない方は�
 
 提供しているマテリアルを使用し、次の順番でData Collection for .NETアプリ(以下、アプリ)を構築します。
 
- 1. [アプリで使用する地図データの作成]()
- 1. [地図データを反映したアプリの実行]()
+ 1. [アプリで使用する地図データの作成](./How2SetupApp_webmap_layer.md)
+ 1. [地図データを反映したアプリの実行](./How2SetupApp_appexecute.md)
  1. [アプリの操作方法](./How2SetupApp_how2use.md)
 
 （※別ページにリンクしてます）
@@ -54,7 +54,7 @@ ArcGIS for Developers（開発者アカウント）をお持ちでない方は�
 アプリを元に、ESRIジャパンにてローカライズしたものです。改修も行っており、フィーチャに対して画像を添付できる機能を追加しています。
 アプリの技術的な仕様や改修内容については、次の内容をそれぞれご参照ください。
 
- * [アプリの仕様について（詳細）]()
- * [【応用】コード拡張]()
+ * [アプリの仕様について（詳細）](./How2SetupApp_detail.md)
+ * [【応用】コード拡張](./How2SetupApp_expand.md)
 
 米国Esri社が公開する、[Data Collection for .NET](https://developers.arcgis.com/example-apps/data-collection-dotnet/) のページおよび [GitHub ソース](https://github.com/Esri/data-collection-dotnet)についてもぜひご参照ください。
