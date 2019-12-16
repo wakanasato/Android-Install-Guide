@@ -20,12 +20,14 @@
 
 このハンズオンで使用するものは次の 4 つです
 
-* ArcGIS for Developers（開発者アカウント）：ご準備ください
-* Visual Studio 2017：ご準備ください
-* サンプルプロジェクト（Data Collection for .NETアプリ）
-* ダミーデータ
+* ArcGIS for Developers（開発者アカウント）：ご準備ください※1
+* [Visual Studio 2017](https://www.esrij.com/products/arcgis-runtime-sdk-for-dotnet/environments/)：ご準備ください
+* サンプルプロジェクト（Data Collection for .NETアプリ）※2
+* ダミーデータ ※2
 
-ローカライズ済みのサンプルプロジェクト及びダミーデータは [HandsOn_Data.zip](https://github.com/EsriJapan/workshops/raw/master/20190823_app-development-hands-on/HandsOn_Data.zip) からダウンロードできます。</br>
+※1 ArcGIS for Developers（開発者アカウント）をお持ちでない方は「[開発者アカウントの作成](http://esrijapan.github.io/arcgis-dev-resources/guide/create-map/get-dev-account/)」から作成して、ご準備ください。アカウントは無償で作成できます。
+
+※2 ローカライズ済みのサンプルプロジェクト及びダミーデータは [HandsOn_Data.zip](https://github.com/EsriJapan/workshops/raw/master/20190823_app-development-hands-on/HandsOn_Data.zip) からダウンロードできます。</br>
 HandsOn_Data.zip を解凍すると以下の構成となっています。
 
 | HandsOn_Data フォルダ配下 | 格納ファイルまたはプロジェクト | 備考 |
@@ -34,8 +36,6 @@ HandsOn_Data.zip を解凍すると以下の構成となっています。
 |  | tree_inspection.gdb.zip | **使用します：ダミーデータ**  |
 |  | data-collection-dotnet-master_ejLocalized | **使用します：サンプルプロジェクト**  |
 | 03_Widget_Development  | 190823_dev_school.ipynb  | ここでは使用しません  |
-
-ArcGIS for Developers（開発者アカウント）をお持ちでない方は「[開発者アカウントの作成](http://esrijapan.github.io/arcgis-dev-resources/guide/create-map/get-dev-account/)」から作成して、ご準備ください。アカウントは無償で作成できます。
 
 
 # ハンズオンの手順
