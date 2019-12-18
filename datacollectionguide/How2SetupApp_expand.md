@@ -281,3 +281,7 @@ public string attachmentList
 
 `attachmentList` は、新しく追加した変数です。処理を行った後の値が格納されます。</br>
 プロパティが変更されたときは `OnPropertyChanged()` を使用します。
+
+
+[手順一覧のページ](./How2SetupApp_gaiyo.md#ハンズオンの手順)に戻る
+

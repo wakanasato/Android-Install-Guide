@@ -58,4 +58,6 @@ HandsOn_Data\02_Data_Collection_Application\data-collection-dotnet-master_ejLoca
 上記の構成図のとおり、Trees（フィーチャクラス）と Species（テーブル）、Trees（フィーチャクラス）と Inspections（テーブル）にはそれぞれ `Global ID` をキーにして、フィーチャクラスとテーブルを関連付けたリレーションシップクラスを作成しています。
 リレーションシップクラスは、ジオデータベース内のテーブルやフィーチャクラス間の関連付けを管理するものです。詳細は [ArcGIS Pro:リレーションシップと ArcGIS](http://desktop.arcgis.com/ja/arcmap/latest/manage-data/relationships/relationships-and-arcgis.htm) をご参照ください。
 
+
+
 [手順一覧のページ](./How2SetupApp_gaiyo.md#ハンズオンの手順)に戻る

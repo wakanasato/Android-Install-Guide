@@ -82,3 +82,6 @@ ArcGIS for Developers で「アプリの登録」を行い、ログイン機能�
 <div align="center">
  <img src="https://s3-ap-northeast-1.amazonaws.com/apps.esrij.com/arcgis-dev/github/img/workshop/DataCollection/dc_startupApp.png" width="800px">
 </div>
+
+
+[手順一覧のページ](./How2SetupApp_gaiyo.md#ハンズオンの手順)に戻る
