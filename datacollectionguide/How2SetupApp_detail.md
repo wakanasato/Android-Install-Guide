@@ -58,21 +58,4 @@ HandsOn_Data\02_Data_Collection_Application\data-collection-dotnet-master_ejLoca
 上記の構成図のとおり、Trees（フィーチャクラス）と Species（テーブル）、Trees（フィーチャクラス）と Inspections（テーブル）にはそれぞれ `Global ID` をキーにして、フィーチャクラスとテーブルを関連付けたリレーションシップクラスを作成しています。
 リレーションシップクラスは、ジオデータベース内のテーブルやフィーチャクラス間の関連付けを管理するものです。詳細は [ArcGIS Pro:リレーションシップと ArcGIS](http://desktop.arcgis.com/ja/arcmap/latest/manage-data/relationships/relationships-and-arcgis.htm) をご参照ください。
 
-## ポップアップ表示をカスタムする
-
-アプリで表示するフィーチャのポップアップ構成は、Web マップの設定で変更できます。</br>
-ポップアップの構成設定は、Web マップで定義している各レイヤーの[・・・]を選択し、[ポップアップの構成]から設定画面を開きます。</br>
-ポップアップの詳しい内容は、[ArcGIS Online 逆引きガイド（PDF）](https://www.esrij.com/cgi-bin/wp/wp-content/uploads/documents/ArcGISOnline_user_guide.pdf)の「3-4. ポップアップの内容を変更したい」もご参照ください。
-
-### ポップアップのタイトル
-
-設定するポップアップのタイトルは、アプリからフィーチャを選択してポップアップを表示させたときに先頭に表示される項目です。</br>
-ポップアップタイトルは、固定の文字列で設定することも、属性情報でフォーマットして表示することもできます。画面サイズを考慮して設定することを推奨します。
-
-例えば、”保存樹木”という固定の文字列に、属性情報の樹木名称を組み合わせて表示したい場合は次のように定義します。</br>
-
-``` 保存樹木: {trees}``` 
-
-<div align="center">
- <img src="https://s3-ap-northeast-1.amazonaws.com/apps.esrij.com/arcgis-dev/github/img/workshop/DataCollection/dc_popuptitle.png" width="300px">
-</div>
+[手順一覧のページ](../How2SetupApp_gaiyo.md#ハンズオンの手順)に戻る
