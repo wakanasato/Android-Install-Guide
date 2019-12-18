@@ -1,4 +1,4 @@
-# アプリの使用方法
+# アプリの操作方法
 
 アプリの使用方法として、次の方法を解説します。
 
@@ -81,7 +81,7 @@
     <img src="https://s3-ap-northeast-1.amazonaws.com/apps.esrij.com/arcgis-dev/github/img/workshop/DataCollection/dc_saveupdate.png" width="200px">
     </div>
 
-## オフラインモードの編集データをArcGIS Online と同期する
+## オフラインモードの編集データを ArcGIS Online と同期する
 
 1. コンテキスト ドロワー ビューを開く
 1. [マップの同期]を選択する

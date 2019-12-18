@@ -6,8 +6,6 @@
 * [アプリ起動時に作成される設定ファイル](#アプリの仕様についてアプリ起動時に作成される設定ファイル)
 * [ローカライズ対応](#アプリの仕様についてローカライズ対応)
 * [データについて](#データについて)
-* [ポップアップ表示をカスタムする](#ポップアップ表示をカスタムする)
-
 
 ## 編集可能なレイヤーについて
 
@@ -77,20 +75,4 @@ HandsOn_Data\02_Data_Collection_Application\data-collection-dotnet-master_ejLoca
 
 <div align="center">
  <img src="https://s3-ap-northeast-1.amazonaws.com/apps.esrij.com/arcgis-dev/github/img/workshop/DataCollection/dc_popuptitle.png" width="300px">
-</div>
-
-### ポップアップに表示する項目（属性情報）
-
-表示または編集できる属性情報の項目をカスタムすることができます。</br>
-``` 表示：``` のドロップダウンで ```属性フィールドのリスト``` を選択すると、ウィンドウに表示する属性フィールドが表示されます。任意の属性情報を一度選択してから、右横の上下の矢印を操作すると、選択した属性情報の項目の表示順番を指定することができます。
-
-<div align="center">
- <img src="https://s3-ap-northeast-1.amazonaws.com/apps.esrij.com/arcgis-dev/github/img/workshop/DataCollection/dc_popuplistupdate.png" width="300px">
-</div>
-
-```属性フィールドの構成``` を選択すると、表示または編集する属性項目を詳細に設定することができます。</br>
-フィーチャ サービスでは、フィーチャの更新日時や編集者の情報を記録するための属性情報があらかじめ作成されています。この情報もこの構成画面から表示できるように設定することができます。
-
-<div align="center">
- <img src="https://s3-ap-northeast-1.amazonaws.com/apps.esrij.com/arcgis-dev/github/img/workshop/DataCollection/dc_popuplistselect.png" width="300px">
 </div>
